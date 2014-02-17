@@ -1,0 +1,24 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+html {
+height: 100%;				/* Permet d'avoir un menu qui occupe toute la hauteur de la page */
+}
+
+body {
+	height: 100%;			/* Permet d'avoir un menu qui occupe toute la hauteur de la page */
+}
+
+menu {
+	float: left;
+	width: 200px;
+	height: 100%;			/* Permet d'avoir un menu qui occupe toute la hauteur de la page */
+	padding: 10px;
+}
+
+section {
+	float: left;
+	padding: 20px;
+}
