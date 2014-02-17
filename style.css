@@ -3,8 +3,12 @@
 	padding: 0;
 }
 
-#nav {
-	border: 1px solid black;
+a {
+	text-decoration: none;
+}
+
+#menu {
+	/*border: 1px solid black;*/
 	height: 50px;
 	background-color: lightgrey;
 	/*box-shadow: 3px 3px 2px #494949;*/
@@ -12,10 +16,24 @@
 
 #connexion li {
 	text-align: center;
-	padding: 15px;
-	margin-right: 20px;
+	line-height:50px;
 	float: right;
 	display: inline-block;
+	width: 120px;
+	height: 50px;
+	background-color: lightgrey;
+	overflow: hidden;
+	transition: background-color 0.3s, width 0.3s, height 0.4s ease 0.15s;
+}
+
+#login:hover {
+	width:265px;
+	height:270px;
+	background-color: grey;
+}
+
+#register:hover {
+	background-color: grey;
 }
 
 #rechercher {
@@ -31,7 +49,6 @@
 #firstarticle {
 	border: 1px solid black;
 	height: 600px;
-	/*width: 1500px;*/
 }
 
 #best {
@@ -65,3 +82,70 @@
 	float: right;
 	margin-top: 20px;
 }
+
+/* CSS pour la première page de recherche */
+#minimap {
+	border: 1px solid black;
+	height: 350px;
+	width: 780px;
+	float:left;
+}
+
+#filtre {
+	border: 1px solid black;
+	float:right;
+	height:350px;
+	width: 736px;
+}
+
+#allresults {
+	border: 1px solid black;
+	height: 328px;
+	clear:both;
+	overflow:hidden;
+	overflow-x:auto;
+	overflow-y:hidden;
+	
+}
+
+.imgpreview li{
+	border:1px solid black;
+	height: 230px;
+	width: 390px;
+	margin-top: 15px;
+	margin-left: 15px;
+	display: inline-block;
+}
+
+.imgpreview li div {
+	border: 1px solid black;
+	width:390px;
+	height:55px;
+	margin-top: 212px;
+}
+
+/* CSS pour la page de recherche sans minimap */
+#filtre3 {
+	border: 1px solid black;
+	width: 400px;
+	height: 700px;
+	float: left;
+}
+
+#allresults3 {
+	border: 1px solid black;
+	width: 1110px;
+	height: 700px;
+	float: right;
+	overflow: auto;
+}
+
+#allresults3 div {
+	border: 1px solid black;
+	height: 220px;
+	width: 345px;
+	margin: 15px;
+	margin-right: 0px;
+	display: inline-block;
+}
+/* FIN */

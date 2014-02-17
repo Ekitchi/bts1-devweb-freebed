@@ -59,33 +59,44 @@
 				</ul>
 			</nav>
 		</header>
-
-		<section id="firstarticle" name="firstarticle">
-			<article id="slider1" name="slider1">
-				SLIDER1
-				<!-- <img src="http://placehold.it/1515x600"> -->
+		
+		
+		<section>
+			<article id="minimap">
+				MINIMAP (Option)
+			</article>
+			<article id="filtre">
+				FILTRE
 			</article>
 		</section>
-
-		<section id="bestrated" name="bestrated">
-			<article id="best" name="best">
-				<img src="http://placehold.it/1100x500">
-			</article>
-
-			<article id="bestdesc" name="bestdesc">
-				DESC
+		
+		<section>
+			<article id="allresults">
+				<ul class="imgpreview">
+					<li>
+						IMG
+						<div classe="imginfos">
+							Infos
+						</div>
+					</li>
+					<li>
+						IMG
+						<div classe="imginfos">
+							Infos
+						</div>
+					</li>
+					<li>
+						IMG
+						<div classe="imginfos">
+							Infos
+						</div>
+					</li>
+				</ul>
 			</article>
 		</section>
-
-		<section id="mostrented" name="mostrented">
-			<article id="renteddesc" name="renteddesc">
-				DESC
-			</article>
-			
-			<article id="rented" name="rented">
-				<img src="http://placehold.it/1100x500">
-			</article>
-		</section>
+		
+		
+		
 
 	</body>
 </html>
