@@ -5,8 +5,6 @@
 	<link rel="stylesheet" type="text/css" href="test.css"/>
 	<script src="prefixfree.min.js"></script>
 	<script src="jquery-1.10.2.min.js"></script>
-	<script src="verif_formu.js"></script>
-
 	<head>
 		<meta charset="UTF-8"/>
 		<title>FreeBed Location</title>
