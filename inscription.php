@@ -2,7 +2,7 @@
 <html>
 	<title>FreeBed Location</title>
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
-	<link rel="stylesheet" type="text/css" href="test.css"/>
+	<link rel="stylesheet" type="text/css" href="style.css"/>
 	<script src="prefixfree.min.js"></script>
 	<script src="jquery-1.10.2.min.js"></script>
 	<script src="verif_formu.js"></script>
@@ -17,7 +17,7 @@
 			<nav id="menu" name="menu">
 				<ul id="rechercher" name="rechercher">
 					<li>
-						<input type="text"  placeholder="Où allez-vous ?" value="" style="height:30px; width:250px; border-radius:4px;">
+						<input type="text"  placeholder="Où allez-vous ?" style="height:30px; width:250px; border-radius:4px;">
 						</input>
 					</li>
 					<li>
@@ -26,6 +26,9 @@
 				</ul>
 
 				<ul id="connexion" name="connexion">
+					<li id="register">
+						<a href=""> Inscription </a>
+					</li>
 					<li id="login">
 						<a href=""> Connexion </a>
 						<div>
