@@ -18,7 +18,22 @@ menu {
 	padding: 10px;
 }
 
+menu li {
+	display: inline-block;
+	line-height: 35px;
+	list-style-type: none;
+	margin-top: 10px;
+	padding-left: 20px;
+	height: 35px;
+	width: 190px;
+}
+
 section {
 	float: left;
 	padding: 20px;
+	width: auto;
+}
+
+.masque {
+	visibility: hidden; 
 }
