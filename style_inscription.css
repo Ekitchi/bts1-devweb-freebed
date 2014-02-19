@@ -1,0 +1,26 @@
+#connexion li div {
+	border: 1px solid black;
+}
+
+#rechercher {
+	padding: 8px;
+	margin-left: 20px;
+	float: left;
+}
+
+#rechercher li {
+	display: inline-block;
+}
+
+#inscription {
+	display: inline-block;
+	margin: 50px 500px;
+	padding: 0px;
+	position: relative;
+	text-align: center;
+}
+
+#inscription li {
+	margin-bottom: 20px;
+	list-style-type: none;
+}
