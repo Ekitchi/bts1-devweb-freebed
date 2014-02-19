@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
+	<head>
 	<title>FreeBed Location</title>
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
-	<link rel="stylesheet" type="text/css" href="test.css"/>
+	<link rel="stylesheet" type="text/css" href="style.css"/>
 	<script src="prefixfree.min.js"></script>
 	<script src="jquery-1.10.2.min.js"></script>
-	<head>
 		<meta charset="UTF-8"/>
 		<title>FreeBed Location</title>
 	</head>
@@ -90,7 +90,7 @@
 					</select>
 					</select>
 					<select name="annee">
-					        <?php for ($annee = 1900 ; $annee <= 2011 ; $annee++)
+					        <?php for ($annee = 1900 ; $annee <= 2014 ; $annee++)
 					{
 					?>
 					                  <option value="<?php echo $annee ?>"><?php echo $annee; ?></option>

@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html>
-	<title>FreeBed Location</title>
-	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
-	<link rel="stylesheet" type="text/css" href="style.css"/>
-	<script src="jquery-1.10.2.min.js"></script>
-
 	<head>
+		<title>FreeBed Location</title>
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+		<script src="jquery-1.10.2.min.js"></script>
 		<meta charset="UTF-8"/>
 		<title>FreeBed Location</title>
 	</head>
@@ -81,7 +80,7 @@
 			<article id="renteddesc" name="renteddesc">
 				DESC
 			</article>
-			
+
 			<article id="rented" name="rented">
 				<img src="http://placehold.it/1100x500">
 			</article>
