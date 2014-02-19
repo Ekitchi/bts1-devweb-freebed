@@ -1,0 +1,35 @@
+menu {
+	background-color: #000000;
+	color: #AAAAAA;
+}
+
+menu li.selected {
+	background-color: #FFFFFF;
+	border-bottom-left-radius: 10px;
+	border-top-left-radius: 10px;
+	border-bottom-right-radius: 0px;
+	border-top-right-radius: 0px;
+}
+
+menu li.deselected {
+	background-color: #000000;
+	border-bottom-left-radius: 0px;
+	border-top-left-radius: 0px;
+	border-bottom-right-radius: 10px;
+	border-top-right-radius: 10px;
+}
+section {
+}
+
+h1, h2, h3, li, th, td, a {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;	
+}
+
+#global_header {
+	
+}
+
+#global_header h1 {
+	font-size: 5em;
+	padding-left: 20px;
+}
