@@ -31,9 +31,10 @@ menu li {
 section {
 	float: left;
 	padding: 20px;
-	width: auto;
+	min-width: 50%;
+	max-width: 90%;
 }
 
-.masque {
+.hidden {
 	visibility: hidden; 
 }

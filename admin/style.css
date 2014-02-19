@@ -16,7 +16,11 @@ h1, h2, h3, li, th, td, a {
 	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;	
 }
 
-section header h1 {
+#global_header {
+	
+}
+
+#global_header h1 {
 	font-size: 5em;
 	padding-left: 20px;
 }

@@ -12,24 +12,23 @@
 			<h3>Administrateur</h3>
 			<ul>
 				<li class="selected">
-					Tableau de bord
+					<a href="" >Tableau de bord</a>
 				</li>
 				<li>
-					Gestion des utilisateurs
+					<a href="" >Gestion des utilisateurs</a>
 				</li>
 				<li>
-					Gestion des locations
+					<a href="" >Gestion des locations</a>
 				</li>
 			</ul>
 		</menu>
 		
 		<section>
-			<header>
+			<header id="global_header">
 				<h1>Administration</h1>
 				<hr />
 			</header>
 			
-			<div id="panel"></div>
 			<article>
 				<header>
 					<h2>Tableau de bord</h2>
@@ -37,7 +36,7 @@
 				<article></article>
 				<footer></footer>
 			</article>
-			<article>
+			<article class="hidden">
 				<header>
 					<h2>Gestion des utilisateurs</h2>
 				</header>
@@ -53,7 +52,7 @@
 				</article>
 				<footer></footer>
 			</article>
-			<article>
+			<article class="hidden">
 				<header>
 					<h2>Gestion des locations</h2>
 				</header>
