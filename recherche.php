@@ -72,7 +72,7 @@
 		
 		<section>
 			<article id="allresults">
-				<ul class="imgpreview">
+				<ul>
 					<li>
 						IMG
 						<div classe="imginfos">

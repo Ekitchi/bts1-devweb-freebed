@@ -106,6 +106,7 @@ a {
 #allresults {
 	border: 1px solid black;
 	height: 328px;
+<<<<<<< HEAD
 	clear: both;
 	overflow: hidden;
 	-ms-overflow-x: auto;
@@ -114,6 +115,13 @@ a {
 
 .imgpreview li {
 	border: 1px solid black;
+=======
+	clear:both;
+}
+
+#allresults ul li{
+	border:1px solid black;
+>>>>>>> ee9343dded1f11401ee2c2ff9c1cefe7c951a629
 	height: 230px;
 	width: 390px;
 	margin-top: 15px;
@@ -121,7 +129,7 @@ a {
 	display: inline-block;
 }
 
-.imgpreview li div {
+#allresults ul li div {
 	border: 1px solid black;
 	width: 390px;
 	height: 55px;

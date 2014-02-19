@@ -15,7 +15,7 @@
 			<nav id="menu" name="menu">
 				<ul id="rechercher" name="rechercher">
 					<li>
-						<input type="text"  placeholder="Où allez-vous ?" value="" style="height:30px; width:250px; border-radius:4px;">
+						<input type="text"  placeholder="Où allez-vous ?" style="height:30px; width:250px; border-radius:4px;">
 						</input>
 					</li>
 					<li>
@@ -24,6 +24,9 @@
 				</ul>
 
 				<ul id="connexion" name="connexion">
+					<li id="register">
+						<a href=""> Inscription </a>
+					</li>
 					<li id="login">
 						<a href=""> Connexion </a>
 						<div>
