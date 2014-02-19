@@ -4,6 +4,7 @@
 	<title>FreeBed Location</title>
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
 	<link rel="stylesheet" type="text/css" href="style.css"/>
+	<link rel="stylesheet" type="text/css" href="style_inscription.css"/>
 	<script src="prefixfree.min.js"></script>
 	<script src="jquery-1.10.2.min.js"></script>
 		<meta charset="UTF-8"/>
