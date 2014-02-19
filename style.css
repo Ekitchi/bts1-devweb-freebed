@@ -7,21 +7,20 @@ a {
 	text-decoration: none;
 }
 
+/* CSS pour le header */
 #menu {
-	/*border:  1px solid black;
-	 */
 	height: 50px;
-	background-color: lightgrey; /*box-shadow:  3px 3px 2px #494949;
-	 */
+	background-color: lightgrey; 
+	/*box-shadow:  3px 3px 2px #494949;*/
 }
 
 #connexion li {
 	text-align: center;
 	line-height: 50px;
-	float: right;
 	display: inline-block;
 	width: 120px;
 	height: 50px;
+	float: right;
 	background-color: lightgrey;
 	overflow: hidden;
 	-webkit-transition: background-color 0.3s, width 0.3s, height 0.4s ease 0.15s;
@@ -106,7 +105,6 @@ a {
 #allresults {
 	border: 1px solid black;
 	height: 328px;
-<<<<<<< HEAD
 	clear: both;
 	overflow: hidden;
 	-ms-overflow-x: auto;
@@ -115,13 +113,11 @@ a {
 
 .imgpreview li {
 	border: 1px solid black;
-=======
 	clear:both;
 }
 
 #allresults ul li{
 	border:1px solid black;
->>>>>>> ee9343dded1f11401ee2c2ff9c1cefe7c951a629
 	height: 230px;
 	width: 390px;
 	margin-top: 15px;
@@ -161,4 +157,59 @@ a {
 	display: inline-block;
 }
 
-/* FIN */
+
+/* CSS pour la page de logement */
+#logementname {
+	border: 1px solid black;
+	width: 92%;
+	height: 70px;
+	margin-top: 10px;
+}
+
+#slider {
+	border: 1px solid black;
+	width: 850px;
+	height: 450px;
+	float: left;
+	margin-left: 60px;
+	margin-top: 0px;
+}
+
+#logementinfos {
+	border:1px solid black;
+	width: 500px;
+	height: 450px;
+	margin-right: 60px;
+	margin-top: 20px;
+}
+
+#logementdesc {
+	border: 1px solid black;
+	width: 850px;
+	height: 500px;
+	float: left;
+	margin-left: 60px;
+	margin-top: 20px;
+}
+
+#userinfos {
+	border: 1px solid black;
+	width: 500px;
+	height: 450px;
+	float: right;
+	margin-right: 60px;
+	margin-top: 20px;
+}
+
+#allview {
+	border: 1px solid black;
+	height: 700px;
+	width: 850px;
+	float: left;
+	margin-top: 20px;
+	margin-left: 60px;
+}
+
+.classfloat {
+	float: none;
+}

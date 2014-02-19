@@ -25,7 +25,7 @@
 
 				<ul id="connexion" name="connexion">
 					<li id="register">
-						<a href=""> Inscription </a>
+						<a href="inscription.php"> Inscription </a>
 					</li>
 					<li id="login">
 						<a href=""> Connexion </a>
