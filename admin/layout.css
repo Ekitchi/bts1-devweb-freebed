@@ -14,8 +14,12 @@ body {
 menu {
 	float: left;
 	width: 200px;
-	height: 100%;			/* Permet d'avoir un menu qui occupe toute la hauteur de la page */
+	height: 100%;		/* Permet d'avoir un menu qui occupe toute la hauteur de la page */
 	padding: 10px;
+}
+
+menu h3 {
+	margin-bottom: 25px;	
 }
 
 menu li {

@@ -13,13 +13,13 @@
 			<h3>Administrateur</h3>
 			<ul>
 				<li class="deselected" id="menu_01">
-					<a href="#" onclick="hilightMenuItem('menu_01');">Tableau de bord</a>
+					<a href="#" onclick="adminMenu('menu_01', 'board_01');">Tableau de bord</a>
 				</li>
 				<li class="deselected" id="menu_02">
-					<a href="#" onclick="hilightMenuItem('menu_02');">Gestion des utilisateurs</a>
+					<a href="#" onclick="adminMenu('menu_02', 'board_02');">Gestion des utilisateurs</a>
 				</li>
 				<li class="deselected" id="menu_03">
-					<a href="#" onclick="hilightMenuItem('menu_03');">Gestion des locations</a>
+					<a href="#" onclick="adminMenu('menu_03', 'board_03');">Gestion des locations</a>
 				</li>
 			</ul>
 		</menu>
@@ -30,14 +30,14 @@
 				<hr />
 			</header>
 			
-			<article class="visible">
+			<article id="board_01" class="visible">
 				<header>
 					<h2>Tableau de bord</h2>
 				</header>
 				<article></article>
 				<footer></footer>
 			</article>
-			<article class="hidden">
+			<article id="board_02" class="hidden">
 				<header>
 					<h2>Gestion des utilisateurs</h2>
 				</header>
@@ -53,7 +53,7 @@
 				</article>
 				<footer></footer>
 			</article>
-			<article class="hidden">
+			<article id="board_03" class="hidden">
 				<header>
 					<h2>Gestion des locations</h2>
 				</header>
