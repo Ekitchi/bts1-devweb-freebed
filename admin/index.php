@@ -12,7 +12,7 @@
 			<h2>Bienvenue,</h2>
 			<h3>Administrateur</h3>
 			<ul>
-				<li class="deselected" id="menu_01">
+				<li class="selected" id="menu_01">
 					<a href="#" onclick="adminMenu('menu_01', 'board_01');">Tableau de bord</a>
 				</li>
 				<li class="deselected" id="menu_02">
@@ -37,6 +37,7 @@
 				<article></article>
 				<footer></footer>
 			</article>
+			
 			<article id="board_02" class="hidden">
 				<header>
 					<h2>Gestion des utilisateurs</h2>
@@ -53,6 +54,7 @@
 				</article>
 				<footer></footer>
 			</article>
+			
 			<article id="board_03" class="hidden">
 				<header>
 					<h2>Gestion des locations</h2>
