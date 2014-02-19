@@ -38,3 +38,7 @@ section {
 .hidden {
 	visibility: hidden; 
 }
+
+.visible {
+	visibility: visible; 
+}

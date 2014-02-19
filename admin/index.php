@@ -5,20 +5,21 @@
 		<meta charset="Utf-8" />
 		<link rel="stylesheet" type="text/css" href="layout.css" />
 		<link rel="stylesheet" type="text/css" href="style.css" />
+		<script src="admin_menu.js"></script>
 	</head>
 	<body>
 		<menu>
 			<h2>Bienvenue,</h2>
 			<h3>Administrateur</h3>
 			<ul>
-				<li class="selected">
-					<a href="" >Tableau de bord</a>
+				<li class="deselected" id="menu_01">
+					<a href="#" onclick="hilightMenuItem('menu_01');">Tableau de bord</a>
 				</li>
-				<li>
-					<a href="" >Gestion des utilisateurs</a>
+				<li class="deselected" id="menu_02">
+					<a href="#" onclick="hilightMenuItem('menu_02');">Gestion des utilisateurs</a>
 				</li>
-				<li>
-					<a href="" >Gestion des locations</a>
+				<li class="deselected" id="menu_03">
+					<a href="#" onclick="hilightMenuItem('menu_03');">Gestion des locations</a>
 				</li>
 			</ul>
 		</menu>
@@ -29,7 +30,7 @@
 				<hr />
 			</header>
 			
-			<article>
+			<article class="visible">
 				<header>
 					<h2>Tableau de bord</h2>
 				</header>
