@@ -28,6 +28,8 @@ a {
 	-o-transition: background-color 0.3s, width 0.3s, height 0.4s ease 0.15s;
 	-ms-transition: background-color 0.3s, width 0.3s, height 0.4s ease 0.15s;
 	transition: background-color 0.3s, width 0.3s, height 0.4s ease 0.15s;
+	z-index: 1;
+	position: relative;
 }
 
 #login:hover {
@@ -50,6 +52,7 @@ a {
 	display: inline-block;
 }
 
+/* CSS de la page main.php */
 #firstarticle {
 	border: 1px solid black;
 	height: 600px;
@@ -97,7 +100,7 @@ a {
 
 #filtre {
 	border: 1px solid black;
-	float: right;
+	margin-right: 1px;
 	height: 350px;
 	width: 736px;
 }
@@ -106,14 +109,9 @@ a {
 	border: 1px solid black;
 	height: 328px;
 	clear: both;
-	overflow: hidden;
-	-ms-overflow-x: auto;
-	overflow-x: auto;
-}
-
-.imgpreview li {
-	border: 1px solid black;
-	clear:both;
+	overflow: auto;
+	overflow-y: hidden;
+	white-space:nowrap; 
 }
 
 #allresults ul li{
@@ -144,8 +142,8 @@ a {
 	border: 1px solid black;
 	width: 1110px;
 	height: 700px;
-	float: right;
 	overflow: auto;
+	margin-right: 0px;
 }
 
 #allresults3 div {
@@ -172,7 +170,6 @@ a {
 	height: 450px;
 	float: left;
 	margin-left: 60px;
-	margin-top: 0px;
 }
 
 #logementinfos {
@@ -208,8 +205,4 @@ a {
 	float: left;
 	margin-top: 20px;
 	margin-left: 60px;
-}
-
-.classfloat {
-	float: none;
 }
