@@ -4,7 +4,6 @@
 		<title>FreeBed Location</title>
 		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
 		<link rel="stylesheet" type="text/css" href="style.css"/>
-		<script src="jquery-1.10.2.min.js"></script>
 		<script type="text/javascript" src="scripts/prefixfree.min.js"></script>
 		<script type="text/javascript" src="scripts/jquery-2.1.0.js"></script>
 		<meta charset="UTF-8"/>
@@ -82,6 +81,12 @@
 							<a href="#account_louer"> <h1> Louer votre logement </h1> </a>
 							<div id="account_louer">
 								AJOUTER VOTRE LOGEMENT
+							</div>
+						</li>
+						<li>
+							<a href="#account_historique"> <h1> Historique </h1> </a>
+							<div id="account_historique">
+								HISTORIQUE
 							</div>
 						</li>
 					</ul>
