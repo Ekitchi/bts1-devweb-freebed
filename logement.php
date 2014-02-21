@@ -12,7 +12,7 @@
 
 	<body
 		<!-- Inclusion du header -->
-		<?php include_once ("header.php"); ?>>
+		<?php include_once ("header.php"); ?>
 		
 
 		<section>

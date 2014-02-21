@@ -7,8 +7,8 @@ a {
 	text-decoration: none;
 }
 
-#menu {
-	/*border:  1px solid black;*/
+/* CSS du header */
+#header {
 	height: 50px;
 	background-color: rgba(255, 255, 255, 0.8);
 	border-bottom: 2px solid lightblue;
@@ -16,7 +16,7 @@ a {
 	z-index: 999;
 }
 
-#connexion li {
+#header_connexion li {
 	text-align: center;
 	line-height: 50px;
 	float: right;
@@ -28,16 +28,16 @@ a {
 	position: relative;
 }
 
-#register:hover {
+#header_register:hover {
 	background-color: rgba(128, 128, 128, 0.8);
 }
 
-#login:hover {
+#header_login:hover {
 	width: 265px;
 	background-color: rgba(128, 128, 128, 0.8);
 }
 
-#login div {
+#header_login div {
 	opacity: 0;
 	width: 265px;
 	height: 0px;
@@ -47,7 +47,7 @@ a {
 	background-color: rgba(255, 255, 255, 0.7);
 }
 
-#login:hover div {
+#header_login:hover div {
 	opacity: 1;
 	height:220px;
 	width:265px;
@@ -56,13 +56,13 @@ a {
 	background-color: rgba(128, 128, 128, 0.85);
 }
 
-#rechercher {
+#header_rechercher {
 	padding: 8px;
 	margin-left: 20px;
 	float: left;
 }
 
-#rechercher li {
+#header_rechercher li {
 	display: inline-block;
 }
 
@@ -248,13 +248,13 @@ a {
 	overflow: hidden;
 	font-size: 1.3em;
 	border-radius: 15px;
-	background-color: white;
-	transition: 0.7s background-color;
+	background-color: rgba(255, 255, 255, 0.8);
+	transition: 0.3s background-color ease 0.15s;
 }
 
 #menu_account li:hover {
-	background-color: grey;
-	transition: 0.7s background-color;
+	background-color: rgba(128, 128, 128, 0.8);
+	transition: 0.3s background-color ease 0.15s;
 }
 
 #menu_account li div {

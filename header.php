@@ -1,6 +1,6 @@
 <header>
-	<nav id="menu" name="menu">
-		<ul id="rechercher" name="rechercher">
+	<nav id="header" name="header">
+		<ul id="header_rechercher" name="header_rechercher">
 			<li>
 				<input type="text"  placeholder="Où allez-vous ?" style="height:30px; width:250px; border-radius:4px;">
 				</input>
@@ -10,29 +10,29 @@
 			</li>
 		</ul>
 
-		<ul id="connexion" name="connexion">
-			<li id="register">
+		<ul id="header_connexion" name="header_connexion">
+			<li id="header_register">
 				<a href="inscription.php"> Inscription </a>
 			</li>
-			<li id="login">
+			<li id="header_login">
 				<a href="#"> Connexion </a>
 				<div>
 					<table>
 						<tr>
-							<td><label for="username"> Nom d'utilisateur: </label></td>
+							<td><label for="connexion_username"> Nom d'utilisateur: </label></td>
 							<td>
-							<input type="text" placeholder="Nom d'utilisateur" id="username" name="username"/>
+							<input type="text" placeholder="Nom d'utilisateur" id="connexion_username" name="connexion_username"/>
 							</td>
 						</tr>
 						<tr>
-							<td><label for="password"> Mot de passe: </label></td>
+							<td><label for="connexion_password"> Mot de passe: </label></td>
 							<td>
-							<input type="password" placeholder="Mot de passe" id="password" name="password"/>
+							<input type="password" placeholder="Mot de passe" id="connexion_password" name="connexion_password"/>
 							</td>
 						</tr>
 						<tr>
 							<td colspan="2">
-							<input type="checkbox" id="remember" name="remember"/>
+							<input type="checkbox" id="connexion_remember" name="connexion_remember"/>
 							<label for="remember">Se souvenir de moi</label></td>
 						</tr>
 						<tr>
