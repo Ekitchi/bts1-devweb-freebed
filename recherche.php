@@ -11,6 +11,7 @@
 	</head>
 
 	<body>
+<<<<<<< HEAD
 		<header>
 			<nav id="menu" name="menu">
 				<ul id="rechercher" name="rechercher">
@@ -60,6 +61,11 @@
 			</nav>
 		</header>
 
+=======
+		<!-- Inclusion du header -->
+		<?php include_once("header.php"); ?>
+				
+>>>>>>> 6a14aa0a3bef7d3798cbd273b47d5a39475a254a
 		<section>
 			<article id="minimap">
 				MINIMAP (Option)
