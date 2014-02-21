@@ -8,33 +8,29 @@ a {
 }
 
 #menu {
-	/*border:  1px solid black;
-	 */
+	/*border:  1px solid black;*/
 	height: 50px;
-	background-color: lightgrey; /*box-shadow:  3px 3px 2px #494949;
-	 */
+	background-color: lightgrey; 
+	/*box-shadow:  3px 3px 2px #494949;*/
 }
 
 #connexion li {
 	text-align: center;
 	line-height: 50px;
 	float: right;
-	display: inline-block; /*border:  1px solid black;
-	 */
+	display: inline-block;
+	 /*border:  1px solid black;*/
 	width: 120px;
 	height: 50px;
 	background-color: lightgrey;
 	overflow: hidden;
-<<<<<<< HEAD
-=======
 	-webkit-transition: background-color 0.3s, width 0.3s, height 0.4s ease 0.15s;
 	-moz-transition: background-color 0.3s, width 0.3s, height 0.4s ease 0.15s;
 	-o-transition: background-color 0.3s, width 0.3s, height 0.4s ease 0.15s;
 	-ms-transition: background-color 0.3s, width 0.3s, height 0.4s ease 0.15s;
 	transition: background-color 0.3s, width 0.3s, height 0.4s ease 0.15s;
-	z-index: 1;
+	z-index: 999;
 	position: relative;
->>>>>>> 43f0caa6a8b6b126a608a7af7163e52fcd6b7699
 }
 
 #login:hover {
@@ -113,9 +109,7 @@ a {
 #allresults {
 	border: 1px solid black;
 	height: 328px;
-<<<<<<< HEAD
 	clear: both;
-<<<<<<< HEAD
 	overflow: hidden;
 	-ms-overflow-x: auto;
 	overflow-x: auto;
@@ -125,16 +119,13 @@ a {
 	border: 1px solid black;
 =======
 	clear:both;
-=======
 	overflow: auto;
 	overflow-y: hidden;
 	white-space:nowrap; 
->>>>>>> 43f0caa6a8b6b126a608a7af7163e52fcd6b7699
 }
 
 #allresults ul li{
 	border:1px solid black;
->>>>>>> ee9343dded1f11401ee2c2ff9c1cefe7c951a629
 	height: 230px;
 	width: 390px;
 	margin-top: 15px;
@@ -173,10 +164,7 @@ a {
 	margin-right: 0px;
 	display: inline-block;
 }
-
-<<<<<<< HEAD
 /* FIN */
-=======
 
 /* CSS pour la page de logement */
 #logementname {
@@ -238,6 +226,7 @@ a {
 	margin-top: 50px;
 	margin-left: 25px;
 	border-radius: 15px;
+	z-index: 1;
 }
 
 #menu_account li {
@@ -261,36 +250,57 @@ a {
 	border: 1px solid black;
 	height: 92%;
 	width:600px; 
-	left: 350px;
+	left: 325px;
 	top: 0;
 	visibility:hidden;
 	opacity:0;
 	transition:1s left,1s width, 0.7s visibility, 1s opacity;
 	position: absolute;
+	z-index: 50;
 	text-align: center;
 	margin-top: 50px;
 	overflow:auto;
 	border-radius: 15px;
 }
 
-#account_resume:target {
-	visibility: visible;
-	opacity:1;
-	width: 77%;
-	transition: 1s left, 1s width, 0.7s visibility, 1s opacity;
-}
-
 #account_profil:target {
+	left: 350px;
 	visibility: visible;
 	opacity:1;
 	width: 77%;
 	transition: 1s left, 1s width, 0.7s visibility, 1s opacity;
 }
+	#profil_img {
+		border: 1px solid black;
+		margin-top: 20px;
+		margin-left: 20px;
+		height: 250px;
+		width: 250px;
+		float: left;
+	}
 
-#account_louer:target {
+	#profil_infos {
+		border: 1px solid black;
+		margin-top: 30px;
+		margin-right: 45px;
+		height: 230px;
+		width: 70%;
+		float: right;
+	}
+
+#account_logements:target {
 	visibility: visible;
 	opacity:1;
 	width: 77%;
+	left: 350px;
+	transition: 1s left, 1s width, 0.7s visibility, 1s opacity;
+}
+
+#account_modifier:target {
+	visibility: visible;
+	opacity:1;
+	width: 77%;
+	left: 350px;
 	transition: 1s left, 1s width, 0.7s visibility, 1s opacity;
 }
 
@@ -298,6 +308,14 @@ a {
 	visibility: visible;
 	opacity:1;
 	width: 77%;
+	left: 350px;
 	transition: 1s left, 1s width, 0.7s visibility, 1s opacity;
 }
->>>>>>> 43f0caa6a8b6b126a608a7af7163e52fcd6b7699
+
+#account_contact:target {
+	visibility: visible;
+	opacity:1;
+	width: 77%;
+	left: 350px;
+	transition: 1s left, 1s width, 0.7s visibility, 1s opacity;
+}
