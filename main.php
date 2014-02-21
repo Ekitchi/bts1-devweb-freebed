@@ -14,6 +14,7 @@
 		<!-- Inclusion du header -->
 		<?php include_once("header.php"); ?>
 
+
 		<section id="firstarticle" name="firstarticle">
 			<article id="slider1" name="slider1">
 				SLIDER1
