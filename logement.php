@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>FreeBed Location</title>
 		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
 		<link rel="stylesheet" type="text/css" href="style.css"/>
 		<script src="jquery-1.10.2.min.js"></script>
 		<script type="text/javascript" src="scripts/prefixfree.min.js"></script>
 		<script type="text/javascript" src="scripts/jquery-2.1.0.js"></script>
 		<meta charset="UTF-8"/>
+		<title>FreeBed Location</title>
 	</head>
 
 	<body>
-<<<<<<< HEAD
 		<header>
 			<nav id="menu" name="menu">
 				<ul id="rechercher" name="rechercher">
@@ -61,54 +60,33 @@
 			</nav>
 		</header>
 
-=======
-		<!-- Inclusion du header -->
-		<?php include_once("header.php"); ?>
-				
->>>>>>> 6a14aa0a3bef7d3798cbd273b47d5a39475a254a
 		<section>
-			<article id="minimap">
-				MINIMAP (Option)
-			</article>
-			<article id="filtre">
-				FILTRE
+			<article id="logementname">
+				LOGEMENT
 			</article>
 		</section>
 
 		<section>
-			<article id="allresults">
-				<ul>
-					<li>
-						IMG
-						<div classe="imginfos">
-							Infos
-						</div>
-					</li>
-					<li>
-						IMG
-						<div classe="imginfos">
-							Infos
-						</div>
-					</li>
-					<li>
-						IMG
-						<div classe="imginfos">
-							Infos
-						</div>
-					</li>
-					<li>
-						IMG
-						<div classe="imginfos">
-							Infos
-						</div>
-					</li>
-					<li>
-						IMG
-						<div classe="imginfos">
-							Infos
-						</div>
-					</li>
-				</ul>
+			<article id="slider">
+				SLIDER
+			</article>
+			<article id="logementinfos">
+				INFOS
+			</article>
+		</section>
+
+		<section>
+			<article id="logementdesc">
+				DESCRIPTION
+			</article>
+			<article id="userinfos">
+				INFOS
+			</article>
+		</section>
+
+		<section>
+			<article id="allview">
+				AVIS
 			</article>
 		</section>
 
