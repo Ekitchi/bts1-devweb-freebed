@@ -1,4 +1,30 @@
 <!DOCTYPE html>
+<!-- Traitements pré-HTML -->
+<?php
+	//  Inclusion du fichier permettant la connexion à la BDD
+	include_once("connexion.php");
+	
+	//  Définition de la requête à exécuter
+	$query = "SELECT * FROM user";
+	//  Envoi de la requête SQL
+	$response = $bdd->query($query);
+	
+	/*  $reponse est un tableau contenant les lignes renvoyées par la requête
+	 *  Pour le gérer on passe le tableau des réponse dans un while et on formatera le résultat
+	 *  sous la forme d'une chaine de caractère correspondant a du code HTML appelée $users
+	 */
+	
+	$users = "";
+	
+	while ($données = $response->fetch()) {
+		//  Ici je formate ma ligne en HTML, ça permet de n'avoir à includer qu'une variable dans le HTML
+		$users = $users."<tr><td>".$données['id']."</td><td>".$données['nom']."</td><td>".$données['prenom']."</td><td></td></tr>";
+	}
+	//  Il faut fermer le traitement avec CloseCursor
+	$response->CloseCursor();
+	
+	
+?>
 <html>
 	<head>
 		<title>FreeBed - Administration</title>
@@ -50,6 +76,8 @@
 							<th>Prénom</th>
 							<th>Actions</th>
 						</tr>
+						<!-- Ici je n'ai plus qu'a afficher ma string toute formattée pour visualiser tous mes users -->
+						<?php echo($users); ?>
 					</table>
 				</article>
 				<footer></footer>

@@ -80,7 +80,7 @@ form .item.items{ height:auto; }
 	.item input.short{ width:90px; }
 	.item input:focus:not([type="checkbox"]), .item textarea:focus{ box-shadow:0 0 4px #00AEEF; border:1px solid #00AEEF; }
 	.item textarea{  }
-	.item select{ float:left; width:220px; padding:2px 0; margin:0; border:1px solid #CCC; text-transform:capitalize; }
+	.item select{ float: left ; height : 25px ; width:220px; padding:2px 0; margin:0; border:1px solid #CCC; text-transform:capitalize; }
 		.item select option{ padding:1px; }
 
     .item > .extra{ float:left; font-size:0.9em; color:#999; line-height:2em; margin-left:13px; }
