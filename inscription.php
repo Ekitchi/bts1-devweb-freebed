@@ -142,14 +142,13 @@
 						</div>
 						<div class="item">
 							<label> <span>Retapez votre mot de passe</span>
-								<input type="password" name="password2" data-validate-linked='password_insc' required='required'>
+								<input type="password" name="password2" data-validate-linked='password_insc' required='required'/>
 							</label>
 						</div>
-
 						<div class="item">
 							<label> <span>Vous êtes...</span>
 								<select class="required" name="dropdown">
-									<option value="">--Séléctionnez--</option>
+									<option value="">--Sélectionnez--</option>
 									<option value="o1">Homme</option>
 									<option value="o2">Femme</option>
 									<option value="o3">Autre</option>
