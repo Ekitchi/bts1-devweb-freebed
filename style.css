@@ -28,6 +28,8 @@ a {
 	-o-transition: background-color 0.3s, width 0.3s, height 0.4s ease 0.15s;
 	-ms-transition: background-color 0.3s, width 0.3s, height 0.4s ease 0.15s;
 	transition: background-color 0.3s, width 0.3s, height 0.4s ease 0.15s;
+	z-index: 1;
+	position: relative;
 }
 
 #login:hover {
@@ -50,6 +52,7 @@ a {
 	display: inline-block;
 }
 
+/* CSS de la page main.php */
 #firstarticle {
 	border: 1px solid black;
 	height: 600px;
@@ -97,7 +100,7 @@ a {
 
 #filtre {
 	border: 1px solid black;
-	float: right;
+	margin-right: 1px;
 	height: 350px;
 	width: 736px;
 }
@@ -106,14 +109,9 @@ a {
 	border: 1px solid black;
 	height: 328px;
 	clear: both;
-	overflow: hidden;
-	-ms-overflow-x: auto;
-	overflow-x: auto;
-}
-
-.imgpreview li {
-	border: 1px solid black;
-	clear:both;
+	overflow: auto;
+	overflow-y: hidden;
+	white-space:nowrap; 
 }
 
 #allresults ul li{
@@ -144,8 +142,8 @@ a {
 	border: 1px solid black;
 	width: 1110px;
 	height: 700px;
-	float: right;
-	overflow: auto;
+	overflow-y: auto;
+	margin-right: 0px;
 }
 
 #allresults3 div {
@@ -172,7 +170,6 @@ a {
 	height: 450px;
 	float: left;
 	margin-left: 60px;
-	margin-top: 0px;
 }
 
 #logementinfos {
@@ -210,6 +207,74 @@ a {
 	margin-left: 60px;
 }
 
-.classfloat {
-	float: none;
+/* CSS de la page myaccount.php */
+#menu_account {
+	border: 1px solid black;
+	float: left;
+	height: 500px;
+	width: 300px;
+	margin-top: 50px;
+	margin-left: 25px;
+	border-radius: 15px;
+}
+
+#menu_account li {
+	list-style-type: none;
+	height: 50px;
+	padding: 20px;
+	width: 85%;
+	overflow: hidden;
+	font-size: 1.3em;
+	border-radius: 15px;
+	background-color: white;
+	transition: 0.7s background-color;
+}
+
+#menu_account li:hover {
+	background-color: grey;
+	transition: 0.7s background-color;
+}
+
+#menu_account li div {
+	border: 1px solid black;
+	height: 92%;
+	width:600px; 
+	left: 350px;
+	top: 0;
+	visibility:hidden;
+	opacity:0;
+	transition:1s left,1s width, 0.7s visibility, 1s opacity;
+	position: absolute;
+	text-align: center;
+	margin-top: 50px;
+	overflow:auto;
+	border-radius: 15px;
+}
+
+#account_resume:target {
+	visibility: visible;
+	opacity:1;
+	width: 77%;
+	transition: 1s left, 1s width, 0.7s visibility, 1s opacity;
+}
+
+#account_profil:target {
+	visibility: visible;
+	opacity:1;
+	width: 77%;
+	transition: 1s left, 1s width, 0.7s visibility, 1s opacity;
+}
+
+#account_louer:target {
+	visibility: visible;
+	opacity:1;
+	width: 77%;
+	transition: 1s left, 1s width, 0.7s visibility, 1s opacity;
+}
+
+#account_historique:target {
+	visibility: visible;
+	opacity:1;
+	width: 77%;
+	transition: 1s left, 1s width, 0.7s visibility, 1s opacity;
 }
