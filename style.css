@@ -142,7 +142,7 @@ a {
 	border: 1px solid black;
 	width: 1110px;
 	height: 700px;
-	overflow: auto;
+	overflow-y: auto;
 	margin-right: 0px;
 }
 
@@ -205,4 +205,69 @@ a {
 	float: left;
 	margin-top: 20px;
 	margin-left: 60px;
+}
+
+/* CSS de la page myaccount.php */
+#menu_account {
+	border: 1px solid black;
+	float: left;
+	height: 500px;
+	width: 300px;
+	margin-top: 50px;
+	margin-left: 25px;
+	border-radius: 15px;
+}
+
+#menu_account li {
+	list-style-type: none;
+	height: 50px;
+	padding: 20px;
+	width: 85%;
+	overflow: hidden;
+	font-size: 1.3em;
+	border-radius: 15px;
+	background-color: white;
+	transition: 0.7s background-color;
+}
+
+#menu_account li:hover {
+	background-color: grey;
+	transition: 0.7s background-color;
+}
+
+#menu_account li div {
+	border: 1px solid black;
+	height: 92%;
+	width:600px; 
+	left: 350px;
+	top: 0;
+	visibility:hidden;
+	opacity:0;
+	transition:1s left,1s width, 0.7s visibility, 1s opacity;
+	position: absolute;
+	text-align: center;
+	margin-top: 50px;
+	overflow:auto;
+	border-radius: 15px;
+}
+
+#account_resume:target {
+	visibility: visible;
+	opacity:1;
+	width: 77%;
+	transition: 1s left, 1s width, 0.7s visibility, 1s opacity;
+}
+
+#account_profil:target {
+	visibility: visible;
+	opacity:1;
+	width: 77%;
+	transition: 1s left, 1s width, 0.7s visibility, 1s opacity;
+}
+
+#account_louer:target {
+	visibility: visible;
+	opacity:1;
+	width: 77%;
+	transition: 1s left, 1s width, 0.7s visibility, 1s opacity;
 }
