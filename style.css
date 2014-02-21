@@ -10,17 +10,17 @@ a {
 #menu {
 	/*border:  1px solid black;*/
 	height: 50px;
-	background-color: lightgrey; 
+	background-color: rgba(211, 211, 211,0.8);
 	/*box-shadow:  3px 3px 2px #494949;*/
 }
 
-#connexion li {
+/*#connexion li {
 	text-align: center;
 	line-height: 50px;
 	float: right;
 	display: inline-block;
 	 /*border:  1px solid black;*/
-	width: 120px;
+	/*width: 120px;
 	height: 50px;
 	background-color: lightgrey;
 	overflow: hidden;
@@ -38,9 +38,47 @@ a {
 	height: 270px;
 	background-color: grey;
 }
-
+*/
 #register:hover {
 	background-color: grey;
+}
+
+#connexion li {
+	text-align: center;
+	line-height: 50px;
+	float: right;
+	display: inline-block;
+	 /*border:  1px solid black;*/
+	width: 265px;
+	height: 50px;
+	background-color: rgba(211, 211, 211,0.8);
+	transition: background-color 0.3s, width 0.3s ease 0.15s;
+	z-index: 999;
+	position: relative;
+}
+
+#login:hover {
+	width: 265px;
+	background-color: grey;
+}
+
+#login div {
+	opacity: 1;
+	width: 265px;
+	height: 0px;
+	transition: 1s opacity, 0.4s background-color, 0.6s width, 0.6s height, 1s visibility;
+	visibility:visible;
+	overflow: hidden;
+	background-color: rgba(211, 211, 211, 0.89);
+}
+
+#login:hover div {
+	opacity: 1;
+	height:220px;
+	width:265px;
+	visibility:visible;
+	transition: 1s opacity, 0.4s background-color, 0.6s width, 0.6s height, 1s visibility;
+	background-color: rgba(128, 128, 128, 0.89);
 }
 
 #rechercher {
@@ -117,7 +155,6 @@ a {
 
 .imgpreview li {
 	border: 1px solid black;
-=======
 	clear:both;
 	overflow: auto;
 	overflow-y: hidden;
@@ -226,7 +263,6 @@ a {
 	margin-top: 50px;
 	margin-left: 25px;
 	border-radius: 15px;
-	z-index: 1;
 }
 
 #menu_account li {
@@ -259,8 +295,8 @@ a {
 	z-index: 50;
 	text-align: center;
 	margin-top: 50px;
-	overflow:auto;
 	border-radius: 15px;
+	overflow:auto;
 }
 
 #account_profil:target {
