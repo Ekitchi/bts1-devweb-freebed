@@ -7,22 +7,26 @@ a {
 	text-decoration: none;
 }
 
-/* CSS pour le header */
 #menu {
+	/*border:  1px solid black;
+	 */
 	height: 50px;
-	background-color: lightgrey; 
-	/*box-shadow:  3px 3px 2px #494949;*/
+	background-color: lightgrey; /*box-shadow:  3px 3px 2px #494949;
+	 */
 }
 
 #connexion li {
 	text-align: center;
 	line-height: 50px;
-	display: inline-block;
+	float: right;
+	display: inline-block; /*border:  1px solid black;
+	 */
 	width: 120px;
 	height: 50px;
-	float: right;
 	background-color: lightgrey;
 	overflow: hidden;
+<<<<<<< HEAD
+=======
 	-webkit-transition: background-color 0.3s, width 0.3s, height 0.4s ease 0.15s;
 	-moz-transition: background-color 0.3s, width 0.3s, height 0.4s ease 0.15s;
 	-o-transition: background-color 0.3s, width 0.3s, height 0.4s ease 0.15s;
@@ -30,6 +34,7 @@ a {
 	transition: background-color 0.3s, width 0.3s, height 0.4s ease 0.15s;
 	z-index: 1;
 	position: relative;
+>>>>>>> 43f0caa6a8b6b126a608a7af7163e52fcd6b7699
 }
 
 #login:hover {
@@ -108,14 +113,28 @@ a {
 #allresults {
 	border: 1px solid black;
 	height: 328px;
+<<<<<<< HEAD
 	clear: both;
+<<<<<<< HEAD
+	overflow: hidden;
+	-ms-overflow-x: auto;
+	overflow-x: auto;
+}
+
+.imgpreview li {
+	border: 1px solid black;
+=======
+	clear:both;
+=======
 	overflow: auto;
 	overflow-y: hidden;
 	white-space:nowrap; 
+>>>>>>> 43f0caa6a8b6b126a608a7af7163e52fcd6b7699
 }
 
 #allresults ul li{
 	border:1px solid black;
+>>>>>>> ee9343dded1f11401ee2c2ff9c1cefe7c951a629
 	height: 230px;
 	width: 390px;
 	margin-top: 15px;
@@ -155,6 +174,9 @@ a {
 	display: inline-block;
 }
 
+<<<<<<< HEAD
+/* FIN */
+=======
 
 /* CSS pour la page de logement */
 #logementname {
@@ -278,3 +300,4 @@ a {
 	width: 77%;
 	transition: 1s left, 1s width, 0.7s visibility, 1s opacity;
 }
+>>>>>>> 43f0caa6a8b6b126a608a7af7163e52fcd6b7699
