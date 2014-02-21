@@ -30,7 +30,6 @@
 					<input type='checkbox' id='alerts' />
 					Disable alerts </label>
 			</div>
-			Forms: validation, styling &amp; semantics
 			<section class='form'>
 				<form action="" method="post" novalidate>
 					<fieldset>
