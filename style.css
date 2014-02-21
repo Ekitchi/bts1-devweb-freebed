@@ -233,28 +233,35 @@ a {
 #menu_account {
 	border: 1px solid black;
 	float: left;
-	height: 500px;
+	height: 450px;
 	width: 300px;
-	margin-top: 50px;
+	margin-top: 100px;
 	margin-left: 25px;
-	border-radius: 15px;
+	border-radius: 0px 25px 25px 0px;
+	background-color: rgba(211, 211, 211, 0.8);
 }
 
 #menu_account li {
 	list-style-type: none;
 	height: 50px;
 	padding: 20px;
-	width: 85%;
+	width: 87%;
 	overflow: hidden;
 	font-size: 1.3em;
-	border-radius: 15px;
 	background-color: rgba(255, 255, 255, 0.8);
-	transition: 0.3s background-color ease 0.15s;
+	transition: 0.5s background-color ease;
+}
+
+#menu_account li:first-child {
+	border-radius: 0px 25px 0px 0px;
+}
+
+#menu_account li:last-child {
+	border-radius: 0px 0px 25px 0px;
 }
 
 #menu_account li:hover {
 	background-color: rgba(128, 128, 128, 0.8);
-	transition: 0.3s background-color ease 0.15s;
 }
 
 #menu_account li div {
@@ -291,12 +298,20 @@ a {
 	}
 
 	#profil_infos {
-		border: 1px solid black;
+		border: 1px dashed black;
 		margin-top: 30px;
-		margin-right: 45px;
+		margin-right: 200px;
+		/*float: right;*/
 		height: 230px;
 		width: 70%;
-		float: right;
+		transition: 1s margin-right;
+	}
+
+	#account_profil:target #profil_infos {
+		width: 70%;
+		height: 230px;
+		margin-right: 40px;
+		transition: 1s margin-right;
 	}
 
 #account_logements:target {
