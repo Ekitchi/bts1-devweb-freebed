@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<!-- Traitements pré-HTML -->
+<?php
+	include_once("connexion.php");
+?>
 <html>
 	<title>FreeBed Location</title>
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
