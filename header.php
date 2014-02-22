@@ -1,12 +1,17 @@
 <header>
 	<nav id="header" name="header">
+		<ul id="header_logo">
+			<li>
+				<img src="http://placehold.it/100x40"/>
+			</li>
+		</ul>
 		<ul id="header_rechercher" name="header_rechercher">
 			<li>
-				<input type="text"  placeholder="Où allez-vous ?" style="height:30px; width:250px; border-radius:4px;">
+				<input type="text"  placeholder="Où allez-vous ?" class="form-control">
 				</input>
 			</li>
 			<li>
-				<input type="button" value="Trouver !" style="height:34px; border-radius:4px;"/>
+				<input type="button" value="Trouver !" class="btn-control"/>
 			</li>
 		</ul>
 
@@ -33,7 +38,7 @@
 						<tr>
 							<td colspan="2">
 							<input type="checkbox" id="connexion_remember" name="connexion_remember"/>
-							<label for="remember">Se souvenir de moi</label></td>
+							<label for="connexion_remember">Se souvenir de moi</label></td>
 						</tr>
 						<tr>
 							<td colspan="2">
