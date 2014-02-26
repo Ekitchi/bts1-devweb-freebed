@@ -16,7 +16,8 @@
 				VALUES ('" . $_POST["nom"] . "', '" . $_POST["prenom"] . "', '" . $_POST["courriel"] . "', '" . $default_password . "');";
 			try {
 				$response = $bdd -> query($query);
-			} catch (Exception $e) {
+			} 
+			catch (Exception $e) {
 				$resultat = "<span class='warning'>" . $e -> getMessage() . "</span>";
 			}
 			$resultat = "<span class='info'>Requête effectuée sans problèmes</span>";
@@ -160,7 +161,7 @@
 								<th>Actions</th>
 								<th>Supprimer</th>
 							</tr>
-							<!-- Ici je n'ai plus qu'a afficher ma string toute formattée pour visualiser tous mes users -->
+							<!-- Ici je n'ai plus qu'a afficher ma string toute formatée pour visualiser tous mes users -->
 							<?php echo($users); ?>
 						</table>
 						<strong>Supprimer les utilisateurs cochés :</strong><input type="submit" value="supprimer" name="HandleUsers" onclick="return confirm('Etes-vous sûr de vouloir effacer ces utilisateurs ? \n Pas de retour arrière possible')"/>
