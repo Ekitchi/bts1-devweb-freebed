@@ -18,15 +18,55 @@
 		<section>
 			<article>
 				<ul id="menu_account">
-					<li>
+					<li id="account_page1">
 						<a href="#account_profil"> <h1> Profil </h1> </a>
 						<div id="account_profil">
 							<article id="profil_img">
-								IMG
+								<img src="http://placehold.it/250x250"/>
 							</article>
-							<article id="profil_infos">
-								INFORMATIONS PERSONNELS
-							</article>
+							<section id="profil_infos">
+								<table>
+									<tr>
+										<th> Nom: </th>
+										<td> PHP </td>
+									</tr>
+									<tr>
+										<th> Prénom: </th>
+										<td> PHP </td>
+									</tr>
+									<tr>
+										<th> E-mail: </th>
+										<td> PHP </td>
+									</tr>
+									<tr>
+										<th> Adresse: </th>
+										<td> PHP </td>
+									</tr>
+								</table>
+								<table>
+									<tr>
+										<th> Date de naissance: </th>
+										<td> PHP </td>
+									</tr>
+									<tr>
+										<th> Numéro de Téléphone: </th>
+										<td> PHP </td>
+									</tr>
+									<tr>
+										<th> Lieu: </th>
+										<td> PHP </td>
+									</tr>
+									<tr>
+										<th> Sexe: </th>
+										<td> PHP </td>
+									</tr>
+								</table>
+								
+								<article id="profil_biographie">
+									<h2> Biographie: </h2>
+									<input type="textarea" class="form-control"style="height: 200px;width:600px;"/>
+								</article>
+							</section>
 						</div>
 					</li>
 					<li>
@@ -38,7 +78,7 @@
 					<li>
 						<a href="#account_modifier"> <h1> Modifier mes logements </h1> </a>
 						<div id="account_modifier">
-							MODOFICATION
+							MODIFICATION
 						</div>
 					</li>
 					<li>
