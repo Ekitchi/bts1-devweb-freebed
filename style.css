@@ -65,6 +65,7 @@ a {
 	color: rgba(247, 247, 247, 1)
 }
 	#header_login table a {color: rgba(219, 219, 219, 1)}
+	#header_login table a:hover {font-style: normal;}
 
 #header_rechercher {
 	margin-left: 50px;
@@ -333,7 +334,6 @@ a {
 	z-index: 50;
 	margin-top: 50px;
 	border-radius: 15px;
-	overflow:auto;
 }
 
 #account_profil:target {
@@ -360,36 +360,26 @@ a {
 		height: 230px;
 		width: 70%;
 	}
-	
-		/*#profil_infos1 {
-			border: 1px solid #CCCCCC;
-			float: left;
-			margin-top: 33px;
-			margin-left: 20px;
-		}*/
 		
-		/*#profil_infos1 tr td,
-		#profil_infos1 tr th {
-			padding: 15px;
-		}*/
+		#profil_img img {margin-bottom:50px;}
 		
 		#profil_infos table {
 			border: 1px solid #CCCCCC;
 			float: left;
 			margin-top: 10px;
-			margin-left: 30px;
+			margin-left: 15px;
 		}
 		
 		#profil_infos table tr td, th{
 			padding: 15px;
 		}
 		
-	#profil_biographie {
+	#profil_avis {
 		border: 1px dashed black;
-		height: 270px;
-		width: 600px;
+		height: 280%;
+		width: 40%;
 		float: left;
-		margin-top: 100px;
+		margin-left: 50px;
 	}
 		
 		#profil_biographie h2 {

@@ -23,6 +23,8 @@
 						<div id="account_profil">
 							<article id="profil_img">
 								<img src="http://placehold.it/250x250"/>
+									<h2> Biographie: <input type='button' class="btn" value="Modifier" style="height:30px; width:80px;"/> </h2>
+									<textarea class="form-control" rows="20" cols="85"> </textarea>
 							</article>
 							<section id="profil_infos">
 								<table>
@@ -62,9 +64,8 @@
 									</tr>
 								</table>
 								
-								<article id="profil_biographie">
-									<h2> Biographie: </h2>
-									<input type="textarea" class="form-control"style="height: 200px;width:600px;"/>
+								<article id="profil_avis">
+									AVIS
 								</article>
 							</section>
 						</div>
