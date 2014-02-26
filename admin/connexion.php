@@ -5,4 +5,6 @@ try {
 catch (Exception $e ) {
 	die('Erreur: '.$e->getMessage());
 }
+
+$default_password = "freebed";
 ?>

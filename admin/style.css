@@ -21,7 +21,7 @@ menu li.deselected {
 section {
 }
 
-h1, h2, h3, li, th, td, a {
+h1, h2, h3, li, th, td, a, label, strong, p {
 	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;	
 }
 
@@ -31,5 +31,35 @@ h1, h2, h3, li, th, td, a {
 
 #global_header h1 {
 	font-size: 5em;
-	padding-left: 20px;
+	padding-left: 25px;
+}
+
+table, th, td {
+	border: 1px solid black;
+}
+
+table {
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+th,td {
+	padding: 10px;
+	border-collapse: collapse;
+}
+
+th {
+	background-color: #888888;
+	font-size: 1.1em;
+}
+
+th:first-child {
+	border-top-left-radius: 10px;
+}
+
+tr:hover {
+	background: #CCCCCC;
+}
+th:last-child {
+	border-top-right-radius: 10px;	
 }
