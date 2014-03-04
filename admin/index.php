@@ -1,8 +1,17 @@
-<!DOCTYPE html>
 <!-- Traitements pré-HTML -->
 <?php
+	include_once ("../cl_User.php");
+	session_start();
 	//  Inclusion du fichier permettant la connexion à la BDD
 	include_once ("connexion.php");
+	include_once ("../login.php");
+	
+	if (!isset($_SESSION["user"])){
+		header("Location:../erreur_login.php");
+	}
+	elseif ($_SESSION["user"]->getType() != 0) {
+		header("Location:../erreur_login.php");
+	}
 	
 	$resultat = "";
 	// Sert à stocker le résultat des requêtes pour l'afficher dans le Tableau de bord
@@ -101,6 +110,7 @@
 ?>
 
 <!-- Début du HTML proprement dit -->
+<!DOCTYPE html>
 <html>
 	<head>
 		<title>FreeBed - Administration</title>
