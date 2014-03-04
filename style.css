@@ -58,14 +58,14 @@ a {
 	background-color: rgba(128, 128, 128, 0.85);
 }
 
-#header_login div table {
+/*#header_login div table {
 	text-align: left;
 	margin-left: 15px;
 	font-style: italic;
 	color: rgba(247, 247, 247, 1)
-}
-	#header_login table a {color: rgba(219, 219, 219, 1)}
-	#header_login table a:hover {font-style: normal;}
+}*/
+	#header_login table a {color: rgba(219, 219, 219, 1);}
+	#header_login table a:hover {font-style:italic;}
 
 #header_rechercher {
 	margin-left: 50px;
@@ -115,11 +115,25 @@ a {
 	border-color: grey;
 }
 
+.btn:active {
+	background-color: rgba(127, 127, 127, 1);
+}
+
 	.btn-header {
 		margin-left: 10px;
 		height: 33px;
 		width: 70px;
 	}
+	
+.btn-header-connexion {
+	background-color: rgba(255, 255, 255, 0.8);
+	border: 1px solid rgba(0, 0, 0, 0);
+	border-color: #CCCCCC;
+	border-radius: 4px;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+}
+.btn-header-connexion:hover {border-color: white;}
+	
 
 /* CSS de la page main.php */
 #firstarticle {
@@ -324,7 +338,7 @@ a {
 
 #menu_account li div {
 	height: 92%;
-	width:600px; 
+	/*width:600px;*/ 
 	left: 315px;
 	top: 0;
 	visibility:hidden;
@@ -340,7 +354,7 @@ a {
 	left: 340px;
 	visibility: visible;
 	opacity:1;
-	width: 77%;
+	/*width: 600px;*/
 	transition: 1s left, 1s width, 0.7s visibility, 1s opacity;
 }
 	#profil_img {
@@ -353,38 +367,44 @@ a {
 	}
 
 	#profil_infos {
-		/*border: 1px dashed black;*/
-		margin-top: 30px;
+		margin-top: 20px;
 		margin-right: 40px;
-		margin-left: 280px;
-		height: 230px;
-		width: 70%;
+		margin-left: 10px;
+		height: 250px;
+		width: 38.5%;
+		float:left;
 	}
 		
-		#profil_img img {margin-bottom:50px;}
+		/*#profil_img img {margin-bottom:50px;}*/
 		
 		#profil_infos table {
 			border: 1px solid #CCCCCC;
-			float: left;
 			margin-top: 10px;
 			margin-left: 15px;
 		}
 		
 		#profil_infos table tr td, th{
 			padding: 15px;
+			width: 150px;
 		}
 		
 	#profil_avis {
 		border: 1px dashed black;
-		height: 280%;
+		height: 91.5%;
 		width: 40%;
-		float: left;
-		margin-left: 50px;
+		margin-top: 20px;
+		margin-left: 750px;
+		position: absolute;
 	}
 		
-		#profil_biographie h2 {
-			float: left;
-		}
+	#profil_biographie {
+		clear:both;
+		margin-top: 320px;
+		margin-left: 20px;
+		position: absolute;
+	}
+		
+		/*#profil_biographie h2 {float:left;}*/
 		
 #account_logements:target {
 	visibility: visible;

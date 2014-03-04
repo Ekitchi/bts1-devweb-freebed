@@ -23,11 +23,35 @@
 						<div id="account_profil">
 							<article id="profil_img">
 								<img src="http://placehold.it/250x250"/>
-									<h2> Biographie: <input type='button' class="btn" value="Modifier" style="height:30px; width:80px;"/> </h2>
-									<textarea class="form-control" rows="20" cols="85"> </textarea>
 							</article>
-							<section id="profil_infos">
+							<article id="profil_infos">
 								<table>
+									<tr>
+										<th> Nom: </th>
+										<td> PHP </td>
+										<th> Prénom: </th>
+										<td> PHP </td>
+									</tr>
+									<tr>
+										<th> E-mail: </th>
+										<td> PHP </td>
+										<th> Adresse: </th>
+										<td> PHP </td>
+									</tr>
+									<tr>
+										<th> Résidence: </th>
+										<td> PHP </td>
+										<th> Sexe: </th>
+										<td> PHP </td>
+									</tr>
+									<tr>
+										<th> Date de naissance: </th>
+										<td> PHP </td>
+										<th> Numéro de téléphone: </th>
+										<td> PHP </td>
+									</tr>
+								</table>
+								<!--<table>
 									<tr>
 										<th> Nom: </th>
 										<td> PHP </td>
@@ -62,12 +86,15 @@
 										<th> Sexe: </th>
 										<td> PHP </td>
 									</tr>
-								</table>
-								
-								<article id="profil_avis">
+								</table>-->
+							</article>
+							<article id="profil_avis">
 									AVIS
 								</article>
-							</section>
+							<article id="profil_biographie">
+								<h2> Biographie: <input type='button' class="btn" value="Modifier" style="height:30px; width:80px;"/> </h2>
+								<textarea class="form-control" rows="20" cols="85"> </textarea>
+							</article>
 						</div>
 					</li>
 					<li>
