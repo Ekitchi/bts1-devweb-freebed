@@ -12,7 +12,7 @@
 	<body>
 		<!-- Inclusion du header -->
 		<?php
-			include_once ("header.php");
+		include_once ("header.php");
 		?>
 
 		<section>
@@ -21,10 +21,10 @@
 					<li id="account_page1">
 						<a href="#account_profil"> <h1> Profil </h1> </a>
 						<div id="account_profil">
-							<article id="profil_img">
+							<section id="profil_img">
 								<img src="http://placehold.it/250x250"/>
-							</article>
-							<article id="profil_infos">
+							</section>
+							<section id="profil_infos">
 								<table>
 									<tr>
 										<th> Nom: </th>
@@ -51,50 +51,52 @@
 										<td> PHP </td>
 									</tr>
 								</table>
-								<!--<table>
-									<tr>
-										<th> Nom: </th>
-										<td> PHP </td>
-									</tr>
-									<tr>
-										<th> Prénom: </th>
-										<td> PHP </td>
-									</tr>
-									<tr>
-										<th> E-mail: </th>
-										<td> PHP </td>
-									</tr>
-									<tr>
-										<th> Adresse: </th>
-										<td> PHP </td>
-									</tr>
-								</table>
-								<table>
-									<tr>
-										<th> Date de naissance: </th>
-										<td> PHP </td>
-									</tr>
-									<tr>
-										<th> Numéro de Téléphone: </th>
-										<td> PHP </td>
-									</tr>
-									<tr>
-										<th> Lieu: </th>
-										<td> PHP </td>
-									</tr>
-									<tr>
-										<th> Sexe: </th>
-										<td> PHP </td>
-									</tr>
-								</table>-->
-							</article>
-							<article id="profil_avis">
-									AVIS
+							</section>
+							
+							<section id="profil_avis">
+								<article class="avis_user">
+									<table border="1">
+										<tr>
+											<th> <a href="#account_profil"> User </a> </th>
+										</tr>
+										<tr>
+											<td> AVIS </td>
+										</tr>
+									</table>
+									<table border="1">
+										<tr>
+											<th> <a href="#account_profil"> User </a> </th>
+										</tr>
+										<tr>
+											<td> AVIS </td>
+										</tr>
+									</table>
+									<table border="1">
+										<tr>
+											<th> <a href="#account_profil"> User </a> </th>
+										</tr>
+										<tr>
+											<td> AVIS </td>
+										</tr>
+									</table>
+									<table border="1">
+										<tr>
+											<th> <a href="#account_profil"> User </a> </th>
+										</tr>
+										<tr>
+											<td> AVIS </td>
+										</tr>
+									</table>
 								</article>
-							<article id="profil_biographie">
-								<h2> Biographie: <input type='button' class="btn" value="Modifier" style="height:30px; width:80px;"/> </h2>
-								<textarea class="form-control" rows="20" cols="85"> </textarea>
-							</article>
+							</section>
+							
+							<section id="profil_biographie">
+								<h2> Biographie:
+								<input type='button' class="btn" value="Modifier" style="height:30px; width:80px;"/>
+								</h2>
+								<!--<textarea class="form-control" rows="20" cols="85"> </textarea>-->
+								<article style='border:1px dashed black; height: 309px; width:700px;'></article>
+							</section>
 						</div>
 					</li>
 					<li>
