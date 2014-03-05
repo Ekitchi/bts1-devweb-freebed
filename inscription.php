@@ -35,7 +35,7 @@
 					Disable alerts </label>
 			</div>
 			<section class='form'>
-				<form action="" method="post" novalidate>
+				<form action="" method="post" action=inscriform.php>
 					<fieldset>
 						<div class="item">
 							<label> <span>Nom</span>
@@ -205,7 +205,7 @@
 				return false;
 			});
 
-			/* FOR DEMO ONLY */
+			
 			$('#vfields').change(function() {
 				$('form').toggleClass('mode2');
 			}).prop('checked', false);
