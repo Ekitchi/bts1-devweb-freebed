@@ -7,11 +7,11 @@
 		$nom = $_POST["nom"];
 		$prenom = $_POST["prenom"];
 		$email = $_POST["email"];
-		$password = $_POST["password"];
+		$password = $_POST["password_insc"];
 		$oqp = $_POST["occupation"];
 		$tel = $_POST["telephone"];
 
-	if (1=1) {
+	if (1==1) {
 		$query ="INSERT INTO user VALUES('', "
 			."'".$nom."',"
 			."'".$prenom."',"
@@ -23,5 +23,4 @@ echo $query;
 		$res = mysqli_query($connexion, $query) or die(mysqli_error($connexion));
 	}
 }
-		include("main.php");
 ?>
