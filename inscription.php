@@ -35,11 +35,11 @@
 					Disable alerts </label>
 			</div>
 			<section class='form'>
-				<form action="" method="post" novalidate>
+				<form action="" method="post" action="inscriform.php">
 					<fieldset>
 						<div class="item">
 							<label> <span>Nom</span>
-								<input data-validate-length-range="2" data-validate-words="1" name="nom" placeholder="Votre nom" required="required" type="text" />
+								<input data-validate-length-range="2" data-validate-words="1" name="nom" placeholder="Votre nom" required="required" type="text"  value="" />
 							</label>
 							<div class='tooltip help'>
 								<span>?</span>
@@ -53,7 +53,7 @@
 						</div>
 						<div class="item">
 							<label> <span>Prénom</span>
-								<input data-validate-length-range="2" data-validate-words="1" name="prenom" placeholder="Votre prénom" required="required" type="text" />
+								<input data-validate-length-range="2" data-validate-words="1" name="prenom" placeholder="Votre prénom" required="required" type="text"  value="" />
 							</label>
 							<div class='tooltip help'>
 								<span>?</span>
@@ -67,7 +67,7 @@
 						</div>
 						<div class="item">
 							<label> <span>Occupation</span>
-								<input class='optional' name="occupation" data-validate-length-range="5,20" type="text" />
+								<input class='optional' name="occupation" data-validate-length-range="5,20" type="text"  value="" />
 							</label>
 							<div class='tooltip help'>
 								<span>?</span>
@@ -86,7 +86,7 @@
 						</div>
 						<div class="item">
 							<label> <span>email</span>
-								<input name="email" class='email' required="required" type="email" />
+								<input name="email" class='email' required="required" type="email"  value="" />
 							</label>
 							<div class='tooltip help'>
 								<span>?</span>
@@ -104,12 +104,12 @@
 						</div>
 						<div class="item">
 							<label> <span>Confirmez votre e-mail</span>
-								<input type="email" class='email' name="confirm_email" data-validate-linked='email' required='required'>
+								<input type="email" class='email' name="confirm_email" data-validate-linked='email' required='required' value="" />
 							</label>
 						</div>
 						<div class="item">
 							<label> <span>Numéro de téléphone</span>
-								<input type="number" class='number' name="number" data-validate-length-range="10,60" required='required'>
+								<input type="number" class='number' name="number" data-validate-length-range="10,60" required='required' value="" />
 							</label>
 							<div class='tooltip help'>
 								<span>?</span>
@@ -125,12 +125,12 @@
 						</div>
 						<div class="item">
 							<label> <span>Date de naissance</span>
-								<input class='date' type="date" name="date" required='required'>
+								<input class='date' type="date" name="date" required='required' value="" >
 							</label>
 						</div>
 						<div class="item">
 							<label> <span>Mot de passe</span>
-								<input type="password" name="password_insc" data-validate-length="6,8" required='required'>
+								<input type="password" name="password_insc" data-validate-length="6,8" required='required' value="" />
 							</label>
 							<div class='tooltip help'>
 								<span>?</span>
@@ -146,7 +146,7 @@
 						</div>
 						<div class="item">
 							<label> <span>Retapez votre mot de passe</span>
-								<input type="password" name="password2" data-validate-linked='password_insc' required='required'/>
+								<input type="password" name="password2" data-validate-linked='password_insc' required='required' value="" />
 							</label>
 						</div>
 						<div class="item">
@@ -165,7 +165,8 @@
 						</div>
 
 						<div class="item">
-							<label> <span>Informations complémentaires</span> 								<textarea name='message'></textarea> </label>
+							<label> <span>Informations complémentaires</span>
+								<textarea name='message'></textarea> </label>
 							<span class='extra'>(optional)</span>
 						</div>
 					</fieldset>
@@ -205,7 +206,7 @@
 				return false;
 			});
 
-			/* FOR DEMO ONLY */
+			
 			$('#vfields').change(function() {
 				$('form').toggleClass('mode2');
 			}).prop('checked', false);
