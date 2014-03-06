@@ -1,3 +1,6 @@
+<?php
+
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -13,6 +16,10 @@
 		<!-- Inclusion du header -->
 		<?php
 			include_once ("header.php");
+			
+			$reponse = $bdd->query('SELECT * FROM user');
+			while ($donnees = $reponse->fetch())
+			{
 		?>
 
 		<section>
@@ -28,13 +35,13 @@
 								<table>
 									<tr>
 										<th> Nom: </th>
-										<td> PHP </td>
+										<td> <?php echo $donnees ['nom'] ?> </td>
 										<th> Prénom: </th>
-										<td> PHP </td>
+										<td> <?php echo $donnees ['prenom'] ?> </td>
 									</tr>
 									<tr>
 										<th> E-mail: </th>
-										<td> PHP </td>
+										<td> <?php echo $donnees ['email'] ?> </td>
 										<th> Adresse: </th>
 										<td> PHP </td>
 									</tr>
@@ -48,7 +55,7 @@
 										<th> Date de naissance: </th>
 										<td> PHP </td>
 										<th> Numéro de téléphone: </th>
-										<td> PHP </td>
+										<td> <?php echo $donnees ['tel'] ?> </td>
 									</tr>
 								</table>
 								<!--<table>
@@ -124,6 +131,11 @@
 				</ul>
 			</article>
 		</section>
-
+		<?php
+			}
+			
+			$reponse->closeCursor(); 
+			
+			?>
 	</body>
 </html>
