@@ -30,7 +30,7 @@ $div_hdr_guest = "
 							</tr>
 							<tr>
 								<td colspan='2'>
-								<input type='submit' value='Se connecter'/>
+								<input type='submit' value='Se connecter' class='btn-header-connexion'/>
 								</td>
 							</tr>
 						</table>
