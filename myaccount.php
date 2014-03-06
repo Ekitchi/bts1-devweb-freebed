@@ -1,3 +1,7 @@
+<!-- traitement pré-HTML -->
+<?php
+	include_once ("includes.php");
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -28,13 +32,13 @@
 								<table>
 									<tr>
 										<th> Nom: </th>
-										<td> PHP </td>
+										<td> <?php echo $_SESSION["user"]->getNom(); ?> </td>
 										<th> Prénom: </th>
-										<td> PHP </td>
+										<td> <?php echo $_SESSION["user"]->getPrenom(); ?> </td>
 									</tr>
 									<tr>
 										<th> E-mail: </th>
-										<td> PHP </td>
+										<td> <?php echo $_SESSION["user"]->getEmail(); ?> </td>
 										<th> Adresse: </th>
 										<td> PHP </td>
 									</tr>
@@ -48,7 +52,7 @@
 										<th> Date de naissance: </th>
 										<td> PHP </td>
 										<th> Numéro de téléphone: </th>
-										<td> PHP </td>
+										<td> <?php echo $_SESSION["user"]->getTel(); ?> </td>
 									</tr>
 								</table>
 							</section>
@@ -126,6 +130,6 @@
 				</ul>
 			</article>
 		</section>
-
+		
 	</body>
 </html>
