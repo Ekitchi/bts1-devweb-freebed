@@ -1,8 +1,8 @@
-<!DOCTYPE html>
 <!-- Traitements pré-HTML -->
 <?php
-	include_once("connexion.php");
+	include_once ("includes.php");
 ?>
+<!DOCTYPE html>
 <html>
 	<head>
 		<title>FreeBed Location</title>
