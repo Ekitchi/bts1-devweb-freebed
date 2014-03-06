@@ -32,32 +32,32 @@
 								<table>
 									<tr>
 										<th> Nom: </th>
-										<td> <?php echo $_SESSION["user"]->getNom(); ?> </td>
+										<td> <input type="text" style="width:100%;" class="form-control" placeholder="<?php echo $_SESSION["user"]->getNom(); ?>"/> </td>
 										<th> Prénom: </th>
-										<td> <?php echo $_SESSION["user"]->getPrenom(); ?> </td>
+										<td> <input type="text" style="width:100%;" class="form-control" placeholder="<?php echo $_SESSION["user"]->getPrenom(); ?>"/> </td>
 									</tr>
 									<tr>
 										<th> E-mail: </th>
-										<td> <?php echo $_SESSION["user"]->getEmail(); ?> </td>
+										<td> <input type="email" style="width:100%;" class="form-control" placeholder="<?php echo $_SESSION["user"]->getEmail(); ?>"/> </td>
 										<th> Adresse: </th>
-										<td> PHP </td>
+										<td> <input type="text" style="width:100%;" class="form-control" placeholder="PHP"/> </td>
 									</tr>
 									<tr>
 										<th> Résidence: </th>
-										<td> PHP </td>
+										<td> <input type="text" style="width:100%;" class="form-control" placeholder="PHP"/> </td>
 										<th> Sexe: </th>
-										<td> PHP </td>
+										<td> <input type="text" style="width:100%;" class="form-control" placeholder="PHP"/> </td>
 									</tr>
 									<tr>
 										<th> Date de naissance: </th>
-										<td> PHP </td>
+										<td> <input type="date" style="width:100%;" class="form-control" placeholder="PHP"/> </td>
 										<th> Numéro de téléphone: </th>
-										<td> <?php echo $_SESSION["user"]->getTel(); ?> </td>
+										<td> <input type="tel" style="width:100%;" class="form-control" placeholder="<?php echo $_SESSION["user"]->getTel(); ?>"/> </td>
 									</tr>
 								</table>
 							</section>
 							
-							<section id="profil_avis">
+							<!--<section id="profil_avis">
 								<article class="avis_user">
 									<table border="1">
 										<tr>
@@ -92,7 +92,7 @@
 										</tr>
 									</table>
 								</article>
-							</section>
+							</section> -->
 							
 							<section id="profil_biographie">
 								<h2> Biographie:

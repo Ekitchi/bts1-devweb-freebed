@@ -141,7 +141,7 @@ $div_hdr_admin= "
 		</ul>
 		<ul id="header_rechercher" name="header_rechercher">
 			<li>
-				<input type="text"  placeholder="Où allez-vous ?" class="form-control form-header">
+				<input type="search"  placeholder="Où allez-vous ?" class="form-control form-header">
 				</input>
 			</li>
 			<li>
