@@ -1,8 +1,22 @@
-<!DOCTYPE html>
 <!-- Traitements pré-HTML -->
 <?php
-	include_once("connexion.php");
+include ("includes.php");
+
+if (isset($_POST["email"]) && isset($_POST["nom"]) && isset($_POST["prenom"])) {
+	$nom = $_POST["nom"];
+	$prenom = $_POST["prenom"];
+	$email = $_POST["email"];
+	$password = $_POST["password_insc"];
+	$oqp = $_POST["occupation"];
+	$tel = $_POST["number"];
+
+	$query = "INSERT INTO `freebed`.`user` VALUES (NULL, '1', '".$nom."', '".$prenom."', '".$email."', '".$password."', '".$oqp."', '".$tel."');";
+	$res = $bdd -> query($query);
+	$inscri = TRUE;
+}
 ?>
+
+<!DOCTYPE html>
 <html>
 	<head>
 		<title>FreeBed Location</title>
@@ -23,8 +37,10 @@
 
 	<body>
 		<!-- Inclusion du header -->
-		<?php include_once ("header.php"); ?>
-		
+		<?php
+			include_once ("header.php");
+		?>
+
 		<div id='wrap'>
 			<div class='options'>
 				<label>
@@ -35,7 +51,11 @@
 					Disable alerts </label>
 			</div>
 			<section class='form'>
-				<form action="" method="post" action="inscriform.php">
+				<?php
+				if($inscri)
+					echo("<h1>Votre inscription s'est bien réalisée.</h1>");
+				?>
+				<form method="post" action="inscription.php">
 					<fieldset>
 						<div class="item">
 							<label> <span>Nom</span>
@@ -165,8 +185,7 @@
 						</div>
 
 						<div class="item">
-							<label> <span>Informations complémentaires</span>
-								<textarea name='message'></textarea> </label>
+							<label> <span>Informations complémentaires</span> 								<textarea name='message'></textarea> </label>
 							<span class='extra'>(optional)</span>
 						</div>
 					</fieldset>
@@ -206,7 +225,6 @@
 				return false;
 			});
 
-			
 			$('#vfields').change(function() {
 				$('form').toggleClass('mode2');
 			}).prop('checked', false);
