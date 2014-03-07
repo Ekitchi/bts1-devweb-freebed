@@ -12,13 +12,13 @@ $div_hdr_guest = "
 					<form method='post' action='main.php'>
 						<table>
 							<tr>
-								<td><label for='connexion_username'> Nom d'utilisateur: </label></td>
+								<td><label for='connexion_username'> Courriel : </label></td>
 								<td>
 								<input type='text' placeholder='Nom de compte' id='connexion_username' name='connexion_username' class='form-control'/>
 								</td>
 							</tr>
 							<tr>
-								<td><label for='connexion_password'> Mot de passe: </label></td>
+								<td><label for='connexion_password'> Mot de passe : </label></td>
 								<td>
 								<input type='password' placeholder='Mot de passe' id='connexion_password' name='connexion_password' class='form-control'/>
 								</td>
