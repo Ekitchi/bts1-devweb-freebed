@@ -5,13 +5,15 @@
 	class User {
 		private $email, $password;
 		private $occupation, $nom, $prenom, $tel;
+		private $date_naissance, $adresse, $sexe, $avatar;
 		
 		// Constructeur de l'objet User	
 		public function __construct($mail, $pwd) {
 			global $bdd;
 			$this->email = $mail;
 			$this->password = $pwd;
-			$query = "SELECT * FROM user WHERE email = '".$this->email."' AND password = '".$this->password."';";
+			$query = "SELECT nom, prenom, oqp, tel, date_de_naissance AS date, adresse, sexe, avatar
+						FROM user WHERE email = '".$this->email."' AND password = '".$this->password."';";
 			$response = $bdd->query($query);
 			$donnees = $response->fetch();
 			if ($donnees != NULL) {
@@ -19,12 +21,15 @@
 				$this->prenom = $donnees["prenom"];
 				$this->occupation = $donnees["oqp"];
 				$this->tel = $donnees["tel"];
-			}
-			else {
-				$this->nom = "Va mourrir";
-				$this->prenom = "Va mourrir";
-				$this->occupation = "Va mourrir";
-				$this->tel = "Va mourrir";
+				$this->date_naissance = $donnees["date"];
+				$this->adresse = $donnees["adresse"];
+				if($donnees["sexe"] == 0)
+					$this->sexe = "Non renseigné";
+				if($donnees["sexe"] == 1)
+					$this->sexe = "Homme";
+				if($donnees["sexe"] == 2)
+					$this->sexe = "Femme";
+				$this->avatar = $donnees["avatar"];
 			}
 			$response->CloseCursor();
 		}
@@ -75,6 +80,18 @@
 		}
 		public function getEmail() {
 			return $this->email;
+		}
+		public function getDateNaissance() {
+			return $this->date_naissance;
+		}
+		public function getAdresse() {
+			return $this->adresse;
+		}
+		public function getSexe() {
+			return $this->sexe;
+		}
+		public function getAvatar() {
+			return $this->avatar;
 		}
 	}
 ?>
