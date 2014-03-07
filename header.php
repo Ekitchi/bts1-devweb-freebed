@@ -129,9 +129,6 @@ $div_hdr_admin= "
 ?>
 
 
-
-
-
 <header>
 	<nav id="header" name="header">
 		<ul id="header_logo">

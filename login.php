@@ -2,7 +2,6 @@
 	function logIn($mail, $pwd)
 	{
 		$user = new User($mail, $pwd);
-		echo $user->getType();
 		echo $user->getNom();
 		if ($user->getType() != 999)
 			$_SESSION["user"] = $user;
