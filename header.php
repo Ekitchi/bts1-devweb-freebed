@@ -145,16 +145,17 @@ $div_hdr_admin= "
 				<a href="main.php"> <img src="http://placehold.it/100x40"/> </a>
 			</li>
 		</ul>
-		<ul id="header_rechercher" name="header_rechercher">
+		<form action="recherche.php" method="post">
+			<ul id="header_rechercher" name="header_rechercher">
 			<li>
-				<input id="search_box" type="search"  placeholder="Où allez-vous ?" class="form-control form-header" >
-				</input>
+				<input id="search_box" name="adresse" type="search"  placeholder="Où allez-vous ?" class="form-control form-header" />
 			</li>
 			<li>
-				<input type="button" value="Trouver !" class="btn btn-header"/>
+				<button type="submit" name="trouver" class="btn btn-header"/>Trouver !</button>
 			</li>
-		</ul>
-
+			</ul>
+		</form>
+		
 		<!-- Ici on a plus qu'à poper $div_hdr qui contien déjà la bonne div-->
 		<?php echo($div_hdr); ?>
 		
