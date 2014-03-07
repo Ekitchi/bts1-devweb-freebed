@@ -12,8 +12,8 @@
 			$this->password = $pwd;
 			$query = "SELECT * FROM user WHERE email = '".$this->email."' AND password = '".$this->password."';";
 			$response = $bdd->query($query);
-			if ($response->fetch() != NULL) {
-				$donnees = $response->fetch();
+			$donnees = $response->fetch();
+			if ($donnees != NULL) {
 				$this->nom = $donnees["nom"];
 				$this->prenom = $donnees["prenom"];
 				$this->occupation = $donnees["oqp"];
