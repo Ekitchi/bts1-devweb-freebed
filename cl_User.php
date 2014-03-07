@@ -5,7 +5,8 @@
 	class User {
 		private $email, $password;
 		private $occupation, $nom, $prenom, $tel;
-			
+		
+		// Constructeur de l'objet User	
 		public function __construct($mail, $pwd) {
 			global $bdd;
 			$this->email = $mail;
@@ -28,8 +29,8 @@
 			$response->CloseCursor();
 		}
 		
-		public function getType($value='')
-		{
+		//  Accesseurs
+		public function getType() {
 			global $bdd;
 			$type = 999;  // Type par défaut d'un utilisateur non loggué
 			
@@ -41,6 +42,20 @@
 			$response->CloseCursor();
 			
 			return intval($type);
+		}
+		
+		public function getID() {
+			global $bdd;
+			$id = 999;  // Type par défaut d'un utilisateur non loggué
+			
+			$query = "SELECT id FROM user WHERE email = '".$this->email."' AND password = '".$this->password."';";
+			$response = $bdd->query($query);
+			$donnees = $response->fetch();
+			if($donnees)
+				$id = $donnees["id"];
+			$response->CloseCursor();
+			
+			return intval($id);
 		}
 		
 		public function getNom() {
