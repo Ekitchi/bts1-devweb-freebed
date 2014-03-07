@@ -41,17 +41,17 @@
 										<th> E-mail: </th>
 										<td> <input type="email" style="width:100%;" class="form-control" placeholder="<?php echo $_SESSION["user"]->getEmail(); ?>"/> </td>
 										<th> Adresse: </th>
-										<td> <input type="text" style="width:100%;" class="form-control" placeholder="PHP"/> </td>
+										<td> <input type="text" style="width:100%;" class="form-control" placeholder="<?php echo $_SESSION["user"]->getAdresse(); ?>"/> </td>
 									</tr>
 									<tr>
-										<th> Résidence: </th>
-										<td> <input type="text" style="width:100%;" class="form-control" placeholder="PHP"/> </td>
+										<th> Occupation: </th>
+										<td> <input type="text" style="width:100%;" class="form-control" placeholder="<?php echo $_SESSION["user"]->getOccupation(); ?>"/> </td>
 										<th> Sexe: </th>
-										<td> <input type="text" style="width:100%;" class="form-control" placeholder="PHP"/> </td>
+										<td> <input type="text" style="width:100%;" class="form-control" placeholder="<?php echo $_SESSION["user"]->getSexe(); ?>"/> </td>
 									</tr>
 									<tr>
 										<th> Date de naissance: </th>
-										<td> <input type="date" style="width:100%;" class="form-control" placeholder="PHP"/> </td>
+										<td> <input type="date" style="width:100%;" class="form-control" placeholder="<?php echo $_SESSION["user"]->getDate(); ?>"/> </td>
 										<th> Numéro de téléphone: </th>
 										<td> <input type="tel" style="width:100%;" class="form-control" placeholder="<?php echo $_SESSION["user"]->getTel(); ?>"/> </td>
 									</tr>

@@ -190,10 +190,11 @@ a {
 }
 
 #filtre {
-	border: 1px solid black;
+	margin-top:50px;
+	float:right;
 	margin-right: 1px;
-	height: 350px;
-	width: 736px;
+	height: 212px;
+	width: 568px;
 }
 
 #allresults {
