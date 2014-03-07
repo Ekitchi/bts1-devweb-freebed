@@ -114,13 +114,20 @@ a {
 }
 
 .btn:active {
-	background-color: rgba(127, 127, 127, 1);
+	background-color: rgba(127, 127, 127, 0.65);
 }
 
 	.btn-header {
 		margin-left: 10px;
 		height: 33px;
 		width: 70px;
+	}
+	
+	.btn-profil {
+		float:right;
+		margin:10px; 
+		height:30px; 
+		width:100px;
 	}
 	
 .btn-header-connexion {
@@ -356,24 +363,22 @@ a {
 	transition: 1s left, 1s width, 0.7s visibility, 1s opacity;
 }
 	#profil_img {
-		border: 1px solid black;
 		margin-top: 20px;
 		margin-left: 20px;
-		height: 250px;
 		width: 250px;
 		float: left;
 	}
 
 	#profil_infos {
 		margin-top: 20px;
-		margin-right: 100px;
+		margin-right: 115px;
 		height: 250px;
 		width: 55%;
 		float:right;
 	}
 		
 		#profil_infos table {
-			border: 1px solid #CCCCCC;
+			border: 2px solid #CCCCCC;
 			width: 100%;
 			height: 100%;
 			/*margin-top: 10px;
@@ -399,12 +404,12 @@ a {
 		
 	#profil_biographie {
 		clear:both;
-		margin-top: 300px;
+		float:left;
 		margin-left: 20px;
-		position: absolute;
+		margin-top: 15px;
 	}
 		
-		/*#profil_biographie h2 {float:left;}*/
+	#profil_footer {width:100%; border-top:2px solid #CCCCCC; float:left; margin-top:10px;}
 		
 #account_logements:target {
 	visibility: visible;
