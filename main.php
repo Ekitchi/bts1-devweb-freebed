@@ -23,6 +23,33 @@
 			<article id="slider1" name="slider1">
 				SLIDER1
 				<!-- <img src="http://placehold.it/1515x600"> -->
+				
+				<!--Style du Compteur-->
+				<!--<div style="text-align:center;"><script type="text/javascript" src="http://services.supportduweb.com/cpt_visits/61149-8-7.js"></script></div><a href="http://www.supportduweb.com/" style="display:block;text-align:center;" title="Outils Services Compteurs G&eacute;n&eacute;rateurs Codes-sources... gratuits pour vos sites"><img src="http://www.webestools.com/images/ban03.gif" alt="Outils Services Compteurs G&eacute;n&eacute;rateurs Codes-sources... gratuits pour vos sites" /></a>
+				-->
+				
+				<!--Compteur Visite-->
+				<!--
+					if(file_exists('compteur_visites.txt'))
+					{
+					        $compteur_f = fopen('compteur_visites.txt', 'r+');
+					        $compte = fgets($compteur_f);
+					}
+					else
+					{
+					        $compteur_f = fopen('compteur_visites.txt', 'a+');
+					        $compte = 0;
+					}
+					if(!isset($_SESSION['compteur_de_visite']))
+					{
+					        $_SESSION['compteur_de_visite'] = 'visite';
+					        $compte++;
+					        fseek($compteur_f, 0);
+					        fputs($compteur_f, $compte);
+					}
+					fclose($compteur_f);
+					echo '<strong>'.$compte.'</strong> visites.';
+				-->
 			</article>
 		</section>
 

@@ -43,8 +43,8 @@
 										<td> <input type="text" style="width:100%;" class="form-control" placeholder="PHP"/> </td>
 									</tr>
 									<tr>
-										<th> Résidence: </th>
-										<td> <input type="text" style="width:100%;" class="form-control" placeholder="PHP"/> </td>
+										<th> Occupation: </th>
+										<td> <input type="text" style="width:100%;" class="form-control" placeholder="<?php echo $_SESSION["user"]->getOccupation(); ?>"/> </td>
 										<th> Sexe: </th>
 										<td> <input type="text" style="width:100%;" class="form-control" placeholder="PHP"/> </td>
 									</tr>
