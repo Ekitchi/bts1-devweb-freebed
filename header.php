@@ -128,8 +128,16 @@ $div_hdr_admin= "
 	else
 		$div_hdr = $div_hdr_guest;	
 ?>
-
-
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
+<script>
+	function initialize() {
+	
+	var input = document.getElementById('search_box');
+	var autocomplete = new google.maps.places.Autocomplete(input);
+	}
+	
+	google.maps.event.addDomListener(window, 'load', initialize);
+</script>
 <header>
 	<nav id="header" name="header">
 		<ul id="header_logo">
@@ -139,7 +147,7 @@ $div_hdr_admin= "
 		</ul>
 		<ul id="header_rechercher" name="header_rechercher">
 			<li>
-				<input type="search"  placeholder="Où allez-vous ?" class="form-control form-header">
+				<input id="search_box" type="search"  placeholder="Où allez-vous ?" class="form-control form-header" >
 				</input>
 			</li>
 			<li>
