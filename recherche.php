@@ -43,7 +43,9 @@
 					<br/>
 					<p style="text-align:center;">Pays : <input type="text" name="pays" placeholder=" Pays" value="" style="margin-right:15px;"/>Ville : <input type="text" name="ville" placeholder=" Ville" value=""/></p>
 					<br/>		
-						<input type"submit"  name="recherchefiltre" value="Recherche">
+					<p style="text-align:center;">
+						<input type="submit"  name="recherchefiltre" value="Recherche"/>
+					</p>
 				</fieldset>
 			</article>
 		</section>

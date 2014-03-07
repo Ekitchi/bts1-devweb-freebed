@@ -50,7 +50,7 @@
 									</tr>
 									<tr>
 										<th> Date de naissance: </th>
-										<td> <input type="date" style="width:100%;" class="form-control" placeholder="<?php echo $_SESSION["user"]->getDate(); ?>"/> </td>
+										<td> <input type="date" style="width:100%;" class="form-control" placeholder="<?php echo $_SESSION["user"]->getDateNaissance(); ?>"/> </td>
 										<th> Numéro de téléphone: </th>
 										<td> <input type="tel" style="width:100%;" class="form-control" placeholder="<?php echo $_SESSION["user"]->getTel(); ?>"/> </td>
 									</tr>
