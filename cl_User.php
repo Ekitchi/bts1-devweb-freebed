@@ -10,25 +10,21 @@
 			global $bdd;
 			$this->email = $mail;
 			$this->password = $pwd;
-			$query = "SELECT nom, prenom, oqp, tel 
-						FROM user 
-						WHERE email = '".$this->email."' AND password = '".$this->password."';";
+			$query = "SELECT * FROM user WHERE email = '".$this->email."' AND password = '".$this->password."';";
 			$response = $bdd->query($query);
-			if ($response->fetch() != NULL) {
-				$donnees = $response->fetch();
+			$donnees = $response->fetch();
+			if ($donnees != NULL) {
 				$this->nom = $donnees["nom"];
 				$this->prenom = $donnees["prenom"];
 				$this->occupation = $donnees["oqp"];
 				$this->tel = $donnees["tel"];
 			}
-			/*else {
-				$this->email = "";
-				$this->password = "";
+			else {
 				$this->nom = "Va mourrir";
-				$this->prenom = "";
-				$this->occupation = "";
-				$this->tel = "";
-			}*/
+				$this->prenom = "Va mourrir";
+				$this->occupation = "Va mourrir";
+				$this->tel = "Va mourrir";
+			}
 			$response->CloseCursor();
 		}
 		

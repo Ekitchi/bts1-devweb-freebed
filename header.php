@@ -45,7 +45,9 @@ $div_hdr_loggued = "
 
 		<ul id='header_connexion' name='header_connexion'>
 			<li id='header_register'>
-				<a href='#'> Se déconnecter </a>
+				<form method='post' action='main.php'>
+					<input type='submit' value='Déconnexion' name='deco' />
+				</form>
 			</li>
 			<li id='header_login'>
 				<a href='myaccount.php'> Mon compte </a>
@@ -79,7 +81,9 @@ $div_hdr_admin= "
 
 		<ul id='header_connexion' name='header_connexion'>
 			<li id='header_register'>
-				<a href='#'> Se déconnecter </a>
+				<form method='post' action='main.php'>
+					<input type='submit' value='Déconnexion' name='deco' />
+				</form>
 			</li>
 			<li id='header_login'>
 				<a href='myaccount.php'> Mon compte </a>
@@ -109,27 +113,21 @@ $div_hdr_admin= "
 		
 	//  Script de log :
 	if(isset($_POST["connexion_username"]) && isset($_POST["connexion_password"])) {
-		/*$query = "SELECT id FROM user WHERE email = '".$_POST["connexion_username"]."' AND password = '".$_POST["connexion_password"]."' ;";
-		$response = $bdd->query($query);
-		$donnees = $response->fetch();
-		if($donnees != NULL) {
-			$_SESSION["email"] = $_POST["connexion_username"];
-			$_SESSION["password"] = $_POST["connexion_password"];
-		}*/
-		
 		logIn($_POST["connexion_username"], $_POST["connexion_password"]);
 	}
+	
+	// Script de log out :
+	if(isset($_POST["deco"])) {
+		logOut();
+	}
 	//  Ici on va placer le traitement SI LOGGUE, SINON SI ADMIN, SINON PAS LOGGUE
-	if (isset($_SESSION["user"]))
+	if (isset($_SESSION["user"]) && $_SESSION["user"]->getType() == 0)
 		$div_hdr = $div_hdr_loggued;	
-	elseif (isset($_SESSION["user"]) && $_SESSION["user"]->getType() == 0)
+	elseif (isset($_SESSION["user"]))
 		$div_hdr = $div_hdr_admin;
 	else
 		$div_hdr = $div_hdr_guest;	
 ?>
-
-
-
 
 
 <header>
