@@ -273,7 +273,7 @@ a {
 }
 
 #logementinfos {
-	width: 30%;
+	width: 27%;
 	height: 450px;
 	margin-left: 25px;
 	margin-top: 20px;
@@ -288,9 +288,9 @@ a {
 		border:1px solid rgba(0,0,0,0.10);
 	}
 	
-	#logement_infos article {
-			padding-top: 35px;
-			margin-left:50px;
+	#logement_text {
+			padding-top: 40px;
+			margin-left:60px;
 			color: #A4A4A4;
 			float:left;
 			font-size: 1.4em;
@@ -298,11 +298,41 @@ a {
 		
 	#logement_price {
 		margin-left:52px;
+		margin-top: 30px;
 		font-size: 2.5em;
 		color:grey;
 		float: left;
 	}
 	
+	#logement_date {
+		clear:both;
+		width:95%;
+		margin-top: 140px;
+		margin-left: 15px;
+		font-size: 1.1em;
+	}
+	
+	.logement_date {
+		display: inline-block;
+		padding:10px;
+	}
+	
+	#logementlouer {
+		border:1px solid black;
+		height: 80px;
+		width: 100%;
+		background-color: rgba(255,255,255, 0.85);
+		border: 1px solid rgba(0,0,0, 0.10);
+		border-radius:2px;
+	}
+
+#userinfos {
+	border: 1px solid black;
+	width: 27%;
+	height: 450px;
+	float: left;
+	margin-left: 25px;
+}	
 
 #logementdesc {
 	border: 1px solid black;
@@ -310,15 +340,6 @@ a {
 	height: 500px;
 	float: left;
 	margin-left: 60px;
-	margin-top: 20px;
-}
-
-#userinfos {
-	border: 1px solid black;
-	width: 33%;
-	height: 450px;
-	float: right;
-	margin-right: 60px;
 	margin-top: 20px;
 }
 
@@ -331,6 +352,19 @@ a {
 	margin-left: 60px;
 }
 
+.form-logement_infos {
+	height: 30px;
+	width: 100px;
+}
+
+.btn_louer {
+	height: 50px;
+	width: 80%;
+	margin-top: 15px;
+	margin-left: 41px;	
+}
+
+/* FIN */
 /* CSS de la page myaccount.php */
 #menu_account {
 	border: 1px solid black;
