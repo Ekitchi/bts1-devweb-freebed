@@ -46,7 +46,7 @@ $div_hdr_loggued = "
 		<ul id='header_connexion' name='header_connexion'>
 			<li id='header_register'>
 				<form method='post' action='main.php'>
-					<a> <input type='submit' value='Déconnexion' name='deco' class='btn-header-deconnexion'/> </a>
+					<input type='submit' value='Déconnexion' name='deco' class='btn-header-deconnexion'/>
 				</form>
 			</li>
 			<li id='header_login'>

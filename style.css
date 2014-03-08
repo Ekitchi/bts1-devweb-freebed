@@ -1,3 +1,15 @@
+@keyframes AutoSlide {
+    0%, 15%, 100% {
+        left: 0px; /*1ère image*/
+    }
+    35%, 50% {
+        left: -100%; /*2ème image*/
+    }
+    70%, 85% {
+        left: -201%; /*3ème image*/
+    }
+}
+
 * {
 	margin: 0 auto;
 	padding: 0;
@@ -29,6 +41,18 @@ a {
 
 #header_login {width:265px;}
 #header_register {width:120px;}
+#header_register input[type="submit"]
+{
+    margin: 0;
+    padding: 0;
+    line-height: 100%;
+    border: 0;
+    background: none;
+    font: purple;
+    color: purple;
+    text-decoration: none;
+    cursor:pointer;
+}
 
 /*#header_register:hover {
 	background-color: rgba(128, 128, 128, 0.8);
@@ -143,27 +167,37 @@ a {
 }
 .btn-header-connexion:hover {border-color: white;}
 
-.btn-header-deconnexion {
+
+/* FIN */
+/* CSS de la page main.php */
+
+#slideshow {
+    position: relative;
+    width: 85%;
+    height: 600px;
+    margin:  20px auto;
+    overflow: hidden;
+    
+}
+#sContent li {
+    display: inline;
+}
+#sContent:hover {
+	-moz-animation-play-state:paused;
 	
 }
 
-#header_register input[type="submit"]
-{
-    margin: 0;
+#sContent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400%;
+    margin: 0;            
     padding: 0;
-    line-height: 100%; /* Si ça fonctionne pas mets 0 */
-    border: 0;
-    background: none; /* ou transparent je sais plus... */
-    font: purple;/* Définis le même font qu'un lien traditionnel */;
-    color: purple;/* La même couleur... */;
-    text-decoration: none;
-    cursor:pointer; /* Normalement */
-}
-
-/* CSS de la page main.php */
-#firstarticle {
-	border: 1px solid black;
-	height: 600px;
+    -moz-animation-name: AutoSlide;
+    -moz-animation-duration: 10s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: ease-in-out;
 }
 
 #best {
