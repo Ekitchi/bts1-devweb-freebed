@@ -1,6 +1,6 @@
 <!-- Traitements pré-HTML -->
 <?php
-	include_once("connexion.php");
+	include_once("includes.php");
 ?>
 
 <!DOCTYPE html>
@@ -14,10 +14,29 @@
 		<script type="text/javascript" src="scripts/jquery-2.1.0.js"></script>
 		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
 		<script type="text/javascript">
+			var geocoder;
+			var map;
 			function initialize() {
+				var post_adresse = "<?php echo($_POST["adresse"]); ?>"; // Récupération de l'adresse POSTée (j'aime mon humour de merde)
+				geocoder = new google.maps.Geocoder();
 				var mapOptions = {center: new google.maps.LatLng(-34.397, 150.644), zoom: 8 };
-				var map = new google.maps.Map(document.getElementById("minimap"), mapOptions);
+				map = new google.maps.Map(document.getElementById("minimap"), mapOptions);
+				codeAddress(post_adresse, geocoder);
 			}
+			
+			function codeAddress(address) {
+				geocoder.geocode({ 'address': address}, function(results, status) {
+					if (status == google.maps.GeocoderStatus.OK) {
+						map.setCenter(results[0].geometry.location);
+						var marker = new google.maps.Marker({map: map,position: results[0].geometry.location});
+					} 
+					else {
+						alert('Geocode was not successful for the following reason: ' + status);
+					}
+				});
+			}
+
+			
 			google.maps.event.addDomListener(window, 'load', initialize);
 		</script>
 
