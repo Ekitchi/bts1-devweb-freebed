@@ -1,3 +1,15 @@
+@keyframes AutoSlide {
+    0%, 15%, 100% {
+        left: 0px; /*1ère image*/
+    }
+    35%, 50% {
+        left: -100%; /*2ème image*/
+    }
+    70%, 85% {
+        left: -201%; /*3ème image*/
+    }
+}
+
 * {
 	margin: 0 auto;
 	padding: 0;
@@ -29,23 +41,38 @@ a {
 
 #header_login {width:265px;}
 #header_register {width:120px;}
+#header_register input[type="submit"]
+{
+    margin: 0;
+    padding: 0;
+    line-height: 100%;
+    border: 0;
+    background: none;
+    font: purple;
+    color: purple;
+    text-decoration: none;
+    cursor:pointer;
+}
 
-#header_register:hover {
+/*#header_register:hover {
 	background-color: rgba(128, 128, 128, 0.8);
 }
 
 #header_login:hover {
 	background-color: rgba(128, 128, 128, 0.8);
-}
+}*/
 
 #header_login div {
-	opacity: 0;
+	opacity: 1;
 	width: 265px;
 	height: 0px;
 	transition: 0.4s background-color, 0.8s opacity, 0.6s height, 1s visibility;
 	visibility:hidden;
 	overflow: hidden;
-	background-color: rgba(255, 255, 255, 0.7);
+	background-color: rgba(255, 255, 255, 1);
+	border-bottom: 2px solid lightblue;
+	border-right: 2px solid lightblue;
+	border-left: 2px solid lightblue;
 }
 
 #header_login:hover div {
@@ -53,7 +80,7 @@ a {
 	height:220px;
 	visibility:visible;
 	transition: 0.4s background-color, 0.4s opacity, 0.6s height, 1s visibility;
-	background-color: rgba(128, 128, 128, 0.85);
+	background-color: rgba(255, 255, 255, 1);
 }
 
 /*#header_login div table {
@@ -110,17 +137,25 @@ a {
 
 .btn:hover {
 	background-color: rgba(128, 128, 128, 0.20);
+	/*background-color: rgba(144, 238, 144, 0.20);*/
 	border-color: grey;
 }
 
 .btn:active {
-	background-color: rgba(127, 127, 127, 1);
+	background-color: rgba(127, 127, 127, 0.65);
 }
 
 	.btn-header {
 		margin-left: 10px;
 		height: 33px;
 		width: 70px;
+	}
+	
+	.btn-profil {
+		float:right;
+		margin:10px; 
+		height:30px; 
+		width:100px;
 	}
 	
 .btn-header-connexion {
@@ -131,12 +166,38 @@ a {
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
 }
 .btn-header-connexion:hover {border-color: white;}
-	
 
+
+/* FIN */
 /* CSS de la page main.php */
-#firstarticle {
-	border: 1px solid black;
-	height: 600px;
+
+#slideshow {
+    position: relative;
+    width: 85%;
+    height: 600px;
+    margin:  20px auto;
+    overflow: hidden;
+    
+}
+#sContent li {
+    display: inline;
+}
+#sContent:hover {
+	-moz-animation-play-state:paused;
+	
+}
+
+#sContent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400%;
+    margin: 0;            
+    padding: 0;
+    -moz-animation-name: AutoSlide;
+    -moz-animation-duration: 10s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: ease-in-out;
 }
 
 #best {
@@ -256,35 +317,105 @@ a {
 
 #slider {
 	border: 1px solid black;
-	width: 850px;
+	width: 56%;
 	height: 450px;
 	float: left;
 	margin-left: 60px;
+	margin-top: 20px;
 }
 
 #logementinfos {
-	border:1px solid black;
-	width: 500px;
-	height: 450px;
-	margin-right: 60px;
+	width: 24%;
+	height: 990px;
+	margin-right: 12%;
 	margin-top: 20px;
+	float:right;
 }
+	
+	#logement_infos {
+		width:100%;
+		height:23%;
+		background-color: rgba(230, 230, 230, 0.65);
+		border-radius:2px;
+		border:1px solid rgba(0,0,0,0.10);
+	}
+	
+	#logement_text {
+			margin-top: 40px;
+			margin-left:60px;
+			color: #A4A4A4;
+			float:left;
+			font-size: 1.4em;
+		}
+		
+	#logement_price {
+		margin-left:52px;
+		margin-top: 30px;
+		font-size: 2.5em;
+		color:grey;
+		float: left;
+	}
+	
+	#logement_date {
+		clear:both;
+		width:95%;
+		margin-top: 140px;
+		margin-left: 15px;
+	}
+	
+	.logement_date {
+		display: inline-block;
+		padding:5px;
+	}
+	
+	#logementlouer {
+		border:1px solid black;
+		height: 80px;
+		width: 100%;
+		background-color: rgba(255,255,255, 0.85);
+		border: 1px solid rgba(0,0,0, 0.10);
+		border-radius:2px;
+	}
+
+#userinfos {
+	width: 100%;
+	height: 58%;
+	float: left;
+	margin-top: 75px;
+}
+
+	#user_avatar {
+		height: 60%;
+		width:100%;
+		background-color: rgba(230, 230, 230, 0.65);
+		border-radius:2px;
+		border:1px solid rgba(0,0,0,0.10);
+	}
+	
+		#user_avatar img {margin-top:26px; margin-left: 16%;}
+		#user_avatar div {width: 100%; text-align:center; font-size:1.6em;margin-top:20px;}
+	
+	#user_infos {
+		height:42%;
+		width: 100%;
+		background-color: rgba(255, 255, 255, 0.85);
+		border-radius:2px;
+		border:1px solid rgba(0,0,0,0.10);
+	}
+	
+		#user_infos table {
+			width: 100%;
+			height: 100%;
+		}
+		#user_infos table th {text-align:center; color:rgba(180,180,180,1);}
+		#user_infos table td {text-align:center;}
 
 #logementdesc {
 	border: 1px solid black;
-	width: 850px;
+	width: 56%;
 	height: 500px;
 	float: left;
 	margin-left: 60px;
-	margin-top: 20px;
-}
-
-#userinfos {
-	border: 1px solid black;
-	width: 500px;
-	height: 450px;
-	float: right;
-	margin-right: 60px;
 	margin-top: 20px;
 }
 
@@ -297,6 +428,20 @@ a {
 	margin-left: 60px;
 }
 
+.form-logement_infos {
+	height: 30px;
+	width: 100px;
+}
+.for-logement_infos2 {width:50px;}
+
+.btn_louer {
+	height: 50px;
+	width: 80%;
+	margin-top: 15px;
+	margin-left: 41px;	
+}
+
+/* FIN */
 /* CSS de la page myaccount.php */
 #menu_account {
 	border: 1px solid black;
@@ -357,24 +502,22 @@ a {
 	transition: 1s left, 1s width, 0.7s visibility, 1s opacity;
 }
 	#profil_img {
-		border: 1px solid black;
 		margin-top: 20px;
 		margin-left: 20px;
-		height: 250px;
 		width: 250px;
 		float: left;
 	}
 
 	#profil_infos {
 		margin-top: 20px;
-		margin-right: 100px;
+		margin-right: 115px;
 		height: 250px;
 		width: 55%;
 		float:right;
 	}
 		
 		#profil_infos table {
-			border: 1px solid #CCCCCC;
+			border: 2px solid #CCCCCC;
 			width: 100%;
 			height: 100%;
 			/*margin-top: 10px;
@@ -400,12 +543,12 @@ a {
 		
 	#profil_biographie {
 		clear:both;
-		margin-top: 300px;
+		float:left;
 		margin-left: 20px;
-		position: absolute;
+		margin-top: 15px;
 	}
 		
-		/*#profil_biographie h2 {float:left;}*/
+	#profil_footer {width:100%; border-top:2px solid #CCCCCC; float:left; margin-top:10px;}
 		
 #account_logements:target {
 	visibility: visible;

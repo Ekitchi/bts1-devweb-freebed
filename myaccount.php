@@ -27,6 +27,7 @@
 						<div id="account_profil">
 							<section id="profil_img">
 								<img src="http://placehold.it/250x250"/>
+								<input type="file"/>
 							</section>
 							<section id="profil_infos">
 								<table>
@@ -95,12 +96,15 @@
 							</section> -->
 							
 							<section id="profil_biographie">
-								<h2> Biographie:
-								<input type='button' class="btn" value="Modifier" style="height:30px; width:80px;"/>
-								</h2>
-								<!--<textarea class="form-control" rows="20" cols="85"> </textarea>-->
-								<article style='border:1px dashed black; height: 309px; width:700px;'></article>
+								<h2> Biographie:</h2>
+								<textarea class="form-control" rows="20" cols="85"> </textarea>
 							</section>
+							
+							<footer id="profil_footer">
+								<input type="submit" class="btn btn-profil" value="Annuler"/>
+								<input type="submit" class="btn btn-profil" value="Enregistrer"/>
+								<p style="float:right;margin:15px;">Voulez-vous enregistrer les modifications ?</p>
+							</footer>
 						</div>
 					</li>
 					<li>
