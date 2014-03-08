@@ -12,6 +12,15 @@
 		<script src="scripts/jquery-2.1.0.js"></script>
 		<script type="text/javascript" src="scripts/prefixfree.min.js"></script>
 		<script type="text/javascript" src="scripts/jquery-2.1.0.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+		<script type="text/javascript">
+			function initialize() {
+				var mapOptions = {center: new google.maps.LatLng(-34.397, 150.644), zoom: 8 };
+				var map = new google.maps.Map(document.getElementById("minimap"), mapOptions);
+			}
+			google.maps.event.addDomListener(window, 'load', initialize);
+		</script>
+
 		<meta charset="UTF-8"/>
 	</head>
 
@@ -21,7 +30,6 @@
 				
 		<section>
 			<article id="minimap">
-				MINIMAP (Option)
 			</article>
 			<article id="filtre">
 				<fieldset style="padding:30px">
@@ -43,7 +51,7 @@
 					<br/>
 					<p style="text-align:center;">Pays : <input type="text" name="pays" placeholder=" Pays" value="" style="margin-right:15px;"/>Ville : <input type="text" name="ville" placeholder=" Ville" value=""/></p>
 					<br/>		
-						<input type"submit"  name="recherchefiltre" value="Recherche">
+						<input type="submit"  name="recherchefiltre" value="Recherche">
 				</fieldset>
 			</article>
 		</section>
