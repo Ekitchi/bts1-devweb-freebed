@@ -25,38 +25,38 @@
 					<li id="account_page1">
 						<a href="#account_profil"> <h1> Profil </h1> </a>
 						<div id="account_profil">
-							<section id="profil_img">
+							<article id="profil_img">
 								<img src="http://placehold.it/250x250"/>
 								<input type="file"/>
-							</section>
-							<section id="profil_infos">
+							</article>
+							<article id="profil_infos">
 								<table>
 									<tr>
 										<th> Nom: </th>
-										<td> <input type="text" style="width:100%;" class="form-control" placeholder="<?php echo $_SESSION["user"]->getNom(); ?>"/> </td>
+										<td> <input type="text" style="width:100%;" class="form-control" placeholder="<?php echo $_SESSION['user']->getNom(); ?>"/> </td>
 										<th> Prénom: </th>
-										<td> <input type="text" style="width:100%;" class="form-control" placeholder="<?php echo $_SESSION["user"]->getPrenom(); ?>"/> </td>
+										<td> <input type="text" style="width:100%;" class="form-control" placeholder="<?php echo $_SESSION['user']->getPrenom(); ?>"/> </td>
 									</tr>
 									<tr>
 										<th> E-mail: </th>
-										<td> <input type="email" style="width:100%;" class="form-control" placeholder="<?php echo $_SESSION["user"]->getEmail(); ?>"/> </td>
+										<td> <input type="email" style="width:100%;" class="form-control" placeholder="<?php echo $_SESSION['user']->getEmail(); ?>"/> </td>
 										<th> Adresse: </th>
-										<td> <input type="text" style="width:100%;" class="form-control" placeholder="<?php echo $_SESSION["user"]->getAdresse(); ?>"/> </td>
+										<td> <input type="text" style="width:100%;" class="form-control" placeholder="<?php echo $_SESSION['user']->getAdresse(); ?>"/> </td>
 									</tr>
 									<tr>
 										<th> Occupation: </th>
-										<td> <input type="text" style="width:100%;" class="form-control" placeholder="<?php echo $_SESSION["user"]->getOccupation(); ?>"/> </td>
+										<td> <input type="text" style="width:100%;" class="form-control" placeholder="<?php echo $_SESSION['user']->getOccupation(); ?>"/> </td>
 										<th> Sexe: </th>
-										<td> <input type="text" style="width:100%;" class="form-control" placeholder="<?php echo $_SESSION["user"]->getSexe(); ?>"/> </td>
+										<td> <input type="text" style="width:100%;" class="form-control" placeholder="<?php echo $_SESSION['user']->getSexe(); ?>"/> </td>
 									</tr>
 									<tr>
 										<th> Date de naissance: </th>
-										<td> <input type="date" style="width:100%;" class="form-control" placeholder="<?php echo $_SESSION["user"]->getDate(); ?>"/> </td>
+										<td> <input type="date" style="width:100%;" class="form-control" placeholder="<?php echo $_SESSION['user']->getDateNaissance(); ?>"/> </td>
 										<th> Numéro de téléphone: </th>
-										<td> <input type="tel" style="width:100%;" class="form-control" placeholder="<?php echo $_SESSION["user"]->getTel(); ?>"/> </td>
+										<td> <input type="tel" style="width:100%;" class="form-control" placeholder="<?php echo $_SESSION['user']->getTel(); ?>"/> </td>
 									</tr>
 								</table>
-							</section>
+							</article>
 							
 							<!--<section id="profil_avis">
 								<article class="avis_user">
@@ -93,12 +93,12 @@
 										</tr>
 									</table>
 								</article>
-							</section> -->
+							</section>-->
 							
-							<section id="profil_biographie">
+							<article id="profil_biographie">
 								<h2> Biographie:</h2>
 								<textarea class="form-control" rows="20" cols="85"> </textarea>
-							</section>
+							</article>
 							
 							<footer id="profil_footer">
 								<input type="submit" class="btn btn-profil" value="Annuler"/>
