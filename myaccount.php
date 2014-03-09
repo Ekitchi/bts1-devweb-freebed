@@ -41,7 +41,7 @@
 										<th> E-mail: </th>
 										<td> <input type="email" style="width:100%;" class="form-control" value="<?php echo $_SESSION['user']->getEmail(); ?>"/> </td>
 										<th> Adresse: </th>
-										<td> <input type="text" style="width:100%;" class="form-control" value="<?php echo $_SESSION['user']->getAdresse(); ?>"/> </td>
+										<td> <textarea rows="1" style="width:100%" class="form-control"><?php echo $_SESSION['user']->getAdresse(); ?></textarea> </td>
 									</tr>
 									<tr>
 										<th> Occupation: </th>
@@ -96,8 +96,8 @@
 							</section>-->
 							
 							<article id="profil_biographie">
-								<h2> Biographie:</h2>
-								<textarea class="form-control" rows="20" cols="85"> </textarea>
+								<h2>Biographie:</h2>
+								<textarea class="form-control" rows="20" cols="85"></textarea>
 							</article>
 							
 							<footer id="profil_footer">

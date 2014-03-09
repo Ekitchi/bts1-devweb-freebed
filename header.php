@@ -61,12 +61,12 @@ $div_hdr_loggued = "
 						</tr>
 						<tr>
 							<td colspan='2'>
-							 <a href='myaccount.php#account_modifier'> Gérer mes logements </a>
+							 <a href='myaccount.php#account_historique'> Historique </a>
 							 </td>
 						</tr>
 						<tr>
 							<td colspan='2'>
-							<a href='myaccount.php#account_historique'> Historique </a>
+							<a href='myaccount.php#account_contact'> Contact </a>
 							</td>
 						</tr>
 					</table>
@@ -88,22 +88,22 @@ $div_hdr_admin= "
 			<li id='header_login'>
 				<a href='myaccount.php'> Mon compte </a>
 				<div>
-					<table>
+					<table style='text-align:left;'>
 						<tr>
 							<td colspan='2'> <a href='myaccount.php#account_profil'> Mon profil </a> </td>
 							<td> <a href='admin'> Administration </a> </td>
 						</tr>
 						<tr>
-							<td colspan='2'> <a href='myaccount.php#account_logements'> Mes locations </a> </td>
+							<td colspan='2'> <a href='myaccount.php#account_logements'> Mes logements </a> </td>
 						</tr>
 						<tr>
 							<td colspan='2'>
-							 <a href='myaccount.php#account_modifier'> Gérer mes logements </a>
+							 <a href='myaccount.php#account_historique'> Historique </a>
 							 </td>
 						</tr>
 						<tr>
 							<td colspan='2'>
-							<a href='myaccount.php#account_historique'> Historique </a>
+							<a href='myaccount.php#account_contact'> Contact </a>
 							</td>
 						</tr>
 					</table>
@@ -122,9 +122,9 @@ $div_hdr_admin= "
 	}
 	//  Ici on va placer le traitement SI LOGGUE, SINON SI ADMIN, SINON PAS LOGGUE
 	if (isset($_SESSION["user"]) && $_SESSION["user"]->getType() == 0)
-		$div_hdr = $div_hdr_loggued;	
+		$div_hdr = $div_hdr_admin;	
 	elseif (isset($_SESSION["user"]))
-		$div_hdr = $div_hdr_admin;
+		$div_hdr = $div_hdr_loggued;
 	else
 		$div_hdr = $div_hdr_guest;	
 ?>
