@@ -109,7 +109,7 @@ ul.InlineList li{
 	font-style: italic;
 	color: rgba(247, 247, 247, 1)
 }*/
-	#header_login table a {color: rgba(219, 219, 219, 1);}
+	#header_login table a {color: rgba(210, 210, 210, 1);}
 	#header_login table a:hover {font-style:italic;}
 
 #header_rechercher {
@@ -298,13 +298,12 @@ ul.InlineList li{
 	float:left;
 	width:56%;
 	height:580px;
-	margin-left: 60px;
+	margin-left: 7%;
 	margin-top: 20px;
 	background-color: rgba(230, 230, 230, 0.65);
 }
 	
 #slideshow {
-	border: 1px solid black;
 	width: 94%;
 	height: 82.5%;
 	margin: 0 auto;
@@ -323,6 +322,7 @@ ul.InlineList li{
 
 #slideshow_miniature_container {
 	border: 1px solid rgba(0,0,0, 0.10);
+	border-radius: 2px;
 	width: 100%;
 	height: 12%;
 	margin-top:10px;
@@ -369,7 +369,7 @@ ul.InlineList li{
 #logementinfos {
 	width: 24%;
 	height: 990px;
-	margin-right: 12%;
+	margin-right: 7%;
 	margin-top: 20px;
 	float:right;
 }
@@ -419,12 +419,12 @@ ul.InlineList li{
 		border-radius:2px;
 	}
 
-#userinfos {
-	width: 100%;
-	height: 58%;
-	float: left;
-	margin-top: 75px;
-}
+	#userinfos {
+		width: 100%;
+		height: 58%;
+		float: left;
+		margin-top: 75px;
+	}
 
 	#user_avatar {
 		height: 60%;
@@ -448,26 +448,63 @@ ul.InlineList li{
 		#user_infos table {
 			width: 100%;
 			height: 100%;
+			text-align:center;
 		}
-		#user_infos table th {text-align:center; color:rgba(180,180,180,1);}
-		#user_infos table td {text-align:center;}
+		#user_infos table th {color:rgba(180,180,180,1);}
+
 
 #logementdesc {
-	border: 1px solid black;
+	border: 1px solid rgba(0,0,0,0.10);
+	border-radius: 2px;
+	background-color: rgba(230, 230, 230, 0.85);
 	width: 56%;
-	height: 500px;
+	height: 680px;
 	float: left;
-	margin-left: 60px;
+	margin-left: 7%;
 	margin-top: 20px;
 }
 
+	#logement_desc {
+		border: 1px solid rgba(0,0,0, 0.10);
+		border-radius: 2px;
+		height: 94%;
+		width: 60%;
+		margin-top: 2%;
+		margin-left:2%;
+		background-color: rgba(255,255,255, 0.85);
+		text-align: justify;
+		float:left;
+	}
+	
+	#logement_Tinfos {
+		height:94%;
+		width:35%;
+		float:right;
+		margin-top:2%;
+		margin-right:2%;
+		border: 1px solid rgba(0,0,0,0.10);
+		border-radius:2px;
+		background-color:rgba(255,255,255,0.85);
+	}
+	
+		#logement_Tinfos table {border-collapse:collapse; width:95%; height:98%;margin-top:2%;}
+		#logement_Tinfos th {
+			padding:10px;
+			width:45%;
+			background-color: rgba(200,200,200,0.55);
+		}
+		#logement_Tinfos td {
+			width:55%;
+			text-align: center;
+		}
+	
 #allview {
 	border: 1px solid black;
 	height: 700px;
 	width: 850px;
 	float: left;
 	margin-top: 20px;
-	margin-left: 60px;
+	margin-left: 7%;
 }
 
 .form-logement_infos {
@@ -562,11 +599,12 @@ ul.InlineList li{
 			border: 2px solid #CCCCCC;
 			width: 100%;
 			height: 100%;
+			border-collapse:collapse;
 			/*margin-top: 10px;
 			margin-left: 15px;*/
 		}
 		
-		#profil_infos table tr th {padding:10px; background-color:rgba(128,128,128, 0.2); text-align:center;}
+		#profil_infos table tr th {padding:10px; background-color:rgba(128,128,128, 0.2); text-align:center; width:100px;}
 		#profil_infos table tr td {padding:10px; background-color:rgba(200,200,200, 0.2);}
 		
 	/*#profil_avis {

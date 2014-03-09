@@ -15,11 +15,16 @@
 	<body>
 		<?php include_once ("header.php"); ?>
 		
+		
+		
 		<section>
 			<article id="logementname">
 				PHP QUI AFFICHE LE NOM DU LOGEMENT RICHARD ! WESH WESH
 			</article>
 		</section>
+
+
+
 
 		<section id="slideshow_container">
 			<article id="slideshow">
@@ -43,6 +48,7 @@
 				</div>
 			</article>
 		</section>
+		
 		
 		
 		<section>
@@ -106,11 +112,75 @@
 			</article>
 		</section>
 
+
+
+
+
 		<section>
 			<article id="logementdesc">
-				DESCRIPTION
+				
+				<section id="logement_desc">
+					PHP DESCRIPTION DU LOGEMENT // RICHARRRRRD !
+				</section>
+				
+				<section id="logement_Tinfos">
+					<table>
+						<tr>
+							<th>Type de Logement</th>
+							<td>PHP</td>
+						</tr>
+						<tr>
+							<th>Type de lit</th>
+							<td>PHP</td>
+						</tr>
+						<tr>
+							<th>Capacité d'accueil</th>
+							<td>PHP</td>
+						</tr>
+						<tr>
+							<th>Chambres</th>
+							<td>PHP</td>
+						</tr>
+						<tr>
+							<th>Salle de bain</th>
+							<td>PHP</td>
+						</tr>
+						<tr>
+							<th>Durée minimum</th>
+							<td>PHP</td>
+						</tr>
+						<tr>
+							<th>Tarif mensuel</th>
+							<td>PHP</td>
+						</tr>
+						<tr>
+							<th>Caution</th>
+							<td>PHP</td>
+						</tr>
+						<tr>
+							<th>Pays</th>
+							<td>PHP</td>
+						</tr>
+						<tr>
+							<th>Ville</th>
+							<td>PHP</td>
+						</tr>
+						<tr>
+							<th>Quartier</th>
+							<td>PHP</td>
+						</tr>
+						<tr>
+							<th>Conditions d'annulation</th>
+							<td>PHP</td>
+						</tr>
+					</table>
+				</section>
+				
 			</article>
 		</section>
+
+
+
 
 		<section>
 			<article id="allview">
