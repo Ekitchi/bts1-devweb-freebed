@@ -97,6 +97,7 @@
 		<section>
 			<article id="minimap" onclick="addMarqueurs();" onmousewheel="addMarqueurs();">
 			</article>
+			
 			<article id="filtre">
 				<fieldset style="padding:30px">
 				<legend><h4><i>Filtres de recherche</i></h4></legend>
