@@ -1,3 +1,27 @@
+/*
+ * Définitions des styles de polices
+ */
+
+/* Définitions générales */
+h1, h2, h3, h4, li, th, td, a, label, strong, p {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+
+/* Définitions les liens */
+a {
+	text-decoration: none;
+}
+
+/*
+ * Définitions des blocs
+ */
+
+/* Définitions générales */
+* {
+	margin: 0 auto;
+	padding: 0;
+}
+
 @keyframes AutoSlide {
     0%, 15%, 100% {
         left: 0px; /*1ère image*/
@@ -10,14 +34,9 @@
     }
 }
 
-* {
-	margin: 0 auto;
-	padding: 0;
-}
 
-a {
-	text-decoration: none;
-}
+
+
 
 /* CSS du header */
 #header {
