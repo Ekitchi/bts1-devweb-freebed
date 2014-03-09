@@ -26,36 +26,22 @@
 		<script type="text/javascript">
 			var geocoder;
 			var map;
-			var lieux = [{id: 0, lat: 0, lng: 0}<?php
-				foreach ($lieux as $lieu) {
-					echo(",{id: ".$lieu->getId().",lat: ".$lieu->getLatitude().",lng: ".$lieu->getLongitude()."}");
-				}?>];
+			var lieux = [{id: 0, lat: 0, lng: 0, nom: "0", img: "0"}<?php foreach ($lieux as $lieu) { echo(",{id: ".$lieu->getId().", lat: ".$lieu->getLatitude().", lng: ".$lieu->getLongitude().", nom: '".$lieu->getNom()."', img: './data/photos/".$lieu->getPhoto()."'}");}?>];
 			var marqueurs = [];
 
 			function initialize() {
 				var post_adresse = "<?php echo($_POST["adresse"]); ?>"; // Récupération de l'adresse POSTée (j'aime mon humour de merde)
 				geocoder = new google.maps.Geocoder();
-				var mapOptions = {center: new google.maps.LatLng(-34.397, 150.644), zoom: 8 };
+				var mapOptions = {center: new google.maps.LatLng(-34.397, 150.644), zoom: 12 };
 				map = new google.maps.Map(document.getElementById("minimap"), mapOptions);
 				codeAddress(post_adresse, geocoder);
-				
-				
 			}
 			
 			function codeAddress(address) {
 				geocoder.geocode({ 'address': address}, function(results, status) {
 					if (status == google.maps.GeocoderStatus.OK) {
 						map.setCenter(results[0].geometry.location);
-						var marker = new google.maps.Marker({map: map,position: results[0].geometry.location});
 						
-						// Gros codage gore de marqueur
-						/*
-						for(var i = 0; i < lieux.length; i++) {
-							if (isInMap(lieux[i]["lat"], lieux[i]["lng"])) {
-								var pos_marker2 = new google.maps.LatLng(lieux[1]["lat"], lieux[1]["lng"]);
-								var marker2 = new google.maps.Marker({map: map,position: pos_marker2});
-							}
-						}*/
 						addMarqueurs();
 					} 
 					else {
@@ -72,15 +58,32 @@
 			}
 
 			function addMarqueurs() {
+				cleanResults();
 				for (var i = 0; i < marqueurs.length; i++)
 					marqueurs[i].setMap(null);
 				marqueurs.splice(0);
 				for (var i = 0; i < lieux.length; i++) {
 					if (isInMap(lieux[i]["lat"], lieux[i]["lng"])) {
-						var pos_marker2 = new google.maps.LatLng(lieux[1]["lat"], lieux[1]["lng"]);				
-						marqueurs.push(new google.maps.Marker({map: map, position: pos_marker2}));
+						var pos_marqueurs = new google.maps.LatLng(lieux[i]["lat"], lieux[i]["lng"]);				
+						marqueurs.push(new google.maps.Marker({map: map, position: pos_marqueurs, title: lieux[i]["nom"]}));
+						addSearchResults(i);
 					}
 				}
+			}
+			
+			function addSearchResults (id) {
+				var zone_results = document.getElementById("allresults").firstChild.nextSibling.firstChild.nextSibling;
+				var resultat = document.createElement("li");
+				var photo = document.createElement("img");
+				photo.setAttribute("src", lieux[id]["img"])
+				resultat.appendChild(photo);
+				zone_results.appendChild(resultat);
+			}
+			
+			function cleanResults () {
+				var zone_results = document.getElementById("allresults").firstChild.nextSibling.firstChild.nextSibling;
+				while (zone_results.firstChild)
+					zone_results.removeChild(zone_results.firstChild);
 			}
 			
 			google.maps.event.addDomListener(window, 'load', initialize);
@@ -100,9 +103,9 @@
 			<article id="filtre">
 				<fieldset style="padding:30px">
 				<legend><h4><i>Filtres de recherche</i></h4></legend>
-					<p style="text-align:center;">Budget de <input type="text" name="prix" placeholder=" Prix" value=""/>€ à <input type"text" name="prix2" placeholder=" Prix"/>€</p>
+					<p>Budget de <input type="text" name="prix" placeholder=" Prix" value=""/>€ à <input type"text" name="prix2" placeholder=" Prix"/>€</p>
 					<br/>
-					<p style="text-align:center; padding:5px;">
+					<p>
 						<ul class="InlineList">
 							<li>
 								<label for="Chambre d'Hôte">Chambre d'Hôte</label>
@@ -123,9 +126,10 @@
 						</ul>
 					</p>
 					<br/>
-					<p style="text-align:center;">Surface recherchée : <input type="text" name="surface" placeholder=" None" value=""/>m²</p>
+					<p>Surface recherchée : <input type="text" name="surface" placeholder=" None" value=""/>m²</p>
 					<br/>
-					<p style="text-align:center;">Pays : <input type="text" name="pays" placeholder=" Pays" value="" style="margin-right:15px;"/>Ville : <input type="text" name="ville" placeholder=" Ville" value=""/></p>
+					<p>Pays : <input type="text" name="pays" placeholder=" Pays" value="" style="margin-right:15px;"/><br />
+						Ville : <input type="text" name="ville" placeholder=" Ville" value=""/></p>
 					<br/>		
 						<input type="submit"  name="recherchefiltre" value="Recherche">
 				</fieldset>
@@ -141,30 +145,7 @@
 							Infos
 						</div>
 					</li>
-					<li>
-						IMG
-						<div classe="imginfos">
-							Infos
-						</div>
-					</li>
-					<li>
-						IMG
-						<div classe="imginfos">
-							Infos
-						</div>
-					</li>
-					<li>
-						IMG
-						<div classe="imginfos">
-							Infos
-						</div>
-					</li>
-					<li>
-						IMG
-						<div classe="imginfos">
-							Infos
-						</div>
-					</li>
+					
 				</ul>
 			</article>
 		</section>

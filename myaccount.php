@@ -33,27 +33,27 @@
 								<table>
 									<tr>
 										<th> Nom: </th>
-										<td> <input type="text" style="width:100%;" class="form-control" placeholder="<?php echo $_SESSION['user']->getNom(); ?>"/> </td>
+										<td> <input type="text" style="width:100%;" class="form-control" value="<?php echo $_SESSION['user']->getNom(); ?>"/> </td>
 										<th> Prénom: </th>
-										<td> <input type="text" style="width:100%;" class="form-control" placeholder="<?php echo $_SESSION['user']->getPrenom(); ?>"/> </td>
+										<td> <input type="text" style="width:100%;" class="form-control" value="<?php echo $_SESSION['user']->getPrenom(); ?>"/> </td>
 									</tr>
 									<tr>
 										<th> E-mail: </th>
-										<td> <input type="email" style="width:100%;" class="form-control" placeholder="<?php echo $_SESSION['user']->getEmail(); ?>"/> </td>
+										<td> <input type="email" style="width:100%;" class="form-control" value="<?php echo $_SESSION['user']->getEmail(); ?>"/> </td>
 										<th> Adresse: </th>
-										<td> <input type="text" style="width:100%;" class="form-control" placeholder="<?php echo $_SESSION['user']->getAdresse(); ?>"/> </td>
+										<td> <input type="text" style="width:100%;" class="form-control" value="<?php echo $_SESSION['user']->getAdresse(); ?>"/> </td>
 									</tr>
 									<tr>
 										<th> Occupation: </th>
-										<td> <input type="text" style="width:100%;" class="form-control" placeholder="<?php echo $_SESSION['user']->getOccupation(); ?>"/> </td>
+										<td> <input type="text" style="width:100%;" class="form-control" value="<?php echo $_SESSION['user']->getOccupation(); ?>"/> </td>
 										<th> Sexe: </th>
-										<td> <input type="text" style="width:100%;" class="form-control" placeholder="<?php echo $_SESSION['user']->getSexe(); ?>"/> </td>
+										<td> <input type="text" style="width:100%;" class="form-control" value="<?php echo $_SESSION['user']->getSexe(); ?>"/> </td>
 									</tr>
 									<tr>
 										<th> Date de naissance: </th>
-										<td> <input type="date" style="width:100%;" class="form-control" placeholder="<?php echo $_SESSION['user']->getDateNaissance(); ?>"/> </td>
+										<td> <input type="date" style="width:100%;" class="form-control" value="<?php echo $_SESSION['user']->getDateNaissance(); ?>"/> </td>
 										<th> Numéro de téléphone: </th>
-										<td> <input type="tel" style="width:100%;" class="form-control" placeholder="<?php echo $_SESSION['user']->getTel(); ?>"/> </td>
+										<td> <input type="tel" style="width:100%;" class="form-control" value="<?php echo $_SESSION['user']->getTel(); ?>"/> </td>
 									</tr>
 								</table>
 							</article>
