@@ -74,9 +74,6 @@ ul.InlineList li{
 #header_register {width:120px;}
 #header_register input[type="submit"]
 {
-    margin: 0;
-    padding: 0;
-    line-height: 100%;
     border: 0;
     background: none;
     font: purple;
@@ -84,14 +81,6 @@ ul.InlineList li{
     text-decoration: none;
     cursor:pointer;
 }
-
-/*#header_register:hover {
-	background-color: rgba(128, 128, 128, 0.8);
-}
-
-#header_login:hover {
-	background-color: rgba(128, 128, 128, 0.8);
-}*/
 
 #header_login div {
 	opacity: 1;
@@ -202,7 +191,7 @@ ul.InlineList li{
 /* FIN */
 /* CSS de la page main.php */
 
-#slideshow {
+#slider {
     position: relative;
     width: 85%;
     height: 600px;
@@ -213,10 +202,9 @@ ul.InlineList li{
 #sContent li {
     display: inline;
 }
-#sContent:hover {
+/*#sContent:hover {
 	-moz-animation-play-state:paused;
-	
-}
+}*/
 
 #sContent {
     position: absolute;
@@ -229,6 +217,10 @@ ul.InlineList li{
     -moz-animation-duration: 10s;
     -moz-animation-iteration-count: infinite;
     -moz-animation-timing-function: ease-in-out;
+    -webkit-animation-name: AutoSlide;
+    -webkit-animation-duration: 10s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
 }
 
 #best {
@@ -300,14 +292,79 @@ ul.InlineList li{
 	margin-top: 10px;
 }
 
-#slider {
-	border: 1px solid black;
-	width: 56%;
-	height: 450px;
-	float: left;
+#slideshow_container {
+	border: 1px solid rgba(0,0,0,0.10);
+	border-radius: 2px;
+	float:left;
+	width:56%;
+	height:580px;
 	margin-left: 60px;
 	margin-top: 20px;
+	background-color: rgba(230, 230, 230, 0.65);
 }
+	
+#slideshow {
+	border: 1px solid black;
+	width: 94%;
+	height: 82.5%;
+	margin: 0 auto;
+	margin-top: 20px;
+	overflow:hidden;
+	position:relative;
+}
+
+#slContent {
+		height: 100%;
+		width: 400%;
+		position: absolute;
+	}
+	
+	#slContent li {display:inline;}
+
+#slideshow_miniature_container {
+	border: 1px solid rgba(0,0,0, 0.10);
+	width: 100%;
+	height: 12%;
+	margin-top:10px;
+	background-color: rgba(255,255,255, 0.85);
+}
+
+	#button-prev {
+		margin-top: 2%;
+		height: 0;
+		width: 0;
+		float:left;
+		border-right:36px solid #AAAAAA;
+		border-bottom:18px solid transparent;
+		border-top:18px solid transparent;
+	}
+	
+	#button-next {
+		height:0;
+		width: 0;
+		margin-top: 2%;
+		float:right;
+		border-left:36px solid #AAAAAA;
+		border-bottom:18px solid transparent;
+		border-top:18px solid transparent;
+	}
+
+#slideshow_miniature {
+	width: 91%;
+	height:87%;
+	margin-top: 0.6%;
+	position: relative;
+	overflow:hidden;
+}
+
+#slmContent {
+	width:400%;
+	height: 100%;
+	margin-left: 10px;
+	position:absolute;
+}
+
+#slmContent li {display: inline;}
 
 #logementinfos {
 	width: 24%;
