@@ -29,6 +29,7 @@
 				foreach ($lieux as $lieu) {
 					echo(",{id: ".$lieu->getId().",lat: ".$lieu->getLatitude().",lng: ".$lieu->getLongitude()."}");
 				}?>];
+			var marqueurs = [];
 
 			function initialize() {
 				var post_adresse = "<?php echo($_POST["adresse"]); ?>"; // Récupération de l'adresse POSTée (j'aime mon humour de merde)
@@ -70,8 +71,10 @@
 			}
 
 			function addMarqueurs() {
-				var marqueurs = [];
-				for(var i = 0; i < lieux.length; i++) {
+				for (var i = 0; i < marqueurs.length; i++)
+					marqueurs[i].setMap(null);
+				marqueurs.splice(0);
+				for (var i = 0; i < lieux.length; i++) {
 					if (isInMap(lieux[i]["lat"], lieux[i]["lng"])) {
 						var pos_marker2 = new google.maps.LatLng(lieux[1]["lat"], lieux[1]["lng"]);				
 						marqueurs.push(new google.maps.Marker({map: map, position: pos_marker2}));
@@ -80,10 +83,7 @@
 			}
 			
 			google.maps.event.addDomListener(window, 'load', initialize);
-			/*google.maps.event.addListener(window, 'click', function() {
-				if(document.getElementById("minimap").
-					addMarqueurs();
-			});*/
+			google.maps.event.addListener(map, 'zoom_changed', addMarqueurs());
 		</script>
 
 		<meta charset="UTF-8"/>
@@ -94,7 +94,7 @@
 		<?php include_once("header.php"); ?>
 				
 		<section>
-			<article id="minimap" onclick="addMarqueurs();">
+			<article id="minimap" onclick="addMarqueurs();" onmousewheel="addMarqueurs();">
 			</article>
 			<article id="filtre">
 				<fieldset style="padding:30px">
