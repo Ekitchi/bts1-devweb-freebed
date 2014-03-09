@@ -99,18 +99,28 @@
 			</article>
 			<article id="filtre">
 				<fieldset style="padding:30px">
-				<legend><h4><i>Filtres</i></h4></legend>
+				<legend><h4><i>Filtres de recherche</i></h4></legend>
 					<p style="text-align:center;">Budget de <input type="text" name="prix" placeholder=" Prix" value=""/>€ à <input type"text" name="prix2" placeholder=" Prix"/>€</p>
 					<br/>
 					<p style="text-align:center; padding:5px;">
-						<label for="Chambre d'Hôte">Chambre d'Hôte</label>
-						<input type="checkbox" id="Chambre d'Hôte" name="Chambre d'Hôte" value="Chambre d'Hôte" style="margin-right:15px;"/>
-						<label for="Appartement">  Appartement</label>
-						<input type="checkbox" id="Appartement" name="Appartement" value="Appartement" style="margin-right:15px;"/>
-						<label for="Maison">  Maison</label>
-						<input type="checkbox" id="Maison" name="Maison" value="Maison" style="margin-right:15px;"/>
-						<label for="Villa">  Villa</label>
-						<input type="checkbox" id="Villa" name="Villa" value="Villa" style="margin-right:15px;"/>
+						<ul class="InlineList">
+							<li>
+								<label for="Chambre d'Hôte">Chambre d'Hôte</label>
+								<input type="checkbox" id="Chambre d'Hôte" name="Chambre d'Hôte" value="Chambre d'Hôte"/>
+							</li>
+							<li>
+								<label for="Appartement">  Appartement</label>
+								<input type="checkbox" id="Appartement" name="Appartement" value="Appartement"/>
+							</li>
+							<li>
+								<label for="Maison">  Maison</label>
+								<input type="checkbox" id="Maison" name="Maison" value="Maison"/>
+							</li>
+							<li>
+								<label for="Villa">  Villa</label>
+								<input type="checkbox" id="Villa" name="Villa" value="Villa"/>
+							</li>
+						</ul>
 					</p>
 					<br/>
 					<p style="text-align:center;">Surface recherchée : <input type="text" name="surface" placeholder=" None" value=""/>m²</p>
@@ -122,8 +132,8 @@
 			</article>
 		</section>
 
-		<section>
-			<article id="allresults">
+		<section id="allresults">
+			<article>
 				<ul>
 					<li>
 						IMG

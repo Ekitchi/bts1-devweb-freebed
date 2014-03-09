@@ -8,16 +8,13 @@
 }
 
 #minimap {
-	border: 1px solid black;
+	border: 1px inset black;
 	height: 400px;
 	width: 60%;
 	float: left;
 }
 
-
-
 #allresults {
-	border: 1px solid black;
 	height: 328px;
 	clear: both;
 	overflow: hidden;
