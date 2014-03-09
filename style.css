@@ -233,53 +233,7 @@ a {
 }
 
 /* CSS pour la première page de recherche */
-#minimap {
-	border: 1px solid black;
-	height: 400px;
-	width: 780px;
-	float: left;
-}
 
-#filtre {
-	margin-top:50px;
-	float:right;
-	margin-right: 1px;
-	height: 212px;
-	width: 568px;
-}
-
-#allresults {
-	border: 1px solid black;
-	height: 328px;
-	clear: both;
-	overflow: hidden;
-	-ms-overflow-x: auto;
-	overflow-x: auto;
-}
-
-.imgpreview li {
-	border: 1px solid black;
-	clear:both;
-	overflow: auto;
-	overflow-y: hidden;
-	white-space:nowrap; 
-}
-
-#allresults ul li{
-	border:1px solid black;
-	height: 230px;
-	width: 390px;
-	margin-top: 15px;
-	margin-left: 15px;
-	display: inline-block;
-}
-
-#allresults ul li div {
-	border: 1px solid black;
-	width: 390px;
-	height: 55px;
-	margin-top: 212px;
-}
 
 /* CSS pour la page de recherche sans minimap */
 #filtre3 {
