@@ -22,6 +22,18 @@ a {
 	padding: 0;
 }
 
+/* ul-li sans puce en inline-block */
+ul.InlineList {
+	list-style-type: none;
+}
+ul.InlineList li{
+	display: inline-block;
+	margin: 2px;
+	padding: 2px 5px;;
+	border: 1px outset #505050;
+	border-radius: 5px;
+}
+
 @keyframes AutoSlide {
     0%, 15%, 100% {
         left: 0px; /*1ère image*/
