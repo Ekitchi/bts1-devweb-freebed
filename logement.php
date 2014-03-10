@@ -57,6 +57,14 @@
 				<section id="logement_infos">
 					<article id="logement_text"> A partir de: </article>
 					<article id="logement_price"> 299€ </article>
+					<article id="logement_note">
+						 <table>
+						 	<tr>
+						 		<th>Note moyenne:</th>
+						 		<td rowspan="2">NOTE</td>
+						 	</tr>
+						 </table>
+					</article>
 					<article id="logement_date">
 						<div class="logement_date">
 							Arrivée <br/> <input type="date" placeholder="jj/mm/aaaa" class="form-control form-logement_infos"/>
