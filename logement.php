@@ -192,7 +192,54 @@
 
 		<section>
 			<article id="allview">
-				AVIS
+				
+				<section class="avis">
+					<div class="avis_img">
+						<img src="http://placehold.it/140x140">
+					</div>
+					<div class="avis_note">
+						NOTE DE L'UTILISATEUR: ETOILE ETOILE ETOILE
+					</div>
+					<div class="avis_message">
+						message de l'utilisateur
+					</div>
+					<div class="avis_date">
+						Message envoyé le: <br/>
+						XX/XX/XXX à XX:XX
+					</div>
+				</section>
+				
+				<section class="avis">
+					<div class="avis_img">
+						<img src="http://placehold.it/140x140">
+					</div>
+					<div class="avis_note">
+						NOTE DE L'UTILISATEUR: ETOILE ETOILE ETOILE
+					</div>
+					<div class="avis_message">
+						message de l'utilisateur
+					</div>
+					<div class="avis_date">
+						Message envoyé le: <br/>
+						XX/XX/XXX à XX:XX
+					</div>
+				</section>
+				
+				<section class="avis">
+					<div class="avis_img">
+						<img src="http://placehold.it/140x140">
+					</div>
+					<div class="avis_note">
+						NOTE DE L'UTILISATEUR: ETOILE ETOILE ETOILE
+					</div>
+					<div class="avis_message">
+						message de l'utilisateur
+					</div>
+					<div class="avis_date">
+						Message envoyé le: <br/>
+						XX/XX/XXX à XX:XX
+					</div>
+				</section>
 			</article>
 		</section>
 

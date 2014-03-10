@@ -286,7 +286,7 @@ ul.InlineList li{
 /* CSS pour la page de logement */
 #logementname {
 	border: 1px solid black;
-	width: 92%;
+	width: 86%;
 	height: 70px;
 	margin-top: 10px;
 }
@@ -481,7 +481,7 @@ ul.InlineList li{
 		width: 60%;
 		margin-top: 2%;
 		margin-left:2%;
-		background-color: rgba(255,255,255, 0.85);
+		background-color: rgba(255,255,255, 0.75);
 		text-align: justify;
 		float:left;
 	}
@@ -494,7 +494,7 @@ ul.InlineList li{
 		margin-right:2%;
 		border: 1px solid rgba(0,0,0,0.10);
 		border-radius:2px;
-		background-color:rgba(255,255,255,0.85);
+		background-color:rgba(255,255,255,0.75);
 	}
 	
 		#logement_Tinfos table {border-collapse:collapse; width:95%; height:98%;margin-top:2%;}
@@ -509,13 +509,57 @@ ul.InlineList li{
 		}
 	
 #allview {
-	border: 1px solid black;
-	height: 700px;
-	width: 850px;
+	border: 1px solid rgba(0,0,0,0.10);
+	border-radius:2px;
+	background-color: rgba(230, 230, 230, 0.65);
+	height: 750px;
+	width: 56%;
 	float: left;
 	margin-top: 20px;
 	margin-left: 7%;
 }
+
+	.avis {
+		border: 1px solid rgba(0,0,0,0.10);
+		border-radius: 2px;
+		background-color: rgba(255,255,255,0.75);
+		width: 96%;
+		height: 30%;
+		margin: 2% auto;
+	}
+		.avis_img {
+		height: 140px;
+		width: 140px;
+		margin: 2%;
+		float:left;
+		}
+		.avis_date {
+			height:40px;
+			width:140px;
+			float:left;
+			margin-left:3%;
+			font-style:italic;
+			font-size:0.9em;
+		}
+		.avis_note {
+			width:75%;
+			float:right;
+			margin-top:3%;
+			margin-right: 2%;
+			color: #A4A4A4;
+			font-size:1.3em;
+			font-style:italic;
+		}
+		.avis_message {
+			border: 1px solid rgba(0,0,0,0.10);
+			border-radius:2px;
+			height: 70%;
+			width:75%;
+			float:right;
+			margin-top:1%;
+			margin-right:2%;
+			text-align:justify;
+		}
 
 .form-logement_infos {
 	height: 30px;
