@@ -51,7 +51,11 @@
 									</tr>
 									<tr>
 										<th> Date de naissance: </th>
+<<<<<<< HEAD
+										<td> <input type="date" style="width:100%;" class="form-control" placeholder="<?php echo $_SESSION["user"]->getDateNaissance(); ?>"/> </td>
+=======
 										<td> <input type="date" style="width:100%;" class="form-control" value="<?php echo $_SESSION['user']->getDateNaissance(); ?>"/> </td>
+>>>>>>> c53f77f39e54759c0a58791f3cbcea5c1fd5e761
 										<th> Numéro de téléphone: </th>
 										<td> <input type="tel" style="width:100%;" class="form-control" value="<?php echo $_SESSION['user']->getTel(); ?>"/> </td>
 									</tr>
