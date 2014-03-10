@@ -1,11 +1,54 @@
+/*
+ * Définitions des styles de polices
+ */
+
+/* Définitions générales */
+h1, h2, h3, h4, li, th, td, a, label, strong, p {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+
+/* Définitions les liens */
+a {
+	text-decoration: none;
+}
+
+/*
+ * Définitions des blocs
+ */
+
+/* Définitions générales */
 * {
 	margin: 0 auto;
 	padding: 0;
 }
 
-a {
-	text-decoration: none;
+/* ul-li sans puce en inline-block */
+ul.InlineList {
+	list-style-type: none;
 }
+ul.InlineList li{
+	display: inline-block;
+	margin: 2px;
+	padding: 2px 5px;;
+	border: 1px outset #505050;
+	border-radius: 5px;
+}
+
+@keyframes AutoSlide {
+    0%, 15%, 100% {
+        left: 0px; /*1ère image*/
+    }
+    35%, 50% {
+        left: -100%; /*2ème image*/
+    }
+    70%, 85% {
+        left: -201%; /*3ème image*/
+    }
+}
+
+
+
+
 
 /* CSS du header */
 #header {
@@ -29,23 +72,27 @@ a {
 
 #header_login {width:265px;}
 #header_register {width:120px;}
-
-#header_register:hover {
-	background-color: rgba(128, 128, 128, 0.8);
-}
-
-#header_login:hover {
-	background-color: rgba(128, 128, 128, 0.8);
+#header_register input[type="submit"]
+{
+    border: 0;
+    background: none;
+    font: purple;
+    color: purple;
+    text-decoration: none;
+    cursor:pointer;
 }
 
 #header_login div {
-	opacity: 0;
+	opacity: 1;
 	width: 265px;
 	height: 0px;
 	transition: 0.4s background-color, 0.8s opacity, 0.6s height, 1s visibility;
 	visibility:hidden;
 	overflow: hidden;
-	background-color: rgba(255, 255, 255, 0.7);
+	background-color: rgba(255, 255, 255, 1);
+	border-bottom: 2px solid lightblue;
+	border-right: 2px solid lightblue;
+	border-left: 2px solid lightblue;
 }
 
 #header_login:hover div {
@@ -53,7 +100,7 @@ a {
 	height:220px;
 	visibility:visible;
 	transition: 0.4s background-color, 0.4s opacity, 0.6s height, 1s visibility;
-	background-color: rgba(128, 128, 128, 0.85);
+	background-color: rgba(255, 255, 255, 1);
 }
 
 /*#header_login div table {
@@ -62,7 +109,7 @@ a {
 	font-style: italic;
 	color: rgba(247, 247, 247, 1)
 }*/
-	#header_login table a {color: rgba(219, 219, 219, 1);}
+	#header_login table a {color: rgba(210, 210, 210, 1);}
 	#header_login table a:hover {font-style:italic;}
 
 #header_rechercher {
@@ -110,17 +157,25 @@ a {
 
 .btn:hover {
 	background-color: rgba(128, 128, 128, 0.20);
+	/*background-color: rgba(144, 238, 144, 0.20);*/
 	border-color: grey;
 }
 
 .btn:active {
-	background-color: rgba(127, 127, 127, 1);
+	background-color: rgba(127, 127, 127, 0.65);
 }
 
 	.btn-header {
 		margin-left: 10px;
 		height: 33px;
 		width: 70px;
+	}
+	
+	.btn-profil {
+		float:right;
+		margin:10px; 
+		height:30px; 
+		width:100px;
 	}
 	
 .btn-header-connexion {
@@ -131,12 +186,41 @@ a {
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
 }
 .btn-header-connexion:hover {border-color: white;}
-	
 
+
+/* FIN */
 /* CSS de la page main.php */
-#firstarticle {
-	border: 1px solid black;
-	height: 600px;
+
+#slider {
+    position: relative;
+    width: 85%;
+    height: 600px;
+    margin:  20px auto;
+    overflow: hidden;
+    
+}
+#sContent li {
+    display: inline;
+}
+/*#sContent:hover {
+	-moz-animation-play-state:paused;
+}*/
+
+#sContent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400%;
+    margin: 0;            
+    padding: 0;
+    -moz-animation-name: AutoSlide;
+    -moz-animation-duration: 10s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: ease-in-out;
+    -webkit-animation-name: AutoSlide;
+    -webkit-animation-duration: 10s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
 }
 
 #best {
@@ -172,6 +256,7 @@ a {
 }
 
 /* CSS pour la première page de recherche */
+<<<<<<< HEAD
 #minimap {
 	border: 1px solid black;
 	height: 350px;
@@ -212,13 +297,9 @@ a {
 	margin-left: 15px;
 	display: inline-block;
 }
+=======
+>>>>>>> c53f77f39e54759c0a58791f3cbcea5c1fd5e761
 
-#allresults ul li div {
-	border: 1px solid black;
-	width: 390px;
-	height: 55px;
-	margin-top: 212px;
-}
 
 /* CSS pour la page de recherche sans minimap */
 #filtre3 {
@@ -254,49 +335,235 @@ a {
 	margin-top: 10px;
 }
 
-#slider {
-	border: 1px solid black;
-	width: 850px;
-	height: 450px;
-	float: left;
-	margin-left: 60px;
+#slideshow_container {
+	border: 1px solid rgba(0,0,0,0.10);
+	border-radius: 2px;
+	float:left;
+	width:56%;
+	height:580px;
+	margin-left: 7%;
+	margin-top: 20px;
+	background-color: rgba(230, 230, 230, 0.65);
 }
+	
+#slideshow {
+	width: 94%;
+	height: 82.5%;
+	margin: 0 auto;
+	margin-top: 20px;
+	overflow:hidden;
+	position:relative;
+}
+
+#slContent {
+		height: 100%;
+		width: 400%;
+		position: absolute;
+	}
+	
+	#slContent li {display:inline;}
+
+#slideshow_miniature_container {
+	border: 1px solid rgba(0,0,0, 0.10);
+	border-radius: 2px;
+	width: 100%;
+	height: 12%;
+	margin-top:10px;
+	background-color: rgba(255,255,255, 0.85);
+}
+
+	#button-prev {
+		margin-top: 2%;
+		height: 0;
+		width: 0;
+		float:left;
+		border-right:36px solid #AAAAAA;
+		border-bottom:18px solid transparent;
+		border-top:18px solid transparent;
+	}
+	
+	#button-next {
+		height:0;
+		width: 0;
+		margin-top: 2%;
+		float:right;
+		border-left:36px solid #AAAAAA;
+		border-bottom:18px solid transparent;
+		border-top:18px solid transparent;
+	}
+
+#slideshow_miniature {
+	width: 91%;
+	height:87%;
+	margin-top: 0.6%;
+	position: relative;
+	overflow:hidden;
+}
+
+#slmContent {
+	width:400%;
+	height: 100%;
+	margin-left: 10px;
+	position:absolute;
+}
+
+#slmContent li {display: inline;}
 
 #logementinfos {
-	border:1px solid black;
-	width: 500px;
-	height: 450px;
-	margin-right: 60px;
+	width: 24%;
+	height: 990px;
+	margin-right: 7%;
 	margin-top: 20px;
+	float:right;
 }
+	
+	#logement_infos {
+		width:100%;
+		height:23%;
+		background-color: rgba(230, 230, 230, 0.65);
+		border-radius:2px;
+		border:1px solid rgba(0,0,0,0.10);
+	}
+	
+	#logement_text {
+			margin-top: 40px;
+			margin-left:60px;
+			color: #A4A4A4;
+			float:left;
+			font-size: 1.4em;
+		}
+		
+	#logement_price {
+		margin-left:52px;
+		margin-top: 30px;
+		font-size: 2.5em;
+		color:grey;
+		float: left;
+	}
+	
+	#logement_date {
+		clear:both;
+		width:95%;
+		margin-top: 140px;
+		margin-left: 15px;
+	}
+	
+	.logement_date {
+		display: inline-block;
+		padding:5px;
+	}
+	
+	#logementlouer {
+		border:1px solid black;
+		height: 80px;
+		width: 100%;
+		background-color: rgba(255,255,255, 0.85);
+		border: 1px solid rgba(0,0,0, 0.10);
+		border-radius:2px;
+	}
+
+	#userinfos {
+		width: 100%;
+		height: 58%;
+		float: left;
+		margin-top: 75px;
+	}
+
+	#user_avatar {
+		height: 60%;
+		width:100%;
+		background-color: rgba(230, 230, 230, 0.65);
+		border-radius:2px;
+		border:1px solid rgba(0,0,0,0.10);
+	}
+	
+		#user_avatar img {margin-top:26px; margin-left: 16%;}
+		#user_avatar div {width: 100%; text-align:center; font-size:1.6em;margin-top:20px;}
+	
+	#user_infos {
+		height:42%;
+		width: 100%;
+		background-color: rgba(255, 255, 255, 0.85);
+		border-radius:2px;
+		border:1px solid rgba(0,0,0,0.10);
+	}
+	
+		#user_infos table {
+			width: 100%;
+			height: 100%;
+			text-align:center;
+		}
+		#user_infos table th {color:rgba(180,180,180,1);}
+
 
 #logementdesc {
-	border: 1px solid black;
-	width: 850px;
-	height: 500px;
+	border: 1px solid rgba(0,0,0,0.10);
+	border-radius: 2px;
+	background-color: rgba(230, 230, 230, 0.85);
+	width: 56%;
+	height: 680px;
 	float: left;
-	margin-left: 60px;
+	margin-left: 7%;
 	margin-top: 20px;
 }
 
-#userinfos {
-	border: 1px solid black;
-	width: 500px;
-	height: 450px;
-	float: right;
-	margin-right: 60px;
-	margin-top: 20px;
-}
-
+	#logement_desc {
+		border: 1px solid rgba(0,0,0, 0.10);
+		border-radius: 2px;
+		height: 94%;
+		width: 60%;
+		margin-top: 2%;
+		margin-left:2%;
+		background-color: rgba(255,255,255, 0.85);
+		text-align: justify;
+		float:left;
+	}
+	
+	#logement_Tinfos {
+		height:94%;
+		width:35%;
+		float:right;
+		margin-top:2%;
+		margin-right:2%;
+		border: 1px solid rgba(0,0,0,0.10);
+		border-radius:2px;
+		background-color:rgba(255,255,255,0.85);
+	}
+	
+		#logement_Tinfos table {border-collapse:collapse; width:95%; height:98%;margin-top:2%;}
+		#logement_Tinfos th {
+			padding:10px;
+			width:45%;
+			background-color: rgba(200,200,200,0.55);
+		}
+		#logement_Tinfos td {
+			width:55%;
+			text-align: center;
+		}
+	
 #allview {
 	border: 1px solid black;
 	height: 700px;
 	width: 850px;
 	float: left;
 	margin-top: 20px;
-	margin-left: 60px;
+	margin-left: 7%;
 }
 
+.form-logement_infos {
+	height: 30px;
+	width: 100px;
+}
+.for-logement_infos2 {width:50px;}
+
+.btn_louer {
+	height: 50px;
+	width: 80%;
+	margin-top: 15px;
+	margin-left: 41px;	
+}
+
+/* FIN */
 /* CSS de la page myaccount.php */
 #menu_account {
 	border: 1px solid black;
@@ -357,31 +624,30 @@ a {
 	transition: 1s left, 1s width, 0.7s visibility, 1s opacity;
 }
 	#profil_img {
-		border: 1px solid black;
 		margin-top: 20px;
 		margin-left: 20px;
-		height: 250px;
 		width: 250px;
 		float: left;
 	}
 
 	#profil_infos {
 		margin-top: 20px;
-		margin-right: 100px;
+		margin-right: 115px;
 		height: 250px;
 		width: 55%;
 		float:right;
 	}
 		
 		#profil_infos table {
-			border: 1px solid #CCCCCC;
+			border: 2px solid #CCCCCC;
 			width: 100%;
 			height: 100%;
+			border-collapse:collapse;
 			/*margin-top: 10px;
 			margin-left: 15px;*/
 		}
 		
-		#profil_infos table tr th {padding:10px; background-color:rgba(128,128,128, 0.2); text-align:center;}
+		#profil_infos table tr th {padding:10px; background-color:rgba(128,128,128, 0.2); text-align:center; width:100px;}
 		#profil_infos table tr td {padding:10px; background-color:rgba(200,200,200, 0.2);}
 		
 	/*#profil_avis {
@@ -400,12 +666,12 @@ a {
 		
 	#profil_biographie {
 		clear:both;
-		margin-top: 300px;
+		float:left;
 		margin-left: 20px;
-		position: absolute;
+		margin-top: 15px;
 	}
 		
-		/*#profil_biographie h2 {float:left;}*/
+	#profil_footer {width:100%; border-top:2px solid #CCCCCC; float:left; margin-top:10px;}
 		
 #account_logements:target {
 	visibility: visible;

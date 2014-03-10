@@ -14,6 +14,9 @@ if (isset($_POST["email"]) && isset($_POST["nom"]) && isset($_POST["prenom"])) {
 	$res = $bdd -> query($query);
 	$inscri = TRUE;
 }
+else {
+	$inscri = FALSE;
+}
 ?>
 
 <!DOCTYPE html>

@@ -25,37 +25,42 @@
 					<li id="account_page1">
 						<a href="#account_profil"> <h1> Profil </h1> </a>
 						<div id="account_profil">
-							<section id="profil_img">
+							<article id="profil_img">
 								<img src="http://placehold.it/250x250"/>
-							</section>
-							<section id="profil_infos">
+								<input type="file"/>
+							</article>
+							<article id="profil_infos">
 								<table>
 									<tr>
 										<th> Nom: </th>
-										<td> <input type="text" style="width:100%;" class="form-control" placeholder="<?php echo $_SESSION["user"]->getNom(); ?>"/> </td>
+										<td> <input type="text" style="width:100%;" class="form-control" value="<?php echo $_SESSION['user']->getNom(); ?>"/> </td>
 										<th> Prénom: </th>
-										<td> <input type="text" style="width:100%;" class="form-control" placeholder="<?php echo $_SESSION["user"]->getPrenom(); ?>"/> </td>
+										<td> <input type="text" style="width:100%;" class="form-control" value="<?php echo $_SESSION['user']->getPrenom(); ?>"/> </td>
 									</tr>
 									<tr>
 										<th> E-mail: </th>
-										<td> <input type="email" style="width:100%;" class="form-control" placeholder="<?php echo $_SESSION["user"]->getEmail(); ?>"/> </td>
+										<td> <input type="email" style="width:100%;" class="form-control" value="<?php echo $_SESSION['user']->getEmail(); ?>"/> </td>
 										<th> Adresse: </th>
-										<td> <input type="text" style="width:100%;" class="form-control" placeholder="<?php echo $_SESSION["user"]->getAdresse(); ?>"/> </td>
+										<td> <textarea rows="1" style="width:100%" class="form-control"><?php echo $_SESSION['user']->getAdresse(); ?></textarea> </td>
 									</tr>
 									<tr>
 										<th> Occupation: </th>
-										<td> <input type="text" style="width:100%;" class="form-control" placeholder="<?php echo $_SESSION["user"]->getOccupation(); ?>"/> </td>
+										<td> <input type="text" style="width:100%;" class="form-control" value="<?php echo $_SESSION['user']->getOccupation(); ?>"/> </td>
 										<th> Sexe: </th>
-										<td> <input type="text" style="width:100%;" class="form-control" placeholder="<?php echo $_SESSION["user"]->getSexe(); ?>"/> </td>
+										<td> <input type="text" style="width:100%;" class="form-control" value="<?php echo $_SESSION['user']->getSexe(); ?>"/> </td>
 									</tr>
 									<tr>
 										<th> Date de naissance: </th>
+<<<<<<< HEAD
 										<td> <input type="date" style="width:100%;" class="form-control" placeholder="<?php echo $_SESSION["user"]->getDateNaissance(); ?>"/> </td>
+=======
+										<td> <input type="date" style="width:100%;" class="form-control" value="<?php echo $_SESSION['user']->getDateNaissance(); ?>"/> </td>
+>>>>>>> c53f77f39e54759c0a58791f3cbcea5c1fd5e761
 										<th> Numéro de téléphone: </th>
-										<td> <input type="tel" style="width:100%;" class="form-control" placeholder="<?php echo $_SESSION["user"]->getTel(); ?>"/> </td>
+										<td> <input type="tel" style="width:100%;" class="form-control" value="<?php echo $_SESSION['user']->getTel(); ?>"/> </td>
 									</tr>
 								</table>
-							</section>
+							</article>
 							
 							<!--<section id="profil_avis">
 								<article class="avis_user">
@@ -92,15 +97,18 @@
 										</tr>
 									</table>
 								</article>
-							</section> -->
+							</section>-->
 							
-							<section id="profil_biographie">
-								<h2> Biographie:
-								<input type='button' class="btn" value="Modifier" style="height:30px; width:80px;"/>
-								</h2>
-								<!--<textarea class="form-control" rows="20" cols="85"> </textarea>-->
-								<article style='border:1px dashed black; height: 309px; width:700px;'></article>
-							</section>
+							<article id="profil_biographie">
+								<h2>Biographie:</h2>
+								<textarea class="form-control" rows="20" cols="85"></textarea>
+							</article>
+							
+							<footer id="profil_footer">
+								<input type="submit" class="btn btn-profil" value="Annuler"/>
+								<input type="submit" class="btn btn-profil" value="Enregistrer"/>
+								<p style="float:right;margin:15px;">Voulez-vous enregistrer les modifications ?</p>
+							</footer>
 						</div>
 					</li>
 					<li>

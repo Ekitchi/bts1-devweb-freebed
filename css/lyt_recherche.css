@@ -1,0 +1,45 @@
+#filtre {
+	float:right;
+	margin-left: auto;
+	height: 220px;
+	width: 38%;
+}
+
+#minimap {
+	border: 1px inset black;
+	height: 400px;
+	width: 60%;
+	float: left;
+}
+
+#allresults {
+	height: 328px;
+	clear: both;
+	overflow: hidden;
+	-ms-overflow-x: auto;
+	overflow-x: auto;
+}
+
+.imgpreview li {
+	border: 1px solid black;
+	clear:both;
+	overflow: auto;
+	overflow-y: hidden;
+	white-space:nowrap; 
+}
+
+#allresults ul li{
+	border:1px solid black;
+	height: 230px;
+	width: 390px;
+	margin-top: 15px;
+	margin-left: 15px;
+	display: inline-block;
+}
+
+#allresults ul li div {
+	border: 1px solid black;
+	width: 390px;
+	height: 55px;
+	margin-top: 212px;
+}

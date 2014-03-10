@@ -20,8 +20,14 @@
 
 
 		<section id="firstarticle" name="firstarticle">
-			<article id="slider1" name="slider1">
-				SLIDER1
+			<article id="slider" name="slider">
+				<ul id="sContent">
+					<li> <img alt="blouh" src="data/s1.png" height="600" width="25%"> </li>
+					<li> <img alt="blouh" src="data/s2.png" height="600" width="25%"> </li>
+					<li> <img alt="blouh" src="data/s3.jpg" height="600" width="25%"> </li>
+				</ul>
+				
+				
 				<!-- <img src="http://placehold.it/1515x600"> -->
 				
 				<!--Style du Compteur-->
@@ -51,6 +57,7 @@
 					echo '<strong>'.$compte.'</strong> visites.';
 				-->
 			</article>
+			
 		</section>
 
 		<section id="bestrated" name="bestrated">
