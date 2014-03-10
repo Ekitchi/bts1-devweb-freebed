@@ -17,8 +17,69 @@
 		<!-- Inclusion du header -->
 		<?php include_once("header.php"); ?>
 		
-		<section id="enregistrement">
-			<div id="enr_encadrement">
+		<section id="Ajouter">Publiez votre annonce !</section>
+		
+		<section id="ajout_location">
+			<div id="ajout_infos1">
+				<table>
+					<tr>
+						<th>Titre de l'annonce:</th>
+						<td> <input type="text" name="annonce_titre" class="form-control form-control-ajout" placeholder="Titre" value="" required/> </td>
+					</tr>
+					<tr>
+						<th>Surface(en m²):</th>
+						<td> <input type="number" name="annonce_surface" class="form-control form-control-ajout" placeholder="Surface" value="" required/> </td>
+					</tr>
+					<tr>
+						<th>Adresse:</th>
+						<td> <input type="text" name="annonce_adresse" class="form-control form-control-ajout" placeholder="Adresse" value="" required/> </td>
+					</tr>
+					<tr>
+						<th>Ville:</th>
+						<td> <input type="text" name="annonce_ville" class="form-control form-control-ajout" placeholder="Ville" value="" required/> </td>
+					</tr>
+					<tr>
+						<th>Type de logement:</th>
+						<td> <select class="form-control form-control-ajout"> <option>Appartement</option> <option>Maison</option> <option>Chambre d'hôte</option> <option>Chambre privée</option> <option>Squat</option> </select> </td>
+					</tr>
+				</table>
+			</div>
+				
+			<div id="ajout_infos2">
+				<table>
+					<tr>
+						<th>Capacité d'accueil:</th>
+						<td> <select class="form-control form-control-ajout"> <option>1</option> <option>2</option> <option>3</option> <option>4</option> <option>5</option> <option>5+</option></select> </td>
+					</tr>
+					<tr>
+						<th>Tarif/nuit:</th>
+						<td> <input type="number" name="annonce_tarifn" class="form-control form-control-ajout" placeholder="Prix par nuit" value="" required/> </td>
+					</tr>
+					<tr>
+						<th>Tarif/semaine:</th>
+						<td> <input type="number" name="annonce_tarifs" class="form-control form-control-ajout" placeholder="Prix à la semaine" value="" required/> </td>
+					</tr>
+					<tr>
+						<th>Description:</th>
+						<td> <textarea cols="40" rows="21" class="form-control" placeholder="Informations complémentaires (Logement, quartiers, transports)..."></textarea> </td>
+					</tr>
+				</table>
+			</div>
+			
+		</section>
+		
+		<footer id="ajouter_footer">
+				<input type="submit" class="btn btn-profil" value="Annuler"/>
+				<input type="submit" class="btn btn-profil" value="Publiez"/>
+				<p style="float:right;margin:15px;">Voulez-vous publiez cette annonce ?</p>
+		</footer>
+			
+	</body>
+</html>
+
+
+
+<!--
 				<div id="nom">
 					<form method="POST" action="ajout_logement.php">
 						<fieldset>
@@ -45,7 +106,4 @@
 					</fieldset>
 					</form>
 				</div>
-			</div>
-		</section>
-	</body>
-</html>
+				-->
