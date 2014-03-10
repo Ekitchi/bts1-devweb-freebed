@@ -27,8 +27,8 @@
 						<td> <input type="text" name="annonce_titre" class="form-control form-control-ajout" placeholder="Titre" value="" required/> </td>
 					</tr>
 					<tr>
-						<th>Surface(en m²):</th>
-						<td> <input type="number" name="annonce_surface" class="form-control form-control-ajout" placeholder="Surface" value="" required/> </td>
+						<th>Surface:</th>
+						<td> <input type="number" name="annonce_surface" class="form-control form-control-ajout" placeholder="Surface en m²" value="" required/> </td>
 					</tr>
 					<tr>
 						<th>Adresse:</th>
