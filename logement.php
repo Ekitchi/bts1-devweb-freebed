@@ -138,19 +138,7 @@
 							<td>PHP</td>
 						</tr>
 						<tr>
-							<th>Type de lit</th>
-							<td>PHP</td>
-						</tr>
-						<tr>
 							<th>Capacité d'accueil</th>
-							<td>PHP</td>
-						</tr>
-						<tr>
-							<th>Chambres</th>
-							<td>PHP</td>
-						</tr>
-						<tr>
-							<th>Salle de bain</th>
 							<td>PHP</td>
 						</tr>
 						<tr>
@@ -158,11 +146,11 @@
 							<td>PHP</td>
 						</tr>
 						<tr>
-							<th>Tarif mensuel</th>
+							<th>Tarif/jour</th>
 							<td>PHP</td>
 						</tr>
 						<tr>
-							<th>Caution</th>
+							<th>Tarif/semaine</th>
 							<td>PHP</td>
 						</tr>
 						<tr>
