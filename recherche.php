@@ -82,11 +82,12 @@
 				var titre = document.createTextNode(lieux[id]["nom"]);
 				lien.setAttribute("href", "./logement.php?id_logement="+lieux[id]["id"]);
 				lien.appendChild(titre);
-				var description = document.appendChild("p");
-				p.appendChild(document.createTextNode("A partir de : "+))
+				var description = document.createElement("p");
+				var desc_text = document.createTextNode("A partir de : €");
+				description.appendChild(desc_text);
 				resultat.appendChild(photo);
 				resultat.appendChild(lien);
-				
+				resultat.appendChild(description);
 				zone_results.appendChild(resultat);
 			}
 			
