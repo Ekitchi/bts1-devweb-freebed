@@ -22,9 +22,9 @@
 		<section id="firstarticle" name="firstarticle">
 			<article id="slider" name="slider">
 				<ul id="sContent">
-					<li> <img alt="blouh" src="data/s1.png" height="600" width="25%"> </li>
-					<li> <img alt="blouh" src="data/s2.png" height="600" width="25%"> </li>
-					<li> <img alt="blouh" src="data/s3.jpg" height="600" width="25%"> </li>
+					<li> <img alt="blouh" src="data/s1.png" height="650" width="25%"> </li>
+					<li> <img alt="blouh" src="data/s2.png" height="650" width="25%"> </li>
+					<li> <img alt="blouh" src="data/s3.jpg" height="650" width="25%"> </li>
 				</ul>
 				
 				

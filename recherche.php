@@ -131,7 +131,13 @@
 					<p>Pays : <input type="text" name="pays" placeholder=" Pays" value="" style="margin-right:15px;"/><br />
 						Ville : <input type="text" name="ville" placeholder=" Ville" value=""/></p>
 					<br/>		
+<<<<<<< HEAD
+					<p style="text-align:center;">
+						<input type="submit"  name="recherchefiltre" value="Recherche"/>
+					</p>
+=======
 						<input type="submit"  name="recherchefiltre" value="Recherche">
+>>>>>>> c53f77f39e54759c0a58791f3cbcea5c1fd5e761
 				</fieldset>
 			</article>
 		</section>
