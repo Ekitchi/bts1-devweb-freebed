@@ -12,26 +12,17 @@
 	float: left;
 }
 
+/* Mise en page des résultats de la recherche */
 #allresults {
-	height: 328px;
 	clear: both;
 	overflow: hidden;
 	-ms-overflow-x: auto;
 	overflow-x: auto;
 }
 
-.imgpreview li {
-	border: 1px solid black;
-	clear:both;
-	overflow: auto;
-	overflow-y: hidden;
-	white-space:nowrap; 
-}
-
 #allresults ul li{
-	border:1px solid black;
-	height: 230px;
-	width: 390px;
+	border:1px outset black;
+	width: 350px;
 	margin-top: 15px;
 	margin-left: 15px;
 	display: inline-block;
@@ -43,3 +34,19 @@
 	height: 55px;
 	margin-top: 212px;
 }
+
+#allresults ul li img {
+	display: block;
+	max-width: 350px;
+	max-height: 300px;
+	margin-left: auto;
+}
+
+.imgpreview li {
+	border: 1px solid black;
+	clear:both;
+	overflow: auto;
+	overflow-y: hidden;
+	white-space:nowrap; 
+}
+

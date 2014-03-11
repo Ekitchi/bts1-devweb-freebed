@@ -17,13 +17,14 @@
 	<head>
 		<title>FreeBed Location</title>
 		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+		<meta charset="UTF-8" />
 		<link rel="stylesheet" type="text/css" href="style.css"/>
 		<link rel="stylesheet" type="text/css" href="./css/lyt_recherche.css"/>
 		<script src="scripts/jquery-2.1.0.js"></script>
 		<script type="text/javascript" src="scripts/prefixfree.min.js"></script>
 		<script type="text/javascript" src="scripts/jquery-2.1.0.js"></script>
 		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
-		<script type="text/javascript">
+		<script type="text/javascript" charset="UTF-8">
 			var geocoder;
 			var map;
 			var lieux = [{id: 0, lat: 0, lng: 0, nom: "0", img: "0"}<?php foreach ($lieux as $lieu) { echo(",{id: ".$lieu->getId().", lat: ".$lieu->getLatitude().", lng: ".$lieu->getLongitude().", nom: '".$lieu->getNom()."', img: './data/photos/".$lieu->getPhoto()."'}");}?>];
@@ -75,8 +76,14 @@
 				var zone_results = document.getElementById("allresults").firstChild.nextSibling.firstChild.nextSibling;
 				var resultat = document.createElement("li");
 				var photo = document.createElement("img");
-				photo.setAttribute("src", lieux[id]["img"])
+				photo.setAttribute("src", lieux[id]["img"]);
+				photo.setAttribute("alt", lieux[id]["nom"]);
+				var lien = document .createElement("a");
+				var titre = document.createTextNode(lieux[id]["nom"]);
+				lien.setAttribute("href", "./logement.php?id_logement="+lieux[id]["id"]);
 				resultat.appendChild(photo);
+				resultat.appendChild(lien);
+				lien.appendChild(titre);
 				zone_results.appendChild(resultat);
 			}
 			
@@ -130,14 +137,8 @@
 					<br/>
 					<p>Pays : <input type="text" name="pays" placeholder=" Pays" value="" style="margin-right:15px;"/><br />
 						Ville : <input type="text" name="ville" placeholder=" Ville" value=""/></p>
-					<br/>		
-<<<<<<< HEAD
-					<p style="text-align:center;">
-						<input type="submit"  name="recherchefiltre" value="Recherche"/>
-					</p>
-=======
+					<br/>
 						<input type="submit"  name="recherchefiltre" value="Recherche">
->>>>>>> c53f77f39e54759c0a58791f3cbcea5c1fd5e761
 				</fieldset>
 			</article>
 		</section>
@@ -146,7 +147,7 @@
 			<article>
 				<ul>
 					<li>
-						IMG
+						<img src="" alt="" />
 						<div classe="imginfos">
 							Infos
 						</div>
