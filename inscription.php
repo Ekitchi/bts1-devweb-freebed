@@ -153,7 +153,7 @@ else {
 						</div>
 						<div class="item">
 							<label> <span>Mot de passe</span>
-								<input type="password" name="password_insc" data-validate-length="6,8" required='required' value="" />
+								<input type="password" name="password_insc" data-validate-length="6,30" required='required' value="" />
 							</label>
 							<div class='tooltip help'>
 								<span>?</span>
