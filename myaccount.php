@@ -17,6 +17,20 @@
 		<!-- Inclusion du header -->
 		<?php
 		include_once ("header.php");
+		
+		if (isset($_POST["nom"]) || isset($_POST["prenom"]) || isset($_POST["email"]) || isset($_POST["adresse"]) || isset($_POST["occupation"]) || isset($_POST["sexe"]) || isset($_POST["date_de_naissance"]) 
+		|| isset($_POST["tel"])  ) {
+			$nom = $_POST["nom"];
+			$prenom = $_POST["prenom"];
+			$email = $_POST["email"];
+			$adresse = $_POST["adresse"];
+			$oqp = $_POST["occupation"];
+			$sexe = $_POST["sexe"];
+			$date_de_naissance = $_POST["date_de_naissance"];
+			$tel = $_POST["tel"];
+			$query = "UPDATE `freebed`.`user` VALUES (NULL, 1, '".$nom."', '".$prenom."', '".$email."', '".$adresse."', '".$occupation."', '".$sexe."', '".$date_de_naissance."', '".$tel."');"; 
+			$res = $bdd -> query($query);	
+		}
 		?>
 
 		<section>
@@ -30,30 +44,34 @@
 								<input type="file"/>
 							</article>
 							<article id="profil_infos">
+								<form method="post" action="myaccount.php">
 								<table>
 									<tr>
 										<th> Nom: </th>
-										<td> <input type="text" style="width:100%;" class="form-control" value="<?php echo $_SESSION['user']->getNom(); ?>"/> </td>
+										<td> <input type="text" name="nom" style="width:100%;" class="form-control" value="<?php echo $_SESSION['user']->getNom(); ?>"/> </td>
 										<th> Prénom: </th>
-										<td> <input type="text" style="width:100%;" class="form-control" value="<?php echo $_SESSION['user']->getPrenom(); ?>"/> </td>
+										<td> <input type="text" name="prenom" style="width:100%;" class="form-control" value="<?php echo $_SESSION['user']->getPrenom(); ?>"/> </td>
 									</tr>
 									<tr>
 										<th> E-mail: </th>
-										<td> <input type="email" style="width:100%;" class="form-control" value="<?php echo $_SESSION['user']->getEmail(); ?>"/> </td>
+										<td> <input type="email" name="email" style="width:100%;" class="form-control" value="<?php echo $_SESSION['user']->getEmail(); ?>"/> </td>
 										<th> Adresse: </th>
-										<td> <textarea rows="1" style="width:100%" class="form-control"><?php echo $_SESSION['user']->getAdresse(); ?></textarea> </td>
+										<td> <textarea rows="1"  name="adresse" style="width:100%" class="form-control"><?php echo $_SESSION['user']->getAdresse(); ?></textarea> </td>
 									</tr>
 									<tr>
 										<th> Occupation: </th>
-										<td> <input type="text" style="width:100%;" class="form-control" value="<?php echo $_SESSION['user']->getOccupation(); ?>"/> </td>
+										<td> <input type="text" name="occupation" style="width:100%;" class="form-control" value="<?php echo $_SESSION['user']->getOccupation(); ?>"/> </td>
 										<th> Sexe: </th>
-										<td> <input type="text" style="width:100%;" class="form-control" value="<?php echo $_SESSION['user']->getSexe(); ?>"/> </td>
+										<td> <input type="text" name="sexe" style="width:100%;" class="form-control" value="<?php echo $_SESSION['user']->getSexe(); ?>"/> </td>
 									</tr>
 									<tr>
 										<th> Date de naissance: </th>
 										<td> <input type="date" style="width:100%;" class="form-control" value="<?php echo $_SESSION['user']->getDateNaissance(); ?>"/> </td>
+
+										<td> <input type="date" name="date_de_naissance" style="width:100%;" class="form-control" value="<?php echo $_SESSION['user']->getDateNaissance(); ?>"/> </td>
+
 										<th> Numéro de téléphone: </th>
-										<td> <input type="tel" style="width:100%;" class="form-control" value="<?php echo $_SESSION['user']->getTel(); ?>"/> </td>
+										<td> <input type="tel" name="tel" style="width:100%;" class="form-control" value="<?php echo $_SESSION['user']->getTel(); ?>"/> </td>
 									</tr>
 								</table>
 							</article>
@@ -109,6 +127,7 @@
 					</li>
 					
 					
+					</form>
 					<li>
 						<a href="#account_logements"> <h1> Mes logements </h1> </a>
 						<div id="account_logements">
@@ -240,6 +259,5 @@
 				</ul>
 			</article>
 		</section>
-		
 	</body>
 </html>
