@@ -742,6 +742,31 @@ ul.InlineList li{
 	left: 340px;
 	transition: 1s left, 1s width, 0.7s visibility, 1s opacity;
 }
+	
+	.mes_logements {
+		border: 1px solid rgba(0,0,0,0.10);
+		border-radius: 2px;
+		background-color: rgba(230, 230, 230, 0.85);
+		height: 145px;
+		width:100%;
+		margin-top:20px;
+	}
+	.mes_logements img {margin-top:1%;margin-left:1%;}
+	.mes_logements table {
+		border: 1px solid rgba(0,0,0,0.10);
+		border-radius: 3px;
+		background-color:rgba(255,255,255,0.85);
+		border-collapse:collapse;
+		float:right;
+		height:90%;
+		text-align:center;
+		width:87%;
+		margin-top:0.7%;
+		margin-bottom:0.7%;
+		margin-right:1%;
+	}
+	.mes_logements th {background-color:rgba(240,240,240,0.75);}
+
 
 #account_modifier:target {
 	visibility: visible;

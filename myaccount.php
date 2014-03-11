@@ -107,12 +107,118 @@
 							</footer>
 						</div>
 					</li>
+					
+					
 					<li>
 						<a href="#account_logements"> <h1> Mes logements </h1> </a>
 						<div id="account_logements">
-							LOGEMENTS MIS EN LOCATION
+							<section class="mes_logements">
+								<img src="http://placehold.it/120x120"/>
+								<table>
+									<tr>
+										<th>Annonce</th>
+										<th>Adresse</th>
+										<th>Ville</th>
+										<th>Quartier</th>
+										<th>Type</th>
+										<th>Capacité d'accueil</th>
+										<th>Tarif/jour</th>
+										<th>Tarif/semaine</th>
+									</tr>
+									<tr>
+										<td>PHP</td>
+										<td>PHP</td>
+										<td>PHP</td>
+										<td>PHP</td>
+										<td>PHP</td>
+										<td>PHP</td>
+										<td>PHP</td>
+										<td>PHP</td>
+									</tr>
+								</table>
+							</section>
+							
+							<section class="mes_logements">
+								<img src="http://placehold.it/120x120"/>
+								<table>
+									<tr>
+										<th>Annonce</th>
+										<th>Adresse</th>
+										<th>Ville</th>
+										<th>Quartier</th>
+										<th>Type</th>
+										<th>Capacité d'accueil</th>
+										<th>Tarif/jour</th>
+										<th>Tarif/semaine</th>
+									</tr>
+									<tr>
+										<td>PHP</td>
+										<td>PHP</td>
+										<td>PHP</td>
+										<td>PHP</td>
+										<td>PHP</td>
+										<td>PHP</td>
+										<td>PHP</td>
+										<td>PHP</td>
+									</tr>
+								</table>
+							</section>
+							
+							<section class="mes_logements">
+								<img src="http://placehold.it/120x120"/>
+								<table>
+									<tr>
+										<th>Annonce</th>
+										<th>Adresse</th>
+										<th>Ville</th>
+										<th>Quartier</th>
+										<th>Type</th>
+										<th>Capacité d'accueil</th>
+										<th>Tarif/jour</th>
+										<th>Tarif/semaine</th>
+									</tr>
+									<tr>
+										<td>PHP</td>
+										<td>PHP</td>
+										<td>PHP</td>
+										<td>PHP</td>
+										<td>PHP</td>
+										<td>PHP</td>
+										<td>PHP</td>
+										<td>PHP</td>
+									</tr>
+								</table>
+							</section>
+							
+							<section class="mes_logements">
+								<img src="http://placehold.it/120x120"/>
+								<table>
+									<tr>
+										<th>Annonce</th>
+										<th>Adresse</th>
+										<th>Ville</th>
+										<th>Quartier</th>
+										<th>Type</th>
+										<th>Capacité d'accueil</th>
+										<th>Tarif/jour</th>
+										<th>Tarif/semaine</th>
+									</tr>
+									<tr>
+										<td>PHP</td>
+										<td>PHP</td>
+										<td>PHP</td>
+										<td>PHP</td>
+										<td>PHP</td>
+										<td>PHP</td>
+										<td>PHP</td>
+										<td>PHP</td>
+									</tr>
+								</table>
+							</section>
 						</div>
 					</li>
+					
+					
 					<li>
 						<a href="#account_modifier"> <h1> Modifier mes logements </h1> </a>
 						<div id="account_modifier">
