@@ -10,7 +10,8 @@ if (isset($_POST["email"]) && isset($_POST["nom"]) && isset($_POST["prenom"])) {
 	$oqp = $_POST["occupation"];
 	$tel = $_POST["number"];
 
-	$query = "INSERT INTO `freebed`.`user` VALUES (NULL, '1', '".$nom."', '".$prenom."', '".$email."', '".$password."', '".$oqp."', '".$tel."');";
+	$query = "INSERT INTO user (type, nom, prenom, date_de_naissance, adresse, sexe, email, password, avatar, oqp, tel) VALUES ('1', '".$nom."', '".$prenom."', '', '', '', '".$email."', '".$password."', 'default_avatar.jpg', '".$oqp."', '".$tel."');";
+	echo $query;
 	$res = $bdd -> query($query);
 	$inscri = TRUE;
 }
