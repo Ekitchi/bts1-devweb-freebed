@@ -8,10 +8,49 @@
 		<title>FreeBed Location</title>
 		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
 		<link rel="stylesheet" type="text/css" href="style.css"/>
-		<script src="jquery-1.10.2.min.js"></script>
 		<script type="text/javascript" src="scripts/prefixfree.min.js"></script>
 		<script type="text/javascript" src="scripts/jquery-2.1.0.js"></script>
+			<link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+			<script src="//code.jquery.com/jquery-1.9.1.js"></script>
+			<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+			<link rel="stylesheet" href="/resources/demos/style.css">
 		<meta charset="UTF-8"/>
+		 <script>
+			$(function() {
+			$( ".from" ).datepicker({
+			defaultDate: "+1w",
+			changeMonth: true,
+			numberOfMonths: 1,
+			onClose: function( selectedDate ) {
+			$( ".to" ).datepicker( "option", "minDate", selectedDate );
+			}
+			});
+			$( ".to" ).datepicker({
+			defaultDate: "+1w",
+			changeMonth: true,
+			numberOfMonths: 1,
+			onClose: function( selectedDate ) {
+			$( ".from" ).datepicker( "option", "maxDate", selectedDate );
+			}
+			});
+			});
+		</script>
+		<script>
+			function readURL(input) {
+			if (input.files && input.files[0]) {
+			var reader = new FileReader();
+			
+			reader.onload = function (e) {
+			$('.img_prev')
+			.attr('src', e.target.result)
+			.width(100)
+			.height(60);
+			};
+
+			reader.readAsDataURL(input.files[0]);
+			}
+			}
+		</script>
 	</head>
 	<body>
 		<!-- Inclusion du header -->
@@ -65,13 +104,91 @@
 					</tr>
 				</table>
 			</div>
-			
 		</section>
+
+
+		<section id="ajout_location2">
+				<div id="ajout_calendrier">
+					<table>
+						<tr>
+							<th colspan="2">Date de disponibilité</th>
+						</tr>
+						<tr>
+							<td>
+								<label for="from">Du </label>
+								<input type="text" class="from" name="from">
+							</td>
+							<td>
+								<label for="to"> à </label>
+								<input type="text" class="to" name="to">
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label for="from">Du </label>
+								<input type="text" class="from" name="from">
+							</td>
+							<td>
+								<label for="to"> à </label>
+								<input type="text" class="to" name="to">
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label for="from">Du </label>
+								<input type="text" class="from" name="from">
+							</td>
+							<td>
+								<label for="to"> à </label>
+								<input type="text" class="to" name="to">
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label for="from">Du </label>
+								<input type="text" class="from" name="from">
+							</td>
+							<td>
+								<label for="to"> à </label>
+								<input type="text" class="to" name="to">
+							</td>
+						</tr>
+					</table>
+				</div>
+				
+				<div id="ajout_img">
+					<table>
+						<tr>
+							<th colspan="2"> Photo de vôtre logement</th>
+						</tr>
+						<tr>
+							<td> <input type='file' onchange="readURL(this);" /> </td>
+							<td> <img class="img_prev" src="#" alt="" /> </td>
+						</tr>
+						<tr>
+							<td> <input type='file' onchange="readURL(this);" /> </td>
+							<td> <img class="img_prev" src="#" alt="" /> </td>
+						</tr>
+						<tr>
+							<td> <input type='file' onchange="readURL(this);" /> </td>
+							<td> <img class="img_prev" src="#" alt="" /> </td>
+						</tr>
+						<tr>
+							<td> <input type='file' onchange="readURL(this);" /> </td>
+							<td> <img class="img_prev" src="#" alt="" /> </td>
+						</tr>
+					</table>
+				</div>
+			</section>
+
+
+
+
 		
 		<footer id="ajouter_footer">
 				<input type="submit" class="btn btn-profil" value="Annuler"/>
-				<input type="submit" class="btn btn-profil" value="Publiez"/>
-				<p style="float:right;margin:15px;">Voulez-vous publiez cette annonce ?</p>
+				<input type="submit" class="btn btn-profil" value="Publier"/>
+				<p style="float:right;margin:15px;">Voulez-vous publier cette annonce ?</p>
 		</footer>
 			
 	</body>
