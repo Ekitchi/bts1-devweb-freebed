@@ -1,7 +1,7 @@
 <!-- Traitements pré-HTML -->
 <?php
 	include_once("includes.php");
-	include_once("./classes/cl_logement.php");
+	include_once("./classes/cl_Logement.php");
 	$lieux = array();
 	
 	$query = "SELECT id, latitude, longitude FROM bien";
@@ -81,9 +81,12 @@
 				var lien = document .createElement("a");
 				var titre = document.createTextNode(lieux[id]["nom"]);
 				lien.setAttribute("href", "./logement.php?id_logement="+lieux[id]["id"]);
+				lien.appendChild(titre);
+				var description = document.appendChild("p");
+				p.appendChild(document.createTextNode("A partir de : "+))
 				resultat.appendChild(photo);
 				resultat.appendChild(lien);
-				lien.appendChild(titre);
+				
 				zone_results.appendChild(resultat);
 			}
 			
