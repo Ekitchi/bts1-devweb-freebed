@@ -1,7 +1,27 @@
 <!-- Traitements pré-HTML -->
 <?php
 include_once ("includes.php");
-?>
+if (isset($_POST["annonce_titre"]) && isset($_POST["annonce_adresse"])) {
+			$type = $_POST["annonce_type"];
+			$surface = $_POST["annonce_surface"];
+			$nom = $_POST["annonce_titre"];
+			$description = $_POST["annonce_description"];
+			$adresse = $_POST["annonce_adresse"];
+			$ville = $_POST["annonce_ville"];
+			$tarif_j = $_POST["annonce_tarifn"];
+			$tarif_s = $_POST["annonce_tarifs"];
+			$capacite = $_POST["annonce_capacite"];
+
+			
+			$query = "INSERT INTO `freebed`.`bien` VALUES (NULL, NULL, '".$type."', '".$surface."', '".$nom."', '".$description."', '".$capacite."', '".$adresse."', '".$ville."', '".$tarif_j."', '".$tarif_s."')";
+			$res = $bdd -> query($query);
+			$ajout = TRUE;
+			
+		}
+		else {
+			$ajout = FALSE;
+ 			 }
+		?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -53,27 +73,16 @@ include_once ("includes.php");
 		<!-- Inclusion du header -->
 		<?php
 		include_once ("header.php");
-
-		if (isset($_POST["annonce_titre"]) && isset($_POST["annonce_adresse"])) {
-			$type = $_POST["annonce_type"];
-			$surface = $_POST["annonce_surface"];
-			$nom = $_POST["annonce_titre"];
-			$description = $_POST["annonce_description"];
-			$adresse = $_POST["annonce_adresse"];
-			$ville = $_POST["annonce_ville"];
-			$tarif_j = $_POST["annonce_tarifn"];
-			$tarif_s = $_POST["annonce_tarifs"];
-			$capacite = $_POST["annonce_capacite"];
-
-			$res = $bdd -> query($query);
-
-		}
 		?>
-
+		
 		<section id="Ajouter">
 			Publiez votre annonce !
 		</section>
-
+		<?php
+		if($ajout)
+			echo("<h1>Votre annonce a bien été ajoutée.</h1>");
+		?>
+		<form method="post" action="ajout_location.php">
 		<section id="ajout_location">
 			<div id="ajout_infos1">
 				<table>
@@ -226,6 +235,7 @@ include_once ("includes.php");
 			<p style="float:right;margin:15px;">
 				Voulez-vous publier cette annonce ?
 			</p>
+		</form>
 		</footer>
 
 	</body>
