@@ -1,7 +1,6 @@
 #filtre {
 	float:right;
 	margin-left: auto;
-	height: 220px;
 	width: 38%;
 }
 
@@ -21,18 +20,10 @@
 }
 
 #allresults ul li{
-	border:1px outset black;
 	width: 350px;
 	margin-top: 15px;
 	margin-left: 15px;
 	display: inline-block;
-}
-
-#allresults ul li div {
-	border: 1px solid black;
-	width: 390px;
-	height: 55px;
-	margin-top: 212px;
 }
 
 #allresults ul li img {

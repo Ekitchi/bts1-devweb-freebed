@@ -75,6 +75,7 @@
 			function addSearchResults (id) {
 				var zone_results = document.getElementById("allresults").firstChild.nextSibling.firstChild.nextSibling;
 				var resultat = document.createElement("li");
+				resultat.setAttribute("class", "Boxed");
 				var photo = document.createElement("img");
 				photo.setAttribute("src", lieux[id]["img"]);
 				photo.setAttribute("alt", lieux[id]["nom"]);
@@ -111,9 +112,8 @@
 		<section>
 			<article id="minimap" onclick="addMarqueurs();" onmousewheel="addMarqueurs();">
 			</article>
-			<article id="filtre">
-				<fieldset style="padding:30px">
-				<legend><h4><i>Filtres de recherche</i></h4></legend>
+			<article id="filtre" class="Boxed">
+				<h4>Filtres de recherche</h4>
 					<p>Budget de <input type="text" name="prix" placeholder=" Prix" value=""/>€ à <input type"text" name="prix2" placeholder=" Prix"/>€</p>
 					<br/>
 					<p>
@@ -143,7 +143,6 @@
 						Ville : <input type="text" name="ville" placeholder=" Ville" value=""/></p>
 					<br/>
 						<input type="submit"  name="recherchefiltre" value="Recherche">
-				</fieldset>
 			</article>
 		</section>
 

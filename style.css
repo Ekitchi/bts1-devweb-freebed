@@ -34,6 +34,14 @@ ul.InlineList li{
 	border-radius: 5px;
 }
 
+/* définition des blocs en mis en boite */
+.Boxed {
+	border:1px outset black;
+	border-radius: 10px;
+	padding: 5px;
+	background: #DDDDDD;
+}
+
 @keyframes AutoSlide {
     0%, 15%, 100% {
         left: 0px; /*1ère image*/
