@@ -36,10 +36,10 @@ ul.InlineList li{
 
 /* définition des blocs en mis en boite */
 .Boxed {
-	border:1px outset black;
+	border:1px outset #CCCCCC;
 	border-radius: 10px;
 	padding: 5px;
-	background: #DDDDDD;
+	background: #EEEEEE;
 }
 
 @keyframes AutoSlide {
