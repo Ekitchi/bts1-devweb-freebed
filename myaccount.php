@@ -1,6 +1,28 @@
 <!-- traitement pré-HTML -->
 <?php
 	include_once ("includes.php");
+	
+	if (isset($_POST["sauvegarde"])) {
+			$nom = $_POST["nom"];
+			$prenom = $_POST["prenom"];
+			$email = $_POST["email"];
+			$password = $_POST["password"];
+			$confirm_password = $_POST["confirmpassword"];
+			$adresse = $_POST["adresse"];
+			$oqp = $_POST["occupation"];
+			$sexe = $_POST["sexe"];
+			$date_de_naissance = $_POST["date_de_naissance"];
+			$tel = $_POST["tel"];
+			$query = "";
+			if($password == $confirm_password){
+			$query = "UPDATE user SET nom='".$nom."' , prenom='".$prenom."', date_de_naissance='".$date_de_naissance."', adresse='".$adresse."', sexe='".$sexe."', email='".$email."', avatar='default_avatar.jpg', 
+			password='".$password."', oqp='".$oqp."', tel='".$tel."' WHERE id='".$_SESSION["user"]->getID()."';";
+			 }
+			
+			$res = $bdd -> query($query);	
+			logOut();
+			
+		}
 ?>
 <!DOCTYPE html>
 <html>
@@ -17,20 +39,6 @@
 		<!-- Inclusion du header -->
 		<?php
 		include_once ("header.php");
-		
-		if (isset($_POST["nom"]) || isset($_POST["prenom"]) || isset($_POST["email"]) || isset($_POST["adresse"]) || isset($_POST["occupation"]) || isset($_POST["sexe"]) || isset($_POST["date_de_naissance"]) 
-		|| isset($_POST["tel"])  ) {
-			$nom = $_POST["nom"];
-			$prenom = $_POST["prenom"];
-			$email = $_POST["email"];
-			$adresse = $_POST["adresse"];
-			$oqp = $_POST["occupation"];
-			$sexe = $_POST["sexe"];
-			$date_de_naissance = $_POST["date_de_naissance"];
-			$tel = $_POST["tel"];
-			$query = "UPDATE `freebed`.`user` VALUES (NULL, 1, '".$nom."', '".$prenom."', '".$email."', '".$adresse."', '".$oqp."', '".$sexe."', '".$date_de_naissance."', '".$tel."');"; 
-			$res = $bdd -> query($query);	
-		}
 		?>
 
 		<section>
@@ -131,7 +139,7 @@
 							
 							<footer id="profil_footer">
 								<input type="submit" class="btn btn-profil" value="Annuler"/>
-								<input type="submit" class="btn btn-profil" value="Enregistrer"/>
+								<input type="submit" class="btn btn-profil" name="sauvegarde" value="Enregistrer"/>
 								<p style="float:right;margin:15px;">Voulez-vous enregistrer les modifications ?</p>
 							</footer>
 						</div>
