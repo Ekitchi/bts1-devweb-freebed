@@ -101,7 +101,6 @@
 			google.maps.event.addListener(map, 'zoom_changed', addMarqueurs());
 		</script>
 
-		<meta charset="UTF-8"/>
 	</head>
 
 	<body>

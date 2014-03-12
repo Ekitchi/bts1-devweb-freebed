@@ -2,7 +2,7 @@
 <?php
 include_once ("includes.php");
 if (isset($_POST["annonce_titre"]) && isset($_POST["annonce_adresse"])) {
-			$type = $_POST["annonce_type"];
+			$type = ($_POST["annonce_type"]);
 			$surface = $_POST["annonce_surface"];
 			$nom = $_POST["annonce_titre"];
 			$description = $_POST["annonce_description"];
@@ -119,7 +119,7 @@ if (isset($_POST["annonce_titre"]) && isset($_POST["annonce_adresse"])) {
 					<tr>
 						<th>Type de logement:</th>
 						<td>
-						<select class="form-control form-control-ajout">
+						<select name="annonce_type" class="form-control form-control-ajout">
 							<option>Appartement</option><option>Maison</option><option>Chambre d'hôte</option><option>Chambre privée</option><option>Squat</option>
 						</select></td>
 					</tr>
@@ -149,7 +149,7 @@ if (isset($_POST["annonce_titre"]) && isset($_POST["annonce_adresse"])) {
 					</tr>
 					<tr>
 						<th>Description:</th>
-						<td>						<textarea cols="40" rows="21" class="form-control" placeholder="Informations complémentaires (Logement, quartiers, transports)..."></textarea></td>
+						<td><textarea cols="40" rows="21" class="form-control" placeholder="Informations complémentaires (Logement, quartiers, transports)..."></textarea></td>
 					</tr>
 				</table>
 			</div>
@@ -199,7 +199,7 @@ if (isset($_POST["annonce_titre"]) && isset($_POST["annonce_adresse"])) {
 			<div id="ajout_img">
 				<table>
 					<tr>
-						<th colspan="2"> Photo de vôtre logement</th>
+						<th colspan="2"> Photo de votre logement</th>
 					</tr>
 					<tr>
 						<td>

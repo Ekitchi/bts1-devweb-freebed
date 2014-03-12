@@ -699,6 +699,16 @@ ul.InlineList li{
 	left: 340px;
 	transition: 1s left, 1s width, 0.7s visibility, 1s opacity;
 }
+
+	#logements_ajouter {
+		border: 1px dashed rgba(0,0,0,0.50);
+		border-radius: 2px;
+		background-color: rgba(230, 230, 230, 0.85);
+		height: 145px;
+		width:100%;
+		margin-top:20px;
+	}
+	.btn-annonce {height:40px; width:150px; margin:4.5% auto;display:block;}
 	
 	.mes_logements {
 		border: 1px solid rgba(0,0,0,0.10);
