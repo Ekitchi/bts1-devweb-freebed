@@ -1,6 +1,28 @@
 <!-- traitement pré-HTML -->
 <?php
 	include_once ("includes.php");
+	
+	if (isset($_POST["sauvegarde"])) {
+			$nom = $_POST["nom"];
+			$prenom = $_POST["prenom"];
+			$email = $_POST["email"];
+			$password = $_POST["password"];
+			$confirm_password = $_POST["confirmpassword"];
+			$adresse = $_POST["adresse"];
+			$oqp = $_POST["occupation"];
+			$sexe = $_POST["sexe"];
+			$date_de_naissance = $_POST["date_de_naissance"];
+			$tel = $_POST["tel"];
+			$query = "";
+			if($password == $confirm_password){
+			$query = "UPDATE user SET nom='".$nom."' , prenom='".$prenom."', date_de_naissance='".$date_de_naissance."', adresse='".$adresse."', sexe='".$sexe."', email='".$email."', avatar='default_avatar.jpg', 
+			password='".$password."', oqp='".$oqp."', tel='".$tel."' WHERE id='".$_SESSION["user"]->getID()."';";
+			 }
+			
+			$res = $bdd -> query($query);	
+			logOut();
+			
+		}
 ?>
 <!DOCTYPE html>
 <html>
@@ -17,20 +39,6 @@
 		<!-- Inclusion du header -->
 		<?php
 		include_once ("header.php");
-		
-		if (isset($_POST["nom"]) || isset($_POST["prenom"]) || isset($_POST["email"]) || isset($_POST["adresse"]) || isset($_POST["occupation"]) || isset($_POST["sexe"]) || isset($_POST["date_de_naissance"]) 
-		|| isset($_POST["tel"])  ) {
-			$nom = $_POST["nom"];
-			$prenom = $_POST["prenom"];
-			$email = $_POST["email"];
-			$adresse = $_POST["adresse"];
-			$oqp = $_POST["occupation"];
-			$sexe = $_POST["sexe"];
-			$date_de_naissance = $_POST["date_de_naissance"];
-			$tel = $_POST["tel"];
-			$query = "UPDATE `freebed`.`user` VALUES (NULL, 1, '".$nom."', '".$prenom."', '".$email."', '".$adresse."', '".$occupation."', '".$sexe."', '".$date_de_naissance."', '".$tel."');"; 
-			$res = $bdd -> query($query);	
-		}
 		?>
 
 		<section>
@@ -66,8 +74,6 @@
 									</tr>
 									<tr>
 										<th> Date de naissance: </th>
-										<td> <input type="date" style="width:100%;" class="form-control" value="<?php echo $_SESSION['user']->getDateNaissance(); ?>"/> </td>
-
 										<td> <input type="date" name="date_de_naissance" style="width:100%;" class="form-control" value="<?php echo $_SESSION['user']->getDateNaissance(); ?>"/> </td>
 
 										<th> Numéro de téléphone: </th>
@@ -118,9 +124,22 @@
 								<textarea class="form-control" rows="20" cols="85"></textarea>
 							</article>
 							
+							<article id="profilpwd">
+								<table>
+									<tr>
+										<th>Nouveau mot de passe:</th>
+										<td> <input class="form-control" type="password" name="password"/></td>
+									</tr>
+									<tr>
+										<th>Confirmer le mot de passe:</th>
+										<td> <input class="form-control" type="password" name="confirmpassword"/></td>
+									</tr>
+								</table>
+							</article>
+							
 							<footer id="profil_footer">
 								<input type="submit" class="btn btn-profil" value="Annuler"/>
-								<input type="submit" class="btn btn-profil" value="Enregistrer"/>
+								<input type="submit" class="btn btn-profil" name="sauvegarde" value="Enregistrer"/>
 								<p style="float:right;margin:15px;">Voulez-vous enregistrer les modifications ?</p>
 							</footer>
 						</div>
@@ -131,30 +150,8 @@
 					<li>
 						<a href="#account_logements"> <h1> Mes logements </h1> </a>
 						<div id="account_logements">
-							<section class="mes_logements">
-								<img src="http://placehold.it/120x120"/>
-								<table>
-									<tr>
-										<th>Annonce</th>
-										<th>Adresse</th>
-										<th>Ville</th>
-										<th>Quartier</th>
-										<th>Type</th>
-										<th>Capacité d'accueil</th>
-										<th>Tarif/jour</th>
-										<th>Tarif/semaine</th>
-									</tr>
-									<tr>
-										<td>PHP</td>
-										<td>PHP</td>
-										<td>PHP</td>
-										<td>PHP</td>
-										<td>PHP</td>
-										<td>PHP</td>
-										<td>PHP</td>
-										<td>PHP</td>
-									</tr>
-								</table>
+							<section id="logements_ajouter">
+								<a href="ajout_location.php"><input type="button" class="btn btn-annonce" value="Publier une annonce"/></a>
 							</section>
 							
 							<section class="mes_logements">

@@ -16,7 +16,6 @@
 <html>
 	<head>
 		<title>FreeBed Location</title>
-		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
 		<meta charset="UTF-8" />
 		<link rel="stylesheet" type="text/css" href="style.css"/>
 		<link rel="stylesheet" type="text/css" href="./css/lyt_recherche.css"/>
@@ -27,7 +26,7 @@
 		<script type="text/javascript" charset="UTF-8">
 			var geocoder;
 			var map;
-			var lieux = [{id: 0, lat: 0, lng: 0, nom: "0", img: "0"}<?php foreach ($lieux as $lieu) { echo(",{id: ".$lieu->getId().", lat: ".$lieu->getLatitude().", lng: ".$lieu->getLongitude().", nom: '".$lieu->getNom()."', img: './data/photos/".$lieu->getPhoto()."'}");}?>];
+			var lieux = [{id: 0, lat: 0, lng: 0, nom: "0", img: "0", tarif: 0.00}<?php foreach ($lieux as $lieu) { echo(",{id: ".$lieu->getId().", lat: ".$lieu->getLatitude().", lng: ".$lieu->getLongitude().", nom: '".$lieu->getNom()."', img: './data/photos/".$lieu->getPhoto()."', tarif: ".$lieu->getTarifJournee()."}");}?>];
 			var marqueurs = [];
 
 			function initialize() {
@@ -75,6 +74,7 @@
 			function addSearchResults (id) {
 				var zone_results = document.getElementById("allresults").firstChild.nextSibling.firstChild.nextSibling;
 				var resultat = document.createElement("li");
+				resultat.setAttribute("class", "Boxed");
 				var photo = document.createElement("img");
 				photo.setAttribute("src", lieux[id]["img"]);
 				photo.setAttribute("alt", lieux[id]["nom"]);
@@ -83,7 +83,7 @@
 				lien.setAttribute("href", "./logement.php?id_logement="+lieux[id]["id"]);
 				lien.appendChild(titre);
 				var description = document.createElement("p");
-				var desc_text = document.createTextNode("A partir de : €");
+				var desc_text = document.createTextNode("A partir de : "+lieux[id]["tarif"]+"€");
 				description.appendChild(desc_text);
 				resultat.appendChild(photo);
 				resultat.appendChild(lien);
@@ -101,7 +101,6 @@
 			google.maps.event.addListener(map, 'zoom_changed', addMarqueurs());
 		</script>
 
-		<meta charset="UTF-8"/>
 	</head>
 
 	<body>
@@ -111,9 +110,8 @@
 		<section>
 			<article id="minimap" onclick="addMarqueurs();" onmousewheel="addMarqueurs();">
 			</article>
-			<article id="filtre">
-				<fieldset style="padding:30px">
-				<legend><h4><i>Filtres de recherche</i></h4></legend>
+			<article id="filtre" class="Boxed">
+				<h4>Filtres de recherche</h4>
 					<p>Budget de <input type="text" name="prix" placeholder=" Prix" value=""/>€ à <input type"text" name="prix2" placeholder=" Prix"/>€</p>
 					<br/>
 					<p>
@@ -143,10 +141,10 @@
 						Ville : <input type="text" name="ville" placeholder=" Ville" value=""/></p>
 					<br/>
 						<input type="submit"  name="recherchefiltre" value="Recherche">
-				</fieldset>
 			</article>
 		</section>
 
+		<h2 style="clear: both;">Résultats de votre recherche :</h2>
 		<section id="allresults">
 			<article>
 				<ul>
@@ -160,6 +158,6 @@
 				</ul>
 			</article>
 		</section>
-
+		<?php include_once("footer.php"); ?>
 	</body>
 </html>

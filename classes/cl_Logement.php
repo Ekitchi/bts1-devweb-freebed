@@ -1,4 +1,4 @@
-<?
+<?php
 /**
  * 
  */
@@ -15,7 +15,7 @@ class Logement {
 		$réponse = $bdd->query($query);
 		$données = $réponse->fetch();
 		$this->photo = $données["url_photo"];
-		$this->nom = $données["nom"];
+		$this->nom = utf8_encode($données["nom"]);
 		$this->tarif_nuit = $données["tarif_j"];
 	}
 	

@@ -1,10 +1,10 @@
 <!-- Traitements pré-HTML -->
 <?php
-	include_once ("../cl_User.php");
+	include_once ("../classes/cl_User.php");
 	session_start();
 	//  Inclusion du fichier permettant la connexion à la BDD
 	include_once ("connexion.php");
-	include_once ("../login.php");
+	include_once ("../functions/login.php");
 	
 	if (!isset($_SESSION["user"])){
 		header("Location:../erreur_login.php");
