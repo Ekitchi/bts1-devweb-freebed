@@ -116,6 +116,19 @@
 								<textarea class="form-control" rows="20" cols="85"></textarea>
 							</article>
 							
+							<article id="profilpwd">
+								<table>
+									<tr>
+										<th>Nouveau mot de passe:</th>
+										<td> <input class="form-control" type="password" name="password"/></td>
+									</tr>
+									<tr>
+										<th>Confirmer le mot de passe:</th>
+										<td> <input class="form-control" type="password" name="confirmpassword"/></td>
+									</tr>
+								</table>
+							</article>
+							
 							<footer id="profil_footer">
 								<input type="submit" class="btn btn-profil" value="Annuler"/>
 								<input type="submit" class="btn btn-profil" value="Enregistrer"/>
