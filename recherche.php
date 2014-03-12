@@ -16,7 +16,6 @@
 <html>
 	<head>
 		<title>FreeBed Location</title>
-		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
 		<meta charset="UTF-8" />
 		<link rel="stylesheet" type="text/css" href="style.css"/>
 		<link rel="stylesheet" type="text/css" href="./css/lyt_recherche.css"/>
@@ -27,7 +26,7 @@
 		<script type="text/javascript" charset="UTF-8">
 			var geocoder;
 			var map;
-			var lieux = [{id: 0, lat: 0, lng: 0, nom: "0", img: "0"}<?php foreach ($lieux as $lieu) { echo(",{id: ".$lieu->getId().", lat: ".$lieu->getLatitude().", lng: ".$lieu->getLongitude().", nom: '".$lieu->getNom()."', img: './data/photos/".$lieu->getPhoto()."'}");}?>];
+			var lieux = [{id: 0, lat: 0, lng: 0, nom: "0", img: "0", tarif: 0.00}<?php foreach ($lieux as $lieu) { echo(",{id: ".$lieu->getId().", lat: ".$lieu->getLatitude().", lng: ".$lieu->getLongitude().", nom: '".$lieu->getNom()."', img: './data/photos/".$lieu->getPhoto()."', tarif: ".$lieu->getTarifJournee()."}");}?>];
 			var marqueurs = [];
 
 			function initialize() {
@@ -84,7 +83,7 @@
 				lien.setAttribute("href", "./logement.php?id_logement="+lieux[id]["id"]);
 				lien.appendChild(titre);
 				var description = document.createElement("p");
-				var desc_text = document.createTextNode("A partir de : €");
+				var desc_text = document.createTextNode("A partir de : "+lieux[id]["tarif"]+"€");
 				description.appendChild(desc_text);
 				resultat.appendChild(photo);
 				resultat.appendChild(lien);
@@ -101,8 +100,6 @@
 			google.maps.event.addDomListener(window, 'load', initialize);
 			google.maps.event.addListener(map, 'zoom_changed', addMarqueurs());
 		</script>
-
-		<meta charset="UTF-8"/>
 	</head>
 
 	<body>
