@@ -140,6 +140,7 @@
 				google.maps.event.addDomListener(window, 'load', initialize);
 				google.maps.event.addListener(map, 'zoom_changed', addMarqueurs());
 		</script>
+
 	</head>
 
 	<body>
