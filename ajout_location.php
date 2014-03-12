@@ -13,7 +13,7 @@ if (isset($_POST["annonce_titre"]) && isset($_POST["annonce_adresse"])) {
 			$capacite = $_POST["annonce_capacite"];
 
 			
-			$query = "INSERT INTO `freebed`.`bien` VALUES (NULL, NULL, '".$type."', '".$surface."', '".$nom."', '".$description."', '".$capacite."', '".$adresse."', '".$ville."', '".$tarif_j."', '".$tarif_s."')";
+			$query = "INSERT INTO `freebed`.`bien` VALUES (NULL, NULL, '".$type."', '".$surface."', '".$nom."', '".$description."', '".$capacite."', '".$adresse."', '".$ville."', '".$tarif_j."', '".$tarif_s."', NULL, NULL)";
 			$res = $bdd -> query($query);
 			$ajout = TRUE;
 			
