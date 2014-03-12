@@ -146,6 +146,7 @@
 			</article>
 		</section>
 
+		<h2 style="clear: both;">Résultats de votre recherche :</h2>
 		<section id="allresults">
 			<article>
 				<ul>
@@ -159,6 +160,6 @@
 				</ul>
 			</article>
 		</section>
-
+		<?php include_once("footer.php"); ?>
 	</body>
 </html>
