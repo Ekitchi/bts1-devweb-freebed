@@ -66,7 +66,7 @@
 			</article>
 
 			<article id="bestdesc" name="bestdesc">
-				<h2>La magnifique cimetière du Père Lachaise !</h2><br/><br/>
+				<h2>Le magnifique cimetière du Père Lachaise !</h2><br/><br/>
 				<p>Le cimetière du Père-Lachaise est le plus grand cimetière de Paris intra muros et l'un des plus célèbres dans le monde. Situé dans le 20e arrondissement de la ville, de nombreuses personnes célèbres y sont enterrées. Il accueille chaque année plus de trois millions et demi de visiteurs, ce qui en fait le cimetière le plus visité au monde.</p>
 			</article>
 		</section>

@@ -1,4 +1,28 @@
-<?php include_once ("includes.php"); ?>
+<?php 
+include_once ("includes.php"); 
+
+
+$id = intval($_GET['id_logement']);
+$query = "SELECT * FROM bien WHERE id='".$id."'";
+$res = $bdd->query($query);
+$données = $res->fetch();
+
+$nom = utf8_encode($données['nom']);
+$type = utf8_encode($données['type']);
+$adresse = utf8_encode($données['adresse']);
+$ville = utf8_encode($données['ville']);
+$surface = utf8_encode($données['surface']);
+$description = utf8_encode($données['description']);
+$tarifj = utf8_encode($données['tarif_j']);
+$tarifs = utf8_encode($données['tarif_s']);
+$capacite = utf8_encode($données['capacite']);
+$quartier = utf8_encode($données['quartier']);
+$note = utf8_encode($données['note']);
+$pays = utf8_encode($données['pays']);
+
+
+?>
+
 
 <!DOCTYPE html>
 <html>
@@ -19,7 +43,9 @@
 		
 		<section>
 			<article id="logementname">
-				PHP QUI AFFICHE LE NOM DU LOGEMENT RICHARD ! WESH WESH
+				<h1><?php echo($nom); ?></h1>
+				<br/>
+				<?php echo($adresse) ?>
 			</article>
 		</section>
 
@@ -56,12 +82,12 @@
 				
 				<section id="logement_infos">
 					<article id="logement_text"> A partir de: </article>
-					<article id="logement_price"> 299€ </article>
+					<article id="logement_price"> <?php echo($tarifj); ?>€ </article>
 					<article id="logement_note">
 						 <table>
 						 	<tr>
 						 		<th>Note moyenne:</th>
-						 		<td rowspan="2">NOTE</td>
+						 		<td rowspan="2"> <?php echo($note); ?></td>
 						 	</tr>
 						 </table>
 					</article>
@@ -88,7 +114,7 @@
 				<section id="userinfos">
 					<article id="user_avatar">
 						<img src="http://placehold.it/250x250"/>
-						<div> <a href="#"> NOM USER </a> </div>
+						<div> <a href="#">  </a> </div>
 					</article>
 			
 					<article id="user_infos">
@@ -128,18 +154,18 @@
 			<article id="logementdesc">
 				
 				<section id="logement_desc">
-					PHP DESCRIPTION DU LOGEMENT // RICHARRRRRD !
+					<?php echo($description); ?>
 				</section>
 				
 				<section id="logement_Tinfos">
 					<table>
 						<tr>
 							<th>Type de Logement</th>
-							<td>PHP</td>
+							<td><?php echo($type); ?></td>
 						</tr>
 						<tr>
 							<th>Capacité d'accueil</th>
-							<td>PHP</td>
+							<td><?php echo($capacite); ?></td>
 						</tr>
 						<tr>
 							<th>Durée minimum</th>
@@ -147,23 +173,23 @@
 						</tr>
 						<tr>
 							<th>Tarif/jour</th>
-							<td>PHP</td>
+							<td><?php echo($tarifj); ?></td>
 						</tr>
 						<tr>
 							<th>Tarif/semaine</th>
-							<td>PHP</td>
+							<td><?php echo($tarifs); ?></td>
 						</tr>
 						<tr>
 							<th>Pays</th>
-							<td>PHP</td>
+							<td><?php echo($pays); ?></td>
 						</tr>
 						<tr>
 							<th>Ville</th>
-							<td>PHP</td>
+							<td><?php echo($ville);?></td>
 						</tr>
 						<tr>
 							<th>Quartier</th>
-							<td>PHP</td>
+							<td><?php echo($quartier); ?></td>
 						</tr>
 						<tr>
 							<th>Conditions d'annulation</th>
