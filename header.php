@@ -52,7 +52,7 @@ $div_hdr_loggued = "
 			<li id='header_login'>
 				<a href='myaccount.php'> Mon compte </a>
 				<div>
-					<table>
+					<table style='line-height:225%;'>
 						<tr>
 							<td colspan='2'> <a href='myaccount.php#account_profil'> Mon profil </a> </td>
 						</tr>
@@ -67,6 +67,11 @@ $div_hdr_loggued = "
 						<tr>
 							<td colspan='2'>
 							<a href='myaccount.php#account_contact'> Contact </a>
+							</td>
+						</tr>
+						<tr>
+							<td colspan='2'>
+							<a href='ajout_location.php'> Publier une annonce </a>
 							</td>
 						</tr>
 					</table>
