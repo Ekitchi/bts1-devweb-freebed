@@ -13,12 +13,7 @@ if (isset($_POST["annonce_titre"]) && isset($_POST["annonce_adresse"])) {
 			$capacite = $_POST["annonce_capacite"];
 			$quartier = $_POST["annonce_quartier"];
 
-			
-<<<<<<< HEAD
-			$query = "INSERT INTO `freebed`.`bien` VALUES (NULL, NULL, '".$type."', '".$surface."', '".$nom."', '".$description."', '".$capacite."', '".$adresse."', '".$ville."', '".$tarif_j."', '".$tarif_s."', NULL, NULL)";
-=======
 			$query = "INSERT INTO `freebed`.`bien`(type, surface, nom, description, adresse, ville, tarif_j, tarif_s, capacite, quartier) VALUES ('".$type."', '".$surface."', '".$nom."', '".$description."', '".$adresse."', '".$ville."', '".$tarif_j."', '".$tarif_s."', '".$capacite."', '".$quartier."');";
->>>>>>> 58b1415249bfb325bc7141db19ee5fe4f5eafe9d
 			$res = $bdd -> query($query);
 			echo "Votre bien a été enregistré";
 			$ajout = TRUE;
