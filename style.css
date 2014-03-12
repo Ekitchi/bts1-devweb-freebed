@@ -38,6 +38,7 @@ ul.InlineList li{
 .Boxed {
 	border:1px outset #CCCCCC;
 	border-radius: 10px;
+	margin: 5px;
 	padding: 5px;
 	background: #EEEEEE;
 }
