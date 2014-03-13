@@ -44,8 +44,7 @@ $pays = utf8_encode($données['pays']);
 		<section>
 			<article id="logementname">
 				<h1><?php echo($nom); ?></h1>
-				<br/>
-				<?php echo($adresse) ?>
+				<p><?php echo($adresse) ?></p>
 			</article>
 		</section>
 
@@ -81,8 +80,15 @@ $pays = utf8_encode($données['pays']);
 			<article id="logementinfos">
 				
 				<section id="logement_infos">
-					<article id="logement_text"> A partir de: </article>
-					<article id="logement_price"> <?php echo($tarifj); ?>€ </article>
+					<article id="logement_price">
+						<table>
+							<tr>
+								<th>A partir de:</th>
+								<td><?php echo($tarifj) ?>€</td>
+							</tr>
+						</table>
+					</article>
+					
 					<article id="logement_note">
 						 <table>
 						 	<tr>
@@ -114,7 +120,7 @@ $pays = utf8_encode($données['pays']);
 				<section id="userinfos">
 					<article id="user_avatar">
 						<img src="http://placehold.it/250x250"/>
-						<div> <a href="#">  </a> </div>
+						<div> <a href="#"> NOM USER </a> </div>
 					</article>
 			
 					<article id="user_infos">

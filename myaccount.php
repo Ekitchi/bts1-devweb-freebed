@@ -82,42 +82,6 @@
 								</table>
 							</article>
 							
-							<!--<section id="profil_avis">
-								<article class="avis_user">
-									<table border="1">
-										<tr>
-											<th> <a href="#account_profil"> User </a> </th>
-										</tr>
-										<tr>
-											<td> AVIS </td>
-										</tr>
-									</table>
-									<table border="1">
-										<tr>
-											<th> <a href="#account_profil"> User </a> </th>
-										</tr>
-										<tr>
-											<td> AVIS </td>
-										</tr>
-									</table>
-									<table border="1">
-										<tr>
-											<th> <a href="#account_profil"> User </a> </th>
-										</tr>
-										<tr>
-											<td> AVIS </td>
-										</tr>
-									</table>
-									<table border="1">
-										<tr>
-											<th> <a href="#account_profil"> User </a> </th>
-										</tr>
-										<tr>
-											<td> AVIS </td>
-										</tr>
-									</table>
-								</article>
-							</section>-->
 							
 							<article id="profil_biographie">
 								<h2>Biographie:</h2>
@@ -144,9 +108,9 @@
 							</footer>
 						</div>
 					</li>
-					
-					
 					</form>
+					
+					
 					<li>
 						<a href="#account_logements"> <h1> Mes logements </h1> </a>
 						<div id="account_logements">
@@ -236,9 +200,86 @@
 					
 					
 					<li>
-						<a href="#account_modifier"> <h1> Modifier mes logements </h1> </a>
-						<div id="account_modifier">
-							MODIFICATION
+						<a href="#account_avis"> <h1> Mes notes </h1> </a>
+						<div id="account_avis">
+							<section class="account_avis_container">
+								<img src="http://placehold.it/100x100">
+								<article class="account_avis_name">
+									 NOM USER
+								</article>
+								<article class="account_avis_date">
+									Message envoyé le: <br/>
+									XX/XX/XXXX à XX:XX
+								</article>
+								<article class="account_avis_desc">
+									LOREM IMPSUM DKSD KDFSDKMLVMK
+								</article>
+							</section>
+							<section class="account_avis_container">
+								<img src="http://placehold.it/100x100">
+								<article class="account_avis_name">
+									 NOM USER
+								</article>
+								<article class="account_avis_date">
+									Message envoyé le: <br/>
+									XX/XX/XXXX à XX:XX
+								</article>
+								<article class="account_avis_desc">
+									LOREM IMPSUM DKSD KDFSDKMLVMK
+								</article>
+							</section>
+							<section class="account_avis_container">
+								<img src="http://placehold.it/100x100">
+								<article class="account_avis_name">
+									 NOM USER
+								</article>
+								<article class="account_avis_date">
+									Message envoyé le: <br/>
+									XX/XX/XXXX à XX:XX
+								</article>
+								<article class="account_avis_desc">
+									LOREM IMPSUM DKSD KDFSDKMLVMK
+								</article>
+							</section>
+							<section class="account_avis_container">
+								<img src="http://placehold.it/100x100">
+								<article class="account_avis_name">
+									 NOM USER
+								</article>
+								<article class="account_avis_date">
+									Message envoyé le: <br/>
+									XX/XX/XXXX à XX:XX
+								</article>
+								<article class="account_avis_desc">
+									LOREM IMPSUM DKSD KDFSDKMLVMK
+								</article>
+							</section>
+							<section class="account_avis_container">
+								<img src="http://placehold.it/100x100">
+								<article class="account_avis_name">
+									 NOM USER
+								</article>
+								<article class="account_avis_date">
+									Message envoyé le: <br/>
+									XX/XX/XXXX à XX:XX
+								</article>
+								<article class="account_avis_desc">
+									LOREM IMPSUM DKSD KDFSDKMLVMK
+								</article>
+							</section>
+							<section class="account_avis_container">
+								<img src="http://placehold.it/100x100">
+								<article class="account_avis_name">
+									 NOM USER
+								</article>
+								<article class="account_avis_date">
+									Message envoyé le: <br/>
+									XX/XX/XXXX à XX:XX
+								</article>
+								<article class="account_avis_desc">
+									LOREM IMPSUM DKSD KDFSDKMLVMK
+								</article>
+							</section>
 						</div>
 					</li>
 					<li>
