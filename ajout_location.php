@@ -11,14 +11,16 @@ if (isset($_POST["annonce_titre"]) && isset($_POST["annonce_adresse"])) {
 			$tarif_j = $_POST["annonce_tarifn"];
 			$tarif_s = $_POST["annonce_tarifs"];
 			$capacite = $_POST["annonce_capacite"];
+			$quartier = $_POST["annonce_quartier"];
 
-			
-			$query = "INSERT INTO `freebed`.`bien` VALUES (NULL, NULL, '".$type."', '".$surface."', '".$nom."', '".$description."', '".$capacite."', '".$adresse."', '".$ville."', '".$tarif_j."', '".$tarif_s."')";
+			$query = "INSERT INTO `freebed`.`bien`(type, surface, nom, description, adresse, ville, tarif_j, tarif_s, capacite, quartier) VALUES ('".$type."', '".$surface."', '".$nom."', '".$description."', '".$adresse."', '".$ville."', '".$tarif_j."', '".$tarif_s."', '".$capacite."', '".$quartier."');";
 			$res = $bdd -> query($query);
+			echo "Votre bien a été enregistré";
 			$ajout = TRUE;
 			
 		}
 		else {
+			echo "Votre bien n'a pas pus etre enregistré";
 			$ajout = FALSE;
  			 }
 		?>
@@ -120,7 +122,7 @@ if (isset($_POST["annonce_titre"]) && isset($_POST["annonce_adresse"])) {
 						<th>Type de logement:</th>
 						<td>
 						<select name="annonce_type" class="form-control form-control-ajout">
-							<option>Appartement</option><option>Maison</option><option>Chambre d'hôte</option><option>Chambre privée</option><option>Squat</option>
+							<option value="2">Appartement</option><option value="3">Maison</option><option value="1">Chambre d'hôte</option><option>Chambre privée</option><option value="4">Villa</option><option>Squat</option>
 						</select></td>
 					</tr>
 				</table>
@@ -131,7 +133,7 @@ if (isset($_POST["annonce_titre"]) && isset($_POST["annonce_adresse"])) {
 					<tr>
 						<th>Capacité d'accueil:</th>
 						<td>
-						<select class="form-control form-control-ajout">
+						<select name="annonce_capacite" class="form-control form-control-ajout">
 							<option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>5+</option>
 						</select></td>
 					</tr>
@@ -149,7 +151,7 @@ if (isset($_POST["annonce_titre"]) && isset($_POST["annonce_adresse"])) {
 					</tr>
 					<tr>
 						<th>Description:</th>
-						<td><textarea cols="40" rows="21" class="form-control" placeholder="Informations complémentaires (Logement, quartiers, transports)..."></textarea></td>
+						<td><textarea cols="40" rows="21" name="annonce_description" class="form-control" placeholder="Informations complémentaires (Logement, quartiers, transports)..."></textarea></td>
 					</tr>
 				</table>
 			</div>
