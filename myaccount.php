@@ -285,7 +285,94 @@
 					<li>
 						<a href="#account_historique"> <h1> Historique </h1> </a>
 						<div id="account_historique">
-							HISTORIQUES DES LOCATIONS
+							<article class="account_historique">
+								<table>
+									<tr>
+										<th>Annonce</th>
+										<th>Pays</th>
+										<th>Ville</th>
+										<th>Date de location</th>
+										<th>Durée de location</th>
+										<th>Prix/jours</th>
+										<th>Note</th>
+									</tr>
+									<tr>
+										<td>PHP</td>
+										<td>PHP</td>
+										<td>PHP</td>
+										<td>PHP</td>
+										<td>PHP</td>
+										<td>PHP</td>
+										<td>PHP</td>
+									</tr>
+								</table>
+							</article>
+							<article class="account_historique">
+								<table>
+									<tr>
+										<th>Annonce</th>
+										<th>Pays</th>
+										<th>Ville</th>
+										<th>Date de location</th>
+										<th>Durée de location</th>
+										<th>Prix/jours</th>
+										<th>Note</th>
+									</tr>
+									<tr>
+										<td>PHP</td>
+										<td>PHP</td>
+										<td>PHP</td>
+										<td>PHP</td>
+										<td>PHP</td>
+										<td>PHP</td>
+										<td>PHP</td>
+									</tr>
+								</table>
+							</article>
+							<article class="account_historique">
+								<table>
+									<tr>
+										<th>Annonce</th>
+										<th>Pays</th>
+										<th>Ville</th>
+										<th>Date de location</th>
+										<th>Durée de location</th>
+										<th>Prix/jours</th>
+										<th>Note</th>
+									</tr>
+									<tr>
+										<td>PHP</td>
+										<td>PHP</td>
+										<td>PHP</td>
+										<td>PHP</td>
+										<td>PHP</td>
+										<td>PHP</td>
+										<td>PHP</td>
+									</tr>
+								</table>
+							</article>
+							<article class="account_historique">
+								<table>
+									<tr>
+										<th>Annonce</th>
+										<th>Pays</th>
+										<th>Ville</th>
+										<th>Date de location</th>
+										<th>Durée de location</th>
+										<th>Prix/jours</th>
+										<th>Note</th>
+									</tr>
+									<tr>
+										<td>PHP</td>
+										<td>PHP</td>
+										<td>PHP</td>
+										<td>PHP</td>
+										<td>PHP</td>
+										<td>PHP</td>
+										<td>PHP</td>
+									</tr>
+								</table>
+							</article>
 						</div>
 					</li>
 					<li>
