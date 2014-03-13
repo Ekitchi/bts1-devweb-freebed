@@ -526,19 +526,46 @@ ul.InlineList li{
 	border: 1px solid rgba(0,0,0,0.10);
 	border-radius:2px;
 	background-color: rgba(230, 230, 230, 0.65);
-	height: 750px;
+	height: 1000px;
 	width: 56%;
 	float: left;
 	margin-top: 20px;
 	margin-left: 7%;
 }
 
+	#avis_ajout {
+		border: 1px solid rgba(0,0,0,0.10);
+		border-radius: 2px;
+		background-color: rgba(255,255,255,0.75);
+		width: 96%;
+		height: 22.8%;
+		margin: 2% auto;
+	}
+	
+	#avis_message {
+			border-radius:2px;
+			height: 70%;
+			width:75%;
+			float:right;
+			margin-top:1%;
+			margin-right:2%;
+			text-align:justify;
+		}
+	
+	#avis_btn {
+			height:35px;
+			width:100px;
+			float:left;
+			margin-left:4.4%;
+		}
+	.btn-avis {height:100%;width:100%;}
+
 	.avis {
 		border: 1px solid rgba(0,0,0,0.10);
 		border-radius: 2px;
 		background-color: rgba(255,255,255,0.75);
 		width: 96%;
-		height: 30%;
+		height: 22.8%;
 		margin: 2% auto;
 	}
 		.avis_img {

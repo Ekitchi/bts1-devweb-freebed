@@ -22,8 +22,8 @@
 		<section id="firstarticle" name="firstarticle">
 			<article id="slider" name="slider">
 				<ul id="sContent">
-					<li> <img alt="blouh" src="data/s1.png" height="650" width="25%"> </li>
-					<li> <img alt="blouh" src="data/s2.png" height="650" width="25%"> </li>
+					<li> <a href="logement.php?id_logement=3"> <img alt="blouh" src="data/s1.png" height="650" width="25%"> </a> </li>
+					<li> <a href="logement.php?id_logement=2"> <img alt="blouh" src="data/photos/1-marina-di-santa-giulia-residence.jpg" height="650" width="25%"> </a> </li>
 					<li> <img alt="blouh" src="data/s3.jpg" height="650" width="25%"> </li>
 				</ul>
 				

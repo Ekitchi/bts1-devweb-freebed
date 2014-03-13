@@ -126,8 +126,8 @@ $pays = utf8_encode($données['pays']);
 					<article id="user_infos">
 						<table>
 							<tr>
-								<th> Nom </th>
-								<td> NOM USER</td>
+								<th> Email </th>
+								<td> EMAIL USER</td>
 							</tr>
 							<tr>
 								<th> Prénom </th>
@@ -179,11 +179,11 @@ $pays = utf8_encode($données['pays']);
 						</tr>
 						<tr>
 							<th>Tarif/jour</th>
-							<td><?php echo($tarifj); ?></td>
+							<td><?php echo($tarifj); ?>€</td>
 						</tr>
 						<tr>
 							<th>Tarif/semaine</th>
-							<td><?php echo($tarifs); ?></td>
+							<td><?php echo($tarifs); ?>€</td>
 						</tr>
 						<tr>
 							<th>Pays</th>
@@ -212,6 +212,21 @@ $pays = utf8_encode($données['pays']);
 
 		<section>
 			<article id="allview">
+				
+				<section id="avis_ajout">
+					<div class="avis_img">
+						<img src="http://placehold.it/140x140">
+					</div>
+					<div class="avis_note">
+						NOTE DE L'UTILISATEUR: <select name="avis_note"> <option value="1">1</option> <option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option></select> /10
+					</div>
+					<div id="avis_message">
+						<textarea class="form-control" name="avis_message" cols="74%" rows="10%"></textarea>
+					</div>
+					<div id="avis_btn">
+						<input type="submit" class="btn btn-avis" value="Ajouter"/>
+					</div>
+				</section>
 				
 				<section class="avis">
 					<div class="avis_img">
