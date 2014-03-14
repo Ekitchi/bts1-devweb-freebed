@@ -17,10 +17,12 @@ if (isset($_POST["sauvegarde"])) {
 	if ($password == $confirm_password) {
 		$query = "UPDATE user SET nom='" . $nom . "' , prenom='" . $prenom . "', date_de_naissance='" . $date_de_naissance . "', adresse='" . $adresse . "', sexe='" . $sexe . "', email='" . $email . "', avatar='default_avatar.jpg', 
 			password='" . $password . "', oqp='" . $oqp . "', tel='" . $tel . "' WHERE id='" . $_SESSION["user"] -> getID() . "';";
+		$res = $bdd -> query($query);
+		
+		logOut();
+		logIn($email, $password);	
 	}
 
-	$res = $bdd -> query($query);
-	logOut();
 
 }
 
@@ -172,7 +174,7 @@ $response -> CloseCursor();
 									<tr>
 										<th>Nouveau mot de passe:</th>
 										<td>
-										<input class="form-control" type="password" name="password"/>
+										<input class="form-control" type="password" name="password" value="<?php echo $_SESSION["user"]->getPassword(); ?>"/>
 										</td>
 									</tr>
 									<tr>
