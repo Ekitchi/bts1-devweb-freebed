@@ -151,10 +151,7 @@ $tel_u = utf8_encode($donnée['tel']);
 								<th> Tél. </th>
 								<td> <?php echo "$tel_u"; ?> </td>
 							</tr>
-							<tr>
-								<th> Note </th>
-								<td> <?php echo ""; ?> </td>
-							</tr>
+							
 						</table>
 					</article>
 				</section>
