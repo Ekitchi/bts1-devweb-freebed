@@ -1,12 +1,11 @@
-<?php 
-include_once ("includes.php"); 
-
+<?php
+include_once ("includes.php");
 
 $id = intval($_GET['id_logement']);
 $photos = new ArrayObject();
-$query = "SELECT * FROM bien WHERE id='".$id."'";
-$res = $bdd->query($query);
-$données = $res->fetch();
+$query = "SELECT * FROM bien WHERE id='" . $id . "'";
+$res = $bdd -> query($query);
+$données = $res -> fetch();
 
 $nom = utf8_encode($données['nom']);
 $type = utf8_encode($données['type']);
@@ -35,13 +34,41 @@ $tel_u = utf8_encode($donnée['tel']);
 
 $res -> CloseCursor();
 
+$query = "SELECT * FROM location WHERE id_b='" . $id . "'";
+$res = $bdd -> query($query);
+$données = $res -> fetch();
 
-$query = "SELECT url_photo FROM photos WHERE id_bien='".$id."'";
+$date_demande_debut = $_POST["date_dem_debut"];
+$date_demande_fin = $_POST["date_dem_fin"];
+$date_eff_debut = $données['date_debut'];
+$date_eff_fin = $donées['date_fin'];
+$validate;
+
+$res -> CloseCursor();
+
+
+if ($date_demande_debut < $date_demande_fin) {// On teste la cohérence des dates de réservation
+
+	if ($date_demande_fin < $date_eff_debut)
+		$validate = TRUE;
+	elseif ($date_demande_debut > $date_eff_fin)
+		$validate = TRUE;
+	else
+		$validate = FALSE;
+}
+
+
+if ($validate == TRUE) {
+	echo "Votre demande de location a été validée.";
+	$query = "INSERT INTO location (id_b, date_debut, date_fin) VALUES ('".$id."', '".$date_demande_debut."', '".$date_demande_fin."')";
+	$res = $bdd -> query($query);
+}
+
+$query = "SELECT url_photo FROM photos WHERE id_bien='" . $id . "'";
 $res = $bdd -> query($query);
 
-while ($données = $res -> fetch())
-{
-	$photos->append($données['url_photo']);
+while ($données = $res -> fetch()) {
+	$photos -> append($données['url_photo']);
 }
 
 $slidechaud = "
@@ -50,9 +77,9 @@ $slidechaud = "
 				<ul id='slContent'>";
 
 foreach ($photos as $e => $var) {
-	$slidechaud = $slidechaud."<li> <img id='id".$e."' alt='IMG' src='data/photos/".$var."' width='25%' height='100%'> </li>";
+	$slidechaud = $slidechaud . "<li> <img id='id" . $e . "' alt='IMG' src='data/photos/" . $var . "' width='25%' height='100%'> </li>";
 }
-$slidechaud = $slidechaud."
+$slidechaud = $slidechaud . "
 				</ul>
 			</article>
 			<article id='slideshow_miniature_container'>
@@ -61,19 +88,18 @@ $slidechaud = $slidechaud."
 				
 				<div id='slideshow_miniature'>
 					<ul id='slmContent'>";
-					
+
 foreach ($photos as $e => $var) {
-	$slidechaud = $slidechaud."<li> <a href='#id".$e."'> <img alt='IMG' src='data/photos/".$var."' width='100' height='60'> </a> </li>";
-	
+	$slidechaud = $slidechaud . "<li> <a href='#id" . $e . "'> <img alt='IMG' src='data/photos/" . $var . "' width='100' height='60'> </a> </li>";
+
 }
 
-$slidechaud = $slidechaud."
+$slidechaud = $slidechaud . "
 					</ul>
 				</div>
 			</article>
 		</section>
 ";
-
 ?>
 
 
@@ -91,7 +117,9 @@ $slidechaud = $slidechaud."
 	</head>
 
 	<body>
-		<?php include_once ("header.php"); ?>
+		<?php
+		include_once ("header.php");
+ ?>
 		
 		
 		
@@ -103,7 +131,7 @@ $slidechaud = $slidechaud."
 		</section>
 
 
-<?php echo ($slidechaud); ?>
+<?php echo($slidechaud); ?>
 
 		<!--<section id="slideshow_container">
 			<article id="slideshow">
@@ -151,12 +179,13 @@ $slidechaud = $slidechaud."
 						 	</tr>
 						 </table>
 					</article>
+					<form method="POST" action="logement.php">
 					<article id="logement_date">
 						<div class="logement_date">
-							Arrivée <br/> <input type="date" placeholder="jj/mm/aaaa" class="form-control form-logement_infos"/>
+							Arrivée <br/> <input type="date" name="date_dem_debut" placeholder="jj/mm/aaaa" class="form-control form-logement_infos"/>
 						</div>
 						<div class="logement_date">
-							Départ <br/> <input type="date" placeholder="jj/mm/aaaa" class="form-control form-logement_infos"/>
+							Départ <br/> <input type="date" name="date_dem_fin" placeholder="jj/mm/aaaa" class="form-control form-logement_infos"/>
 						</div>
 						<div class="logement_date">
 							Voyageurs <br/>
@@ -170,6 +199,7 @@ $slidechaud = $slidechaud."
 				<section id="logementlouer">
 					<input type="submit" class="btn btn_louer" value="Réserver ce logement !"/>
 				</section>
+				</form>
 				
 				<section id="userinfos">
 					<article id="user_avatar">
@@ -242,7 +272,7 @@ $slidechaud = $slidechaud."
 						</tr>
 						<tr>
 							<th>Ville</th>
-							<td><?php echo($ville);?></td>
+							<td><?php echo($ville); ?></td>
 						</tr>
 						<tr>
 							<th>Quartier</th>
