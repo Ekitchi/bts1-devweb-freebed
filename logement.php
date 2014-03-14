@@ -3,6 +3,7 @@ include_once ("includes.php");
 
 
 $id = intval($_GET['id_logement']);
+$photos = new ArrayObject();
 $query = "SELECT * FROM bien WHERE id='".$id."'";
 $res = $bdd->query($query);
 $données = $res->fetch();
@@ -31,7 +32,50 @@ $prenom_u = utf8_encode($donnée['prenom']);
 $email_u = utf8_encode($donnée['email']);
 $adresse_u = utf8_encode($donnée['adresse']);
 $tel_u = utf8_encode($donnée['tel']);
+
+$res -> CloseCursor();
+
+
+$query = "SELECT url_photo FROM photos WHERE id_bien='".$id."'";
+$res = $bdd -> query($query);
+
+while ($données = $res -> fetch())
+{
+	$photos->append($données['url_photo']);
+}
+
+$slidechaud = "
+<section id='slideshow_container'>
+			<article id='slideshow'>
+				<ul id='slContent'>";
+
+foreach ($photos as $e => $var) {
+	$slidechaud = $slidechaud."<li> <img id='id".$e."' alt='FUMER' src='data/photos/".$var."' width='25%' height='100%'> </li>";
+}
+$slidechaud = $slidechaud."
+				</ul>
+			</article>
+			<article id='slideshow_miniature_container'>
+				<div id='button-prev'> </div>
+				<div id='button-next'> </div>
+				
+				<div id='slideshow_miniature'>
+					<ul id='slmContent'>";
+					
+foreach ($photos as $e => $var) {
+	$slidechaud = $slidechaud."<li> <a href='#id".$e."'> <img alt='FUMER' src='data/photos/".$var."' width='100' height='60'> </a> </li>";
+	
+}
+
+$slidechaud = $slidechaud."
+					</ul>
+				</div>
+			</article>
+		</section>
+";
+
 ?>
+
 
 
 <!DOCTYPE html>
@@ -59,9 +103,9 @@ $tel_u = utf8_encode($donnée['tel']);
 		</section>
 
 
+<?php echo ($slidechaud); ?>
 
-
-		<section id="slideshow_container">
+		<!--<section id="slideshow_container">
 			<article id="slideshow">
 				<ul id="slContent">
 					<li> <img id="s1" alt="FUMER" src="data/s1.png" width="25%" height="100%"> </li>
@@ -82,7 +126,7 @@ $tel_u = utf8_encode($donnée['tel']);
 					</ul>
 				</div>
 			</article>
-		</section>
+		</section>-->
 		
 		
 		
