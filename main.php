@@ -24,7 +24,7 @@
 				<ul id="sContent">
 					<li> <a href="logement.php?id_logement=3"> <img alt="blouh" src="data/s1.png" height="650" width="25%"> </a> </li>
 					<li> <a href="logement.php?id_logement=2"> <img alt="blouh" src="data/photos/1-marina-di-santa-giulia-residence.jpg" height="650" width="25%"> </a> </li>
-					<li> <img alt="blouh" src="data/s3.jpg" height="650" width="25%"> </li>
+					<li> <a href="logement.php?id_logement=9"> <img alt="blouh" src="data/photos/villa_nice1.jpg" height="650" width="25%"> </a> </li>
 				</ul>
 				
 				
@@ -62,7 +62,7 @@
 
 		<section id="bestrated" name="bestrated">
 			<article id="best" name="best">
-				<img src="data/photos/pere_lachaise_2.jpg" height="100%" width="100%">
+				<img src="data/photos/pere_lachaise_1.jpg" height="100%" width="100%">
 			</article>
 
 			<article id="bestdesc" name="bestdesc">
@@ -73,11 +73,17 @@
 
 		<section id="mostrented" name="mostrented">
 			<article id="renteddesc" name="renteddesc">
-				DESC
+				<h2>Loft à Paris</h2><br/><br/>
+
+<p>Accedat huc suavitas quaedam oportet sermonum atque morum, haudquaquam mediocre condimentum amicitiae. Tristitia autem et in omni re severitas habet illa quidem gravitatem, sed amicitia remissior esse debet et liberior et dulcior et ad omnem comitatem facilitatemque proclivior.
+
+Verum ad istam omnem orationem brevis est defensio. Nam quoad aetas M. Caeli dare potuit isti suspicioni locum, fuit primum ipsius pudore, deinde etiam patris diligentia disciplinaque munita. Qui ut huic virilem togam deditšnihil dicam hoc loco de me; tantum sit, quantum vos existimatis; hoc dicam, hunc a patre continuo ad me esse deductum; nemo hunc M. Caelium in illo aetatis flore vidit nisi aut cum patre aut mecum aut in M. Crassi castissima domo, cum artibus honestissimis erudiretur.
+
+Et hanc quidem praeter oppida multa duae civitates exornant Seleucia opus Seleuci regis </p>
 			</article>
 
 			<article id="rented" name="rented">
-				<img src="http://placehold.it/1100x500">
+				<img src="data/photos/loft_paris1.jpg" height="100%" width="100%">
 			</article>
 		</section>
 
