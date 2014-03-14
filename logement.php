@@ -74,6 +74,23 @@ $slidechaud = $slidechaud."
 		</section>
 ";
 
+
+$res -> CloseCursor();
+
+if(isset($_POST['avis_message']) && isset($_POST['avis_note'])) {
+	$message = utf8_encode($_POST['avis_message']);
+	$note = $_POST['avis_note'];
+	$id_u = $_SESSION['user'] -> GetID();
+	
+	$query = "INSERT INTO freebed.commentaire (id_u, id_b, content, note) VALUES ('".$id_u."', '".$id."', '".$message."', '".$note."');";
+	$res = $bdd -> query($query);
+	$ajout = TRUE;
+}
+
+else {
+	$ajout = FALSE;
+}
+
 ?>
 
 
@@ -103,32 +120,8 @@ $slidechaud = $slidechaud."
 		</section>
 
 
-<?php echo ($slidechaud); ?>
+		<?php echo ($slidechaud); ?>
 
-		<!--<section id="slideshow_container">
-			<article id="slideshow">
-				<ul id="slContent">
-					<li> <img id="s1" alt="FUMER" src="data/s1.png" width="25%" height="100%"> </li>
-					<li> <img id="s2" alt="FUMER" src="data/s2.png" width="25%" height="100%"> </li>
-					<li> <img id="s3" alt="FUMER" src="data/s3.jpg" width="25%" height="100%"> </li>
-				</ul>
-			</article>
-			
-			<article id="slideshow_miniature_container">
-				<div id="button-prev"> </div>
-				<div id="button-next"> </div>
-				
-				<div id="slideshow_miniature">
-					<ul id="slmContent">
-						<li> <a href="#s1"> <img alt="FUMER" src="data/s1.png" width="100" height="60"> </a> </li>
-						<li> <a href="#s2"> <img alt="FUMER" src="data/s2.png" width="100" height="60"> </a> </li>
-						<li> <a href="#s3"> <img alt="FUMER" src="data/s3.jpg" width="100" height="60"> </a> </li>
-					</ul>
-				</div>
-			</article>
-		</section>-->
-		
-		
 		
 		<section>
 			<article id="logementinfos">
@@ -268,6 +261,7 @@ $slidechaud = $slidechaud."
 					<div class="avis_img">
 						<img src="http://placehold.it/140x140">
 					</div>
+					<form method="post" action="logement.php?id_logement=<?php echo($id);?> ">
 					<div class="avis_note">
 						NOTE DE L'UTILISATEUR: <select name="avis_note"> <option value="1">1</option> <option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option></select> /10
 					</div>
@@ -277,6 +271,7 @@ $slidechaud = $slidechaud."
 					<div id="avis_btn">
 						<input type="submit" class="btn btn-avis" value="Ajouter"/>
 					</div>
+					</form>
 				</section>
 				
 				<section class="avis">
