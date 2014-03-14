@@ -19,8 +19,18 @@ $capacite = utf8_encode($données['capacite']);
 $quartier = utf8_encode($données['quartier']);
 $note = utf8_encode($données['note']);
 $pays = utf8_encode($données['pays']);
+$loueur = $données['id_L'];
+$res -> CloseCursor();
 
+$query = "SELECT * FROM user WHERE id='" . $loueur . "'";
+$res = $bdd -> query($query);
+$donnée = $res -> fetch();
 
+$nom_u = utf8_encode($donnée['nom']);
+$prenom_u = utf8_encode($donnée['prenom']);
+$email_u = utf8_encode($donnée['email']);
+$adresse_u = utf8_encode($donnée['adresse']);
+$tel_u = utf8_encode($donnée['tel']);
 ?>
 
 
@@ -120,31 +130,28 @@ $pays = utf8_encode($données['pays']);
 				<section id="userinfos">
 					<article id="user_avatar">
 						<img src="http://placehold.it/250x250"/>
-						<div> <a href="#"> NOM USER </a> </div>
+						<div> <a href="#"> <?php echo "$nom_u"; ?></a> </div>
 					</article>
 			
 					<article id="user_infos">
 						<table>
 							<tr>
 								<th> Email </th>
-								<td> EMAIL USER</td>
+								<td> <?php echo "$email_u"; ?></td>
 							</tr>
 							<tr>
 								<th> Prénom </th>
-								<td> PRENOM USER</td>
+								<td> <?php echo "$prenom_u"; ?> </td>
 							</tr>
 							<tr>
 								<th> Adresse </th>
-								<td> ADRESSE USER</td>
+								<td> <?php echo "$adresse_u"; ?> </td>
 							</tr>
 							<tr>
 								<th> Tél. </th>
-								<td> TEL USER</td>
+								<td> <?php echo "$tel_u"; ?> </td>
 							</tr>
-							<tr>
-								<th> Note </th>
-								<td> NOTE USER</td>
-							</tr>
+							
 						</table>
 					</article>
 				</section>

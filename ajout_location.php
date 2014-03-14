@@ -12,15 +12,19 @@ if (isset($_POST["annonce_titre"]) && isset($_POST["annonce_adresse"])) {
 			$tarif_s = $_POST["annonce_tarifs"];
 			$capacite = $_POST["annonce_capacite"];
 			$quartier = $_POST["annonce_quartier"];
+			$id_u = $_SESSION["user"]->getID();
 
-			$query = "INSERT INTO `freebed`.`bien`(type, surface, nom, description, adresse, ville, tarif_j, tarif_s, capacite, quartier) VALUES ('".$type."', '".$surface."', '".$nom."', '".$description."', '".$adresse."', '".$ville."', '".$tarif_j."', '".$tarif_s."', '".$capacite."', '".$quartier."');";
+			$query = "INSERT INTO `freebed`.`bien`(type, id_L, surface, nom, description, adresse, ville, tarif_j, tarif_s, capacite, quartier) VALUES ('".$type."', '".$id_u."','".$surface."', '".$nom."', '".$description."', '".$adresse."', '".$ville."', '".$tarif_j."', '".$tarif_s."', '".$capacite."', '".$quartier."');";
 			$res = $bdd -> query($query);
 			echo "Votre bien a été enregistré";
 			$ajout = TRUE;
-			
+			$res->CloseCursor();
+			$query = "UPDATE user SET type=2 WHERE id= '".$id_u."'";
+			$res = $bdd -> query($query);
+			$res->CloseCursor();
 		}
 		else {
-			echo "Votre bien n'a pas pus etre enregistré";
+			echo "Votre bien n'a pas pu etre enregistré";
 			$ajout = FALSE;
  			 }
 		?>
