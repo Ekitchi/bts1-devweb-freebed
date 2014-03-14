@@ -1,6 +1,6 @@
 <?php
 /**
- * 
+ *  Classe Logement, pour stocker récupérer des logements et les afficher sur la page de recherche
  */
 class Logement {
 	private $id, $lat, $lng;
