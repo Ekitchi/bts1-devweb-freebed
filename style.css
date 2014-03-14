@@ -474,7 +474,7 @@ ul.InlineList li{
 			height: 100%;
 			text-align:center;
 		}
-		#user_infos table th {color:rgba(180,180,180,1);}
+		#user_infos table th {color:rgba(180,180,180,1);width:60%;}
 
 
 #logementdesc {
