@@ -1,6 +1,6 @@
 <?php
 /**
- * 
+ *  Classe Logement, pour stocker récupérer des logements et les afficher sur la page de recherche
  */
 class Logement {
 	private $id, $lat, $lng;
@@ -11,7 +11,12 @@ class Logement {
 		$this->id = $id;
 		$this->lat = $lat;
 		$this->lng = $lng;
-		$query = "SELECT p.url_photo, b.nom, tarif_j FROM photos p JOIN bien b ON id_bien = ".intval($this->id)." WHERE preview = 1 LIMIT 1;";
+		$query = "SELECT p.url_photo, b.nom, b.tarif_j 
+				  FROM photos p 
+				  JOIN bien b 
+				  ON p.id_bien = ".intval($this->id)." 
+				  WHERE b.id = ".intval($this->id)." AND p.preview = 1 
+				  LIMIT 1;";
 		$réponse = $bdd->query($query);
 		$données = $réponse->fetch();
 		$this->photo = $données["url_photo"];

@@ -1,6 +1,6 @@
 <?php
 	/**
-	 * Class User, pour stocker en session l'utilisateur en cours
+	 * Classe User, pour stocker en session l'utilisateur en cours
 	 */
 	class User {
 		private $email, $password;
