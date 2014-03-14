@@ -3,8 +3,11 @@
 	include_once ("includes.php");
 	include_once ("./classes/cl_Logement.php");
 	$lieux = array();
-	if(isset($_POST["adresse"]))
-		$adresse = $_POST["adresse"];
+	if(isset($_POST["adresse"])) {
+		$adresse = $_POST["adresse"];	
+		if($adresse == "")
+			$adresse = "Paris, France";	
+	}
 	else
 		$adresse = $_POST["ville"].", ".$_POST["pays"];
 	
@@ -17,7 +20,7 @@
 			$where->append("surface <= ".$_POST["surface"]);
 		}
 		
-		if ($_POST["type"] != "") {
+		if (isset($_POST["type"])) {
 			$type = $_POST["type"];
 			$in = "(0";
 			foreach ($type as $key) {
