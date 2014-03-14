@@ -48,14 +48,14 @@ while ($données = $response -> fetch()) {
 										<th>Tarif/semaine</th>
 									</tr>
 									<tr>
-										<td>" . $données["nom"] . "</td>
-										<td>" . $données["adresse"] . "</td>
-										<td>" . $données["ville"] . "</td>
-										<td>" . $données["surface"] . " m²</td>
-										<td>" . $données["type"]. "</td>
-										<td>" . $données["capacite"]. "</td>
-										<td>" . $données["tarif_j"]. "</td>
-										<td>" . $données["tarif_s"]. "</td>
+										<td>" .utf8_encode($données["nom"]). "</td>
+										<td>" .utf8_encode($données["adresse"]). "</td>
+										<td>" .utf8_encode($données["ville"]). "</td>
+										<td>" .$données["surface"]. " m²</td>
+										<td>" .utf8_encode($données["type"]). "</td>
+										<td>" .$données["capacite"]. "</td>
+										<td>" .$données["tarif_j"]. "</td>
+										<td>" .$données["tarif_s"]. "</td>
 									</tr>
 								</table>
 							</section>
@@ -206,10 +206,7 @@ $response -> CloseCursor();
 								</a>
 							</section>
 							<!-- affichage des élément de mes biens -->
-							<?php
-
-							echo $mes_bien;
-							?>
+							<?php echo $mes_bien; ?>
 						</div>
 					</li>
 
@@ -307,10 +304,7 @@ $response -> CloseCursor();
 						<div id="account_historique">
 							<!-- affichage historique -->
 
-							<?php
-
-							echo $histo;
-							?>
+							<?php echo $histo; ?>
 
 						</div>
 					</li>
