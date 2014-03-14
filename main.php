@@ -1,6 +1,6 @@
 <!-- Traitements pré-HTML -->
 <?php
-	include_once ("includes.php");
+	include_once("includes.php");
 ?>
 <!DOCTYPE html>
 <html>
