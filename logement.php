@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
 include_once ("includes.php");
 
 $id = intval($_GET['id_logement']);
@@ -100,6 +101,88 @@ $slidechaud = $slidechaud . "
 			</article>
 		</section>
 ";
+=======
+	include_once ("includes.php");
+	
+	$id = intval($_GET['id_logement']);
+	$photos = new ArrayObject();
+	
+	if (isset($_SESSION["user"])) {
+		$query = "SELECT id_L FROM bien WHERE id =" . $id . ";";
+		$res = $bdd -> query($query);
+		$données = $res -> fetch();
+		if ($données["id_L"] == $_SESSION["user"] -> getID())
+			header("Location:./modif_logement.php?id_logement=" . $id);
+	}
+	
+	$query = "SELECT * FROM bien WHERE id='" . $id . "'";
+	$res = $bdd -> query($query);
+	$données = $res -> fetch();
+	
+	$nom = utf8_encode($données['nom']);
+	$type = utf8_encode($données['type']);
+	$adresse = utf8_encode($données['adresse']);
+	$ville = utf8_encode($données['ville']);
+	$surface = utf8_encode($données['surface']);
+	$description = utf8_encode($données['description']);
+	$tarifj = utf8_encode($données['tarif_j']);
+	$tarifs = utf8_encode($données['tarif_s']);
+	$capacite = utf8_encode($données['capacite']);
+	$quartier = utf8_encode($données['quartier']);
+	$note = utf8_encode($données['note']);
+	$pays = utf8_encode($données['pays']);
+	$loueur = $données['id_L'];
+	$res -> CloseCursor();
+	
+	$query = "SELECT * FROM user WHERE id='" . $loueur . "'";
+	$res = $bdd -> query($query);
+	$donnée = $res -> fetch();
+	
+	$nom_u = utf8_encode($donnée['nom']);
+	$prenom_u = utf8_encode($donnée['prenom']);
+	$email_u = utf8_encode($donnée['email']);
+	$adresse_u = utf8_encode($donnée['adresse']);
+	$tel_u = utf8_encode($donnée['tel']);
+	
+	$res -> CloseCursor();
+	
+	$query = "SELECT url_photo FROM photos WHERE id_bien='" . $id . "'";
+	$res = $bdd -> query($query);
+	
+	while ($données = $res -> fetch()) {
+		$photos -> append($données['url_photo']);
+	}
+	
+	$slidechaud = "
+		<section id='slideshow_container'>
+					<article id='slideshow'>
+						<ul id='slContent'>";
+	
+	foreach ($photos as $e => $var) {
+		$slidechaud = $slidechaud . "<li> <img id='id" . $e . "' alt='IMG' src='data/photos/" . $var . "' width='25%' height='100%'> </li>";
+	}
+	$slidechaud = $slidechaud . "
+						</ul>
+					</article>
+					<article id='slideshow_miniature_container'>
+						<div id='button-prev'> </div>
+						<div id='button-next'> </div>
+						
+						<div id='slideshow_miniature'>
+							<ul id='slmContent'>";
+	
+	foreach ($photos as $e => $var) {
+		$slidechaud = $slidechaud . "<li> <a href='#id" . $e . "'> <img alt='IMG' src='data/photos/" . $var . "' width='100' height='60'> </a> </li>";
+	
+	}
+	
+	$slidechaud = $slidechaud . "
+							</ul>
+						</div>
+					</article>
+				</section>
+		";
+>>>>>>> 7d45a5934c6cbfe1425651d589d6056276cfa0d8
 ?>
 
 

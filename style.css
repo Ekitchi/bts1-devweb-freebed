@@ -264,6 +264,7 @@ ul.InlineList li{
 	float: left;
 	margin-top: 20px;
 	margin-left: 5px;
+	text-align:justify;
 }
 
 #rented {
