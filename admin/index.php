@@ -101,9 +101,13 @@
 	$biens = "";
 	
 	while ($données = $response -> fetch()) {
-		$biens = $biens . "<tr><td>" . $données['id'] . "</td>
-				<td>" . $données['nom'] . "</td>
-				<td>" . $données['prenom'] . "</td>
+		$biens = $biens . "<tr>
+				<td>" .$données['id']. "</td>
+				<td>" .$données['nom']. "</td>
+				<td>" .$données['type']. "</td>
+				<td>" .$données['adresse']. "</td>
+				<td>" .$données['description']. "</td>
+				<td>" .$données['surface']. "</td>
 				<td><input type='submit' value='Modifier' /><input type='submit' value='Supprimer' /></td></tr>";
 	}
 	$response -> CloseCursor();
