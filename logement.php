@@ -50,7 +50,7 @@ $slidechaud = "
 				<ul id='slContent'>";
 
 foreach ($photos as $e => $var) {
-	$slidechaud = $slidechaud."<li> <img id='id".$e."' alt='FUMER' src='data/photos/".$var."' width='25%' height='100%'> </li>";
+	$slidechaud = $slidechaud."<li> <img id='id".$e."' alt='IMG' src='data/photos/".$var."' width='25%' height='100%'> </li>";
 }
 $slidechaud = $slidechaud."
 				</ul>
@@ -63,7 +63,7 @@ $slidechaud = $slidechaud."
 					<ul id='slmContent'>";
 					
 foreach ($photos as $e => $var) {
-	$slidechaud = $slidechaud."<li> <a href='#id".$e."'> <img alt='FUMER' src='data/photos/".$var."' width='100' height='60'> </a> </li>";
+	$slidechaud = $slidechaud."<li> <a href='#id".$e."'> <img alt='IMG' src='data/photos/".$var."' width='100' height='60'> </a> </li>";
 	
 }
 
