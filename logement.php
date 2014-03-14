@@ -55,21 +55,26 @@
 	
 	$res -> CloseCursor();
 	
-	if ($date_demande_debut < $date_demande_fin) {// On teste la cohérence des dates de réservation
+	/*
+	 *  Traitement encore non-fonctionnel de la réservation d'un logement
+	 */
+	/*if(isset($_POST["reservation"])) {
+		if ($date_demande_debut < $date_demande_fin) {// On teste la cohérence des dates de réservation
+		
+		if ($date_demande_fin < $date_eff_debut)
+		$validate = TRUE;
+		elseif ($date_demande_debut > $date_eff_fin)
+		$validate = TRUE;
+		else
+		$validate = FALSE;
+		}
+		if ($validate == TRUE) {
+		echo "Votre demande de location a été validée.";
+		$query = "INSERT INTO location (id_b, date_debut, date_fin) VALUES ('".$id."', '".$date_demande_debut."', '".$date_demande_fin."')";
+		$res = $bdd -> query($query);
+		}
+	}*/
 	
-	if ($date_demande_fin < $date_eff_debut)
-	$validate = TRUE;
-	elseif ($date_demande_debut > $date_eff_fin)
-	$validate = TRUE;
-	else
-	$validate = FALSE;
-	}
-	
-	if ($validate == TRUE) {
-	echo "Votre demande de location a été validée.";
-	$query = "INSERT INTO location (id_b, date_debut, date_fin) VALUES ('".$id."', '".$date_demande_debut."', '".$date_demande_fin."')";
-	$res = $bdd -> query($query);
-	}
 	
 	$query = "SELECT url_photo FROM photos WHERE id_bien='" . $id . "'";
 	$res = $bdd -> query($query);
@@ -186,7 +191,7 @@
 						 	</tr>
 						 </table>
 					</article>
-					<form method="POST" action="logement.php">
+					<form method="post" action="logement.php">
 					<article id="logement_date">
 						<div class="logement_date">
 							Arrivée <br/> <input type="date" name="date_dem_debut" placeholder="jj/mm/aaaa" class="form-control form-logement_infos"/>
@@ -204,7 +209,7 @@
 				</section>
 				
 				<section id="logementlouer">
-					<input type="submit" class="btn btn_louer" value="Réserver ce logement !"/>
+					<input type="submit" class="btn btn_louer" value="Réserver ce logement !" name="reservation"/>
 				</section>
 				</form>
 				
