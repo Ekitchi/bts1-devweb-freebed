@@ -36,10 +36,9 @@ if (isset($_POST["sauvmodif"])) {
 		$query = "UPDATE bien SET type='" . $typelogement . "' , surface='" . $surfacelogement . "', pays='" . $payslogement . "', ville='" . $villelogement . "', tarif_j=" . $tarifjour . ", tarif_s=" . $tarifsemaine . ", 
 			capacite=" . $capacitelogement . " WHERE id=" . $_GET["id_logement"]. ";";
 		
-		echo $query;	
+			
 			
 		$res = $bdd -> query($query);
-
 		echo "Modification Enregistré";	
 		
 		
@@ -85,6 +84,37 @@ $slidechaud = $slidechaud."
 			</article>
 		</section>
 ";
+
+
+
+
+$query = "SELECT * FROM note WHERE id_location = '" . $_SESSION["user"] -> getID() . "';";
+$response = $bdd -> query($query);
+
+$affichage_note = "";
+
+while ($données = $response -> fetch()) {
+	$affichage_note = $affichage_note . "
+		<section class='avis'>
+					<div class='avis_img'>
+						<img src='http://placehold.it/140x140'>
+					</div>
+					<div class='avis_note'>
+						NOTE DE L'UTILISATEUR: ".$données["note"]."/10
+					</div>
+					<div class='avis_message'>
+						<text name='content_note' style='width:100%'>".$données["content"]."</text>
+					</div>
+					<div class='avis_date'>
+						Message envoyé le: <br/>
+						".$données["date_note"]." <br/>
+						Par : 
+						".$données["id_utilisateur"]."
+					</div>
+				</section>
+		";
+}
+
 
 ?>
 
@@ -251,53 +281,9 @@ $slidechaud = $slidechaud."
 
 		<section>
 			<article id="allview">				
-				<section class="avis">
-					<div class="avis_img">
-						<img src="http://placehold.it/140x140">
-					</div>
-					<div class="avis_note">
-						NOTE DE L'UTILISATEUR: ETOILE ETOILE ETOILE
-					</div>
-					<div class="avis_message">
-						message de l'utilisateur
-					</div>
-					<div class="avis_date">
-						Message envoyé le: <br/>
-						XX/XX/XXX à XX:XX
-					</div>
-				</section>
-				
-				<section class="avis">
-					<div class="avis_img">
-						<img src="http://placehold.it/140x140">
-					</div>
-					<div class="avis_note">
-						NOTE DE L'UTILISATEUR: ETOILE ETOILE ETOILE
-					</div>
-					<div class="avis_message">
-						message de l'utilisateur
-					</div>
-					<div class="avis_date">
-						Message envoyé le: <br/>
-						XX/XX/XXX à XX:XX
-					</div>
-				</section>
-				
-				<section class="avis">
-					<div class="avis_img">
-						<img src="http://placehold.it/140x140">
-					</div>
-					<div class="avis_note">
-						NOTE DE L'UTILISATEUR: ETOILE ETOILE ETOILE
-					</div>
-					<div class="avis_message">
-						message de l'utilisateur
-					</div>
-					<div class="avis_date">
-						Message envoyé le: <br/>
-						XX/XX/XXX à XX:XX
-					</div>
-				</section>
+								<!-- affichage notes -->
+
+							<?php echo $affichage_note; ?>
 			</article>
 		</section>
 
